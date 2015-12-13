@@ -31,7 +31,7 @@ void stop() {
 	}
 }
 
-// Actual Thead Code starts here
+// Actual Thread Code starts here
 
 static vu8 nextID = 0;
 

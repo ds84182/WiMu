@@ -35,7 +35,7 @@
 
 void *testThread(Future *f);
 
-int	main() {
+int main() {
 	printf("Starting WiMu\n");
 	
 	Renderer::start();
