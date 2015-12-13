@@ -64,7 +64,7 @@ int main() {
 	HomebrewAppState has("sd:/apps/3dmaze");
 	Loader::queue(&has);
 	UI::add(&has);
-	
+
 	/*Completer *c = new Completer();
 
 	Thread b(reinterpret_cast<ThreadEntryPoint>(testThread), c->future);
@@ -208,6 +208,7 @@ int main() {
 
 	Logger::log("Stopping render thread");
 	Renderer::stop();
+	UI::stop();
 
 	/*for (Texture *tex : loadedTextures) {
 		delete tex;

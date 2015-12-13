@@ -14,6 +14,8 @@ class HomebrewAppElement : public UIElement {
 				textRenderable,
 				nullptr
 			});
+	HomebrewAppState *app;
+	
 public:
 	HomebrewAppElement() : UIElement(HOMEBREW_APP_ELEMENT) {};
 

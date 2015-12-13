@@ -63,7 +63,9 @@ UIElement *getElement(State *state) {
 
 void addForRender(State *state) {
 	UIElement *element = getElement(state);
+	state->lock();
 	Renderable *r = element->update();
+	state->unlock();
 	Renderable *old = stateToRenderable[state];
 	if (r != old) {
 		if (old)
@@ -76,11 +78,18 @@ void addForRender(State *state) {
 }
 
 void AddCommand::execute() {
+	Logger::logf("Add state %p", state);
+	if (!state) return;
+
 	states.emplace_back(state);
 	addForRender(state);
 }
 
 void RemoveCommand::execute() {
+	Logger::logf("Remove state %p", state);
+	if (!state) return;
+
+	state->lock();
 	UIElement *element = getElement(state);
 	element->detach();
 	state->element = nullptr;
@@ -91,9 +100,13 @@ void RemoveCommand::execute() {
 	if (r)
 		Renderer::removeRenderable(r);
 	stateToRenderable.erase(state);
+	state->unlock();
 }
 
 void UpdateCommand::execute() {
+	Logger::logf("Update state %p", state);
+	if (!state) return;
+	
 	addForRender(state);
 }
 
