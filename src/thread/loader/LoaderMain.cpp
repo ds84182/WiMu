@@ -1,5 +1,7 @@
 #include "LoaderMain.h"
 
+#include <thread/ui/UIMain.h>
+
 #include <util/Log.h>
 
 namespace Loader {
@@ -47,6 +49,7 @@ void *main(void *args) {
 				message->state->lock();
 				message->state->load(message->flags);
 				message->state->unlock();
+				UI::update(message->state);
 			}
 
 			delete message;

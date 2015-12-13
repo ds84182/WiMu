@@ -56,17 +56,15 @@ int main() {
 
 	Loader::start();
 	Globals::init();
-	//UI::init();
+	UI::start();
 	
 	Logger::log("Adding triangle to render thread");
 	Renderer::addRenderable(new RenderableTriangle());
 
 	HomebrewAppState has("sd:/apps/3dmaze");
 	Loader::queue(&has);
-	//UI::add(&has);
-	//has should call UI::update at the end
-	//UI should ignore updates for elements it doesn't actually have
-
+	UI::add(&has);
+	
 	/*Completer *c = new Completer();
 
 	Thread b(reinterpret_cast<ThreadEntryPoint>(testThread), c->future);

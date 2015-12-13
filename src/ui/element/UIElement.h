@@ -18,7 +18,8 @@
 
 enum UIElementType {
 	NULL_ELEMENT,
-	HOMEBREW_APP_ELEMENT
+	HOMEBREW_APP_ELEMENT,
+	MAX_ELEMENTS
 };
 
 class State;

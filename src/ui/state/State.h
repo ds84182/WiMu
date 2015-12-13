@@ -2,17 +2,18 @@
 
 #include <gccore.h>
 
+#include <thread/ui/UIMain.h>
+
 #include <ui/element/UIElement.h>
 
 #include <util/Mutex.h>
 
 class State {
-public:
+private:
 	UIElementType uiType;
-	//You should not use this...
-	//This is only public because I hate getters and setters.
 	UIElement *element = nullptr;
 
+public:
 	Mutex mutex;
 	bool loaded = false;
 
@@ -40,4 +41,7 @@ public:
 	//This is usually called by ListElement when a state is still loaded but is one screen away from the top or bottom
 	//This method may be called before load, and this method may be called multiple times
 	virtual void unload() = 0;
+
+	friend UIElement *UI::getElement(State*);
+	friend void UI::RemoveCommand::execute();
 };
