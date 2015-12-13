@@ -1,0 +1,25 @@
+#include "VertexDescriptions.h"
+
+GXVtxDesc I8_POSITION[] = {
+	{GX_VA_POS, GX_INDEX8},
+	{GX_VA_NULL, GX_NONE},
+};
+
+GXVtxDesc I8_POSITION_COLOR[] = {
+	{GX_VA_POS, GX_INDEX8},
+	{GX_VA_CLR0, GX_INDEX8},
+	{GX_VA_NULL, GX_NONE},
+};
+
+GXVtxDesc I8_POSITION_TEX[] = {
+	{GX_VA_POS, GX_INDEX8},
+	{GX_VA_TEX0, GX_INDEX8},
+	{GX_VA_NULL, GX_NONE},
+};
+
+GXVtxDesc I8_POSITION_COLOR_TEX[] = {
+	{GX_VA_POS, GX_INDEX8},
+	{GX_VA_CLR0, GX_INDEX8},
+	{GX_VA_TEX0, GX_INDEX8},
+	{GX_VA_NULL, GX_NONE},
+};
