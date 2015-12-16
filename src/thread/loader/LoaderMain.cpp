@@ -45,6 +45,7 @@ void *main(void *args) {
 		LoaderMessage *message = reinterpret_cast<LoaderMessage*>(loadQueue.receive());
 
 		if (message) {
+			Logger::logf("Loader Thread %d has work", id);
 			if (message->state) {
 				message->state->lock();
 				message->state->load(message->flags);

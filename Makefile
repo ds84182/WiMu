@@ -25,7 +25,7 @@ BUILD		:=	build
 SOURCES		:=	src src/async src/render src/thread/loader src/thread/render src/thread/ui src/ui/element src/ui/state src/util
 DATA		:=	data
 TEXTURES	:=	
-INCLUDES	:=	src
+INCLUDES	:=	include src
 
 #---------------------------------------------------------------------------------
 # options for code generation
@@ -131,6 +131,14 @@ $(OUTPUT).elf: $(OFILES)
 # This rule links in binary data with the .bin extension
 #---------------------------------------------------------------------------------
 %.bin.o	:	%.bin
+#---------------------------------------------------------------------------------
+	@echo $(notdir $<)
+	$(bin2o)
+
+#---------------------------------------------------------------------------------
+# This rule links in binary data with the .bin extension
+#---------------------------------------------------------------------------------
+%.mod.o	:	%.mod
 #---------------------------------------------------------------------------------
 	@echo $(notdir $<)
 	$(bin2o)

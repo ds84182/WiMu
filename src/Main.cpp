@@ -26,6 +26,8 @@
 #include <ui/state/HomebrewAppState.h>
 
 #include <util/Animation.h>
+#include <util/ELF.h>
+#include <util/Module.h>
 #include <util/FileSystem.h>
 #include <util/Network.h>
 #include <util/Log.h>
@@ -33,6 +35,8 @@
 #include <util/tinyxml2.h>
 
 #include "Globals.h"
+
+#include "test_module_mod.h"
 
 void *testThread(Future *f);
 
@@ -59,10 +63,8 @@ int main() {
 	Globals::init();
 	UI::start();
 	
-	Logger::log("Adding triangle to render thread");
 	Renderer::addRenderable(new RenderableTriangle());
 
-	HomebrewAppState has("sd:/apps/3dmaze");
 	RenderableRectangle *toolbar = new RenderableRectangle(0, 0, 640, 128, 0x3f51b5ff);
 	Renderer::addRenderable(toolbar);
 
@@ -76,6 +78,16 @@ int main() {
 	Renderer::runAnimation(new AnimatableColor(toolbar->color, 0x3f51b500, 0x3f51b5ff), 5, EasingFunction::OUT_QUAD);
 	Renderer::runAnimation(new AnimatableFloat(&page->y, 480+128, 128), 0.7f, EasingFunction::OUT_QUAD);
 	Renderer::runAnimation(new AnimatableFloat(&title->y, 480+128-4, 128-4), 0.5f, EasingFunction::OUT_QUAD);
+	
+	//((void *(*)())module_bin)();
+
+	ELF testModELF((u8*)test_module_mod);
+	Logger::logf("module symbol: %p", testModELF.findSymbol("module"));
+	Module testModule(&testModELF);
+	testModule.link();
+	Logger::logf("%p", testModule.getSymbol("module")->address);
+	((void *(*)())testModule.getSymbol("module")->address)();
+
 	/*HomebrewAppState has("sd:/apps/3dmaze");
 	Loader::queue(&has);
 	UI::add(&has);*/
