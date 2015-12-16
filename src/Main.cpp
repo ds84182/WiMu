@@ -25,6 +25,7 @@
 
 #include <ui/state/HomebrewAppState.h>
 
+#include <util/Animation.h>
 #include <util/FileSystem.h>
 #include <util/Network.h>
 #include <util/Log.h>
@@ -62,8 +63,22 @@ int main() {
 	Renderer::addRenderable(new RenderableTriangle());
 
 	HomebrewAppState has("sd:/apps/3dmaze");
+	RenderableRectangle *toolbar = new RenderableRectangle(0, 0, 640, 128, 0x3f51b5ff);
+	Renderer::addRenderable(toolbar);
+
+	RenderableRectangle *page = new RenderableRectangle(0, 128, 640, 480-128, 0xf9f9f9ff);
+	Renderer::addRenderable(page);
+
+	RenderableText *title = new RenderableText("WiMu", 40, 128-4, Roboto::Title);
+	Renderer::addRenderable(title);
+
+	Renderer::runAnimation(new AnimatableFloat(&toolbar->y, 480, 0), 0.5f, EasingFunction::OUT_QUAD);
+	Renderer::runAnimation(new AnimatableColor(toolbar->color, 0x3f51b500, 0x3f51b5ff), 5, EasingFunction::OUT_QUAD);
+	Renderer::runAnimation(new AnimatableFloat(&page->y, 480+128, 128), 0.7f, EasingFunction::OUT_QUAD);
+	Renderer::runAnimation(new AnimatableFloat(&title->y, 480+128-4, 128-4), 0.5f, EasingFunction::OUT_QUAD);
+	/*HomebrewAppState has("sd:/apps/3dmaze");
 	Loader::queue(&has);
-	UI::add(&has);
+	UI::add(&has);*/
 
 	/*Completer *c = new Completer();
 
@@ -204,10 +219,13 @@ int main() {
 		}*/
 	}
 
+	Logger::log("Stopping Loader threads");
 	Loader::stop();
 
-	Logger::log("Stopping render thread");
+	Logger::log("Stopping Render thread");
 	Renderer::stop();
+
+	Logger::log("Stopping UI thread");
 	UI::stop();
 
 	/*for (Texture *tex : loadedTextures) {

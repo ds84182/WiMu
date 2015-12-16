@@ -12,10 +12,11 @@ class RenderableRectangle : public Renderable {
 	f32 x, y, width, height;
 	u32 *color;
 	
-	RenderableRectangle(f32 x, f32 y, f32 w, f32 h) :
+	RenderableRectangle(f32 x, f32 y, f32 w, f32 h, u32 col = 0xFFFFFFFF) :
 		x(x), y(y), width(w), height(h) {
 		color = (u32*)memalign(32, 4);
-		*color = rand();//0x7F7F7FFF;
+		*color = col;
+		DCFlushRange(color, sizeof(u32));
 	};
 
 	virtual ~RenderableRectangle();

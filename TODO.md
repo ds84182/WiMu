@@ -1,4 +1,3 @@
-* UI Thread
 * ListElement, VBoxElement, HBoxElement
 * Event subscription
 * Move logic to EventQueueThreads

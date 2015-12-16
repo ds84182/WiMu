@@ -37,6 +37,7 @@ void stop() {
 // Actual Thread Code starts here
 
 static std::vector<Renderable*> renderables;
+static std::vector<EasingState*> animations;
 
 static GXRModeObj *screenMode;
 static void *frameBuffer;
@@ -83,6 +84,7 @@ void *main(void *args) {
 	guOrtho(projectionMatrix, 0, screenMode->efbHeight, 0, screenMode->fbWidth, 0.0F, 30000.0F);
 	GX_LoadProjectionMtx(projectionMatrix, GX_ORTHOGRAPHIC);
 	
+	GX_ClearVtxDesc();
 	GX_SetVtxDescv(I8_POSITION_COLOR);
 	GX_SetVtxAttrFmt(VA_S16, GX_VA_POS,	GX_POS_XYZ,	GX_S16,	0);
 	GX_SetVtxAttrFmt(VA_S16, GX_VA_CLR0, GX_CLR_RGBA, GX_RGBA8,	0);
@@ -95,6 +97,7 @@ void *main(void *args) {
 	GX_SetTexCoordGen(GX_TEXCOORD0, GX_TG_MTX2x4, GX_TG_TEX0, GX_IDENTITY);
 	GX_SetTevOrder(GX_TEVSTAGE0, GX_TEXCOORD0, GX_TEXMAP0, GX_COLOR0A0);
 	GX_SetTevOp(GX_TEVSTAGE0, GX_PASSCLR);
+	GX_SetBlendMode(GX_BM_BLEND, GX_BL_SRCALPHA, GX_BL_INVSRCALPHA, GX_LO_CLEAR);
 	
 	InitFreeType();
 	Font::init();
@@ -108,11 +111,29 @@ void *main(void *args) {
 			} else if (message->type == REMOVE_RENDERABLE) {
 				Logger::logf("Removing Renderable %p", message->renderable);
 				renderables.erase(std::remove(renderables.begin(), renderables.end(), message->renderable));
+			} else if (message->type == RUN_ANIMATION) {
+				Logger::logf("Running Animation %p %f", message->runAnimationArgs->subject, message->runAnimationArgs->duration);
+				EasingState *state = new EasingState(message->runAnimationArgs->subject, message->runAnimationArgs->duration, message->runAnimationArgs->easing);
+				animations.emplace_back(state);
+			} else if (message->type == STOP_ANIMATION) {
+				Logger::log("Stop Animation NYI");
 			}
 			
 			delete message; //I guess... I don't know how sloppy this may become.
 			
 			message = reinterpret_cast<RenderMessage*>(renderQueue.receive(MQ_MSG_NOBLOCK));
+		}
+
+		std::vector<EasingState*> finished;
+		for (EasingState *state : animations) {
+			if (state->update(1.0f/60.0f)) {
+				finished.emplace_back(state);
+			}
+		}
+
+		for (EasingState *state : finished) {
+			animations.erase(std::remove(animations.begin(), animations.end(), state));
+			delete state;
 		}
 		
 		resetMatrixStack();
@@ -128,9 +149,7 @@ void *main(void *args) {
 		delete r;
 	}
 	
-	Logger::log("Render thread stopping");
-	
-	return NULL;
+	return nullptr;
 }
 
 static void update_screen() {

@@ -1,5 +1,6 @@
 #include "Font.h"
 
 namespace Roboto {
-	FreeTypeGX *Regular;
+	FreeTypeGX *Body;
+	FreeTypeGX *Title;
 }

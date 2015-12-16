@@ -22,7 +22,7 @@ void RenderableRectangle::render() {
 	
 	guMtxScale(scaleMatrix, width, height, 1.0F);
 	guMtxTrans(modelView, x, y, 0.0F);
-	guMtxConcat(scaleMatrix, modelView, modelView);
+	guMtxConcat(modelView, scaleMatrix, modelView);
 	guMtxConcat(viewMatrix, modelView, modelView);
 	
 	GX_ClearVtxDesc();

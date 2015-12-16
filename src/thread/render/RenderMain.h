@@ -3,6 +3,7 @@
 #include <render/Renderable.h>
 #include <render/RenderMessage.h>
 
+#include <util/Animation.h>
 #include <util/Thread.h>
 #include <util/MessageQueue.h>
 
@@ -26,6 +27,20 @@ inline void removeRenderable(Renderable *renderable) {
 	addRenderable->type = REMOVE_RENDERABLE;
 	addRenderable->renderable = renderable;
 	renderQueue.send(addRenderable);
+}
+
+inline void runAnimation(Animatable *ani, f32 duration, EasingFunc f) {
+	RenderMessage *runAnimation = new RenderMessage();
+	runAnimation->type = RUN_ANIMATION;
+	runAnimation->runAnimationArgs = new RenderMessageAnimationArgs(ani, duration, f);
+	renderQueue.send(runAnimation);
+}
+
+inline void stopAnimation(Animatable *ani) {
+	RenderMessage *stopAnimation = new RenderMessage();
+	stopAnimation->type = STOP_ANIMATION;
+	stopAnimation->animationSubject = ani;
+	renderQueue.send(stopAnimation);
 }
 
 void *main(void *args);
