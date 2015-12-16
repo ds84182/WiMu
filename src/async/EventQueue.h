@@ -1,8 +1,9 @@
 #pragma once
 
+#include <util/Log.h>
 #include <util/Mutex.h>
 #include <util/MessageQueue.h>
-#include <util/Log.h>
+#include <util/Thread.h>
 
 #include "AsyncObject.h"
 
@@ -35,11 +36,20 @@ public:
 		queue.send(new EventQueueMessage(object, data));
 	}
 
+	void begin() {
+		eventMutex->lock();
+		current = this;
+	}
+
+	void end() {
+		current = nullptr;
+		eventMutex->unlock();
+	}
+
 	void process() {
 		EventQueueMessage *message = reinterpret_cast<EventQueueMessage*>(queue.receive());
 
-		eventMutex->lock();
-		current = this;
+		begin();
 
 		Logger::logf("Process message %p", message);
 		while (message) {
@@ -48,7 +58,32 @@ public:
 			message = reinterpret_cast<EventQueueMessage*>(queue.receive(MQ_MSG_NOBLOCK));
 		}
 
-		current = nullptr;
-		eventMutex->unlock();
+		end();
+	}
+};
+
+struct EventQueueThreadArgs {
+	ThreadEntryPoint entry;
+	void *args;
+	vu8 stopThread;
+	EventQueue *queue;
+};
+
+//OTOMATA, awwyis
+
+class EventQueueThread {
+private:
+	EventQueueThreadArgs *args;
+	Thread *thread;
+
+public:
+	EventQueueThread(ThreadEntryPoint entry, void *args = nullptr);
+
+	void stop() {
+		args->stopThread = 1;
+		args->queue->queue.send(nullptr);
+		thread->join();
+		delete args;
+		delete thread;
 	}
 };

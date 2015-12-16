@@ -245,11 +245,12 @@ void *testThread(Future *f) {
 	EventQueue queue;
 	Logger::log("Test thread started");
 	
+	queue.begin();
 	f->then([](void *arg){
 		Logger::log("Future completed");
 		return nullptr;
 	});
-	f->listeningQueue = &queue;
+	queue.end();
 
 	queue.process();
 

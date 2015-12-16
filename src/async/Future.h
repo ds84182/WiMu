@@ -21,11 +21,13 @@ public:
 };
 
 class Future : public AsyncObject {
-public:
+private:
 	EventQueue *listeningQueue = nullptr;
 	FutureCallback callback = nullptr;
 	Completer *completer = nullptr;
+	friend void Completer::complete(void*);
 
+public:
 	virtual ~Future() {}
 
 	Future *then(FutureCallback cb) {
