@@ -103,7 +103,7 @@ export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib) \
 					-L$(LIBOGC_LIB)
 
 export OUTPUT	:=	$(CURDIR)/$(TARGET)
-.PHONY: $(BUILD) clean
+.PHONY: $(BUILD) clean generate
 
 #---------------------------------------------------------------------------------
 $(BUILD):
@@ -119,6 +119,7 @@ run:
 	wiiload $(OUTPUT).dol
 
 generate:
+	@echo generating files...
 	@lua generate_symbol_script.lua > libwimu/undefines.ld
 	@mkdir -p gen
 	@lua generate_linkdefs.lua > gen/linkdefs.inc
