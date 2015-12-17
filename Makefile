@@ -25,7 +25,7 @@ BUILD		:=	build
 SOURCES		:=	src src/async src/render src/thread/loader src/thread/render src/thread/ui src/ui/element src/ui/state src/util
 DATA		:=	data
 TEXTURES	:=	
-INCLUDES	:=	include src
+INCLUDES	:=	include src gen
 
 #---------------------------------------------------------------------------------
 # options for code generation
@@ -117,6 +117,11 @@ clean:
 #---------------------------------------------------------------------------------
 run:
 	wiiload $(OUTPUT).dol
+
+generate:
+	@lua generate_symbol_script.lua > libwimu/undefines.ld
+	@mkdir -p gen
+	@lua generate_linkdefs.lua > gen/linkdefs.inc
 
 #---------------------------------------------------------------------------------
 else

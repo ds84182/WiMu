@@ -2,13 +2,22 @@
 
 #include "elf.h"
 
+#include "LinkDefs.h"
+
 extern "C" void log(const char *s);
 
-std::map<std::string, Symbol*> Module::globalSymbolMap {
-	{"log", new Symbol("log", (void*)&log)}
-};
+std::map<std::string, Symbol*> Module::globalSymbolMap;
 
-#define HA(x) ((x | ((x & 0x8000) ? 1 : 0)) & 0xFFFF)
+void Module::init() {
+	linkdef *ld = linkdefs;
+	while (ld->name) {
+		globalSymbolMap[ld->name] = new Symbol(ld->name, ld->address);
+		ld++;
+	}
+}
+
+#define HA(x) (x & 0xFFFF)
+//((x | ((x & 0x8000) ? 1 : 0)) & 0xFFFF)
 
 bool Module::link() {
 	//link stage 1: process relocations
@@ -114,16 +123,16 @@ bool Module::link() {
 						*data |= (value&0x03fffffc);
 						break;
 					case R_PPC_ADDR16:
-						*data16 += address;
+						*data16 = value;
 						break;
 					case R_PPC_ADDR16_LO:
-						*data16 = ((*data16) + address) & 0xFFFF;
+						*data16 = (value) & 0xFFFF;
 						break;
 					case R_PPC_ADDR16_HI:
-						*data16 = (((*data16) + address) & 0xFFFF)>>16;
+						*data16 = (value & 0xFFFF)>>16;
 						break;
 					case R_PPC_ADDR16_HA:
-						*data16 = HA(((((*data16) + address) >> 16) & 0xFFFF));
+						*data16 = (value >> 16) + ((value >> 15)&1);
 						break;
 					default:
 						Logger::logf("Unknown Relocation type %d", type);

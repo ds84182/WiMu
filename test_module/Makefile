@@ -22,7 +22,13 @@ GCC_VER := $(shell $(DEVKITPPC)/bin/powerpc-eabi-gcc -dumpversion)
 PATH := $(DEVKITPPC)/bin:$(PATH)
 LIB_INC_DIRS := $(DEVKITPPC)/lib/gcc/powerpc-eabi/$(GCC_VER)/include \
                 $(DEVKITPPC)/lib/gcc/powerpc-eabi/$(GCC_VER)/include-fixed \
-                $(LIBWIMUDIR)/include
+                $(DEVKITPPC)/powerpc-eabi/include \
+                $(DEVKITPPC)/powerpc-eabi/include/c++/$(GCC_VER) \
+                $(DEVKITPPC)/powerpc-eabi/include/c++/$(GCC_VER)/powerpc-eabi \
+                $(DEVKITPPC)/../libogc/include \
+                $(LIBWIMUDIR)/include \
+                $(LIBWIMUDIR)/../src \
+                $(LIBWIMUDIR)/../include
 
 include makefile.mk
 
@@ -62,7 +68,7 @@ OBJDUMP := $(PREFIX)objdump
 LDFLAGS  += --relocatable -s \
             -T $(LIBWIMUDIR)/module.ld \
             $(patsubst %,-Map %,$(strip $(MAP)))
-LD1FLAGS += --relocatable -s \
+LD1FLAGS += --relocatable -s -gc-sections -e module -u malloc \
             -T $(LIBWIMUDIR)/module.ld
 
 # -O2: optimise lots
@@ -84,11 +90,12 @@ LD1FLAGS += --relocatable -s \
 # -memb: enable embedded application specific compilation
 # -ffunction-sections: split up functions so linker can garbage collect
 # -fdata-sections: split up data so linker can garbage collect
-CFLAGS   += -O2 -Wall -x c -std=gnu99 \
+CFLAGS   += -O2 -Wall -std=gnu++11 \
 			-nostdinc -ffreestanding \
             -DGEKKO -DHW_RVL -D__wii__ \
             -mrvl -mcpu=750 -meabi -mhard-float -fno-common \
-            -msdata=none -memb -ffunction-sections -fdata-sections
+            -msdata=none -memb -ffunction-sections -fdata-sections \
+            -Wl,-T,$(LIBWIMUDIR)/undefines.ld
 
 ifdef DEBUG
 else
@@ -115,7 +122,7 @@ LDFLAGS += $(patsubst %,-l %,$(LIBS)) $(patsubst %,-l %,$(LIBS)) \
 CFLAGS  += $(patsubst %,-I %,$(INC_DIRS)) \
            $(patsubst %,-I %/include,$(LIB_DIRS)) -iquote src
 
-OBJECTS := $(patsubst %.c,$(BUILD)/%.c.o,$(filter %.c,$(SRC)))
+OBJECTS := $(patsubst %.cpp,$(BUILD)/%.cpp.o,$(filter %.cpp,$(SRC)))
 
 ###############################################################################
 # Special build rules
@@ -141,7 +148,7 @@ $(BIN) :
 ###############################################################################
 # Standard build rules
 
-$(BUILD)/%.c.o: %.c | $(BUILD)
+$(BUILD)/%.cpp.o: %.cpp | $(BUILD)
 	$(LOG)
 	-$Qmkdir -p $(dir $@)
 	$Q$(CC) -c $(CFLAGS) $< -o $@

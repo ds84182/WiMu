@@ -81,6 +81,8 @@ int main() {
 	
 	//((void *(*)())module_bin)();
 
+	Module::init();
+
 	ELF testModELF((u8*)test_module_mod);
 	Logger::logf("module symbol: %p", testModELF.findSymbol("module"));
 	Module testModule(&testModELF);

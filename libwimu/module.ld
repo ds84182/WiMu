@@ -1,4 +1,3 @@
-EXTERN(module);
 ENTRY(module);
 
 SECTIONS {

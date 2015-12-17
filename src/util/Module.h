@@ -93,4 +93,6 @@ public:
 
 		return nullptr;
 	}
+
+	static void init();
 };

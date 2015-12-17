@@ -2,7 +2,7 @@
 # Source files
 
 # The source files to compile.
-SRC      := module.c
+SRC      := module.cpp
 # Include directories
 INC_DIRS := 
 # Library directories
