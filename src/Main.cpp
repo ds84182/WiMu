@@ -65,7 +65,7 @@ int main() {
 	
 	Renderer::addRenderable(new RenderableTriangle());
 
-	RenderableRectangle *toolbar = new RenderableRectangle(0, 0, 640, 128, 0x3f51b5ff);
+	/*RenderableRectangle *toolbar = new RenderableRectangle(0, 0, 640, 128, 0x3f51b5ff);
 	Renderer::addRenderable(toolbar);
 
 	RenderableRectangle *page = new RenderableRectangle(0, 128, 640, 480-128, 0xf9f9f9ff);
@@ -77,7 +77,7 @@ int main() {
 	Renderer::runAnimation(new AnimatableFloat(&toolbar->y, 480, 0), 0.5f, EasingFunction::OUT_QUAD);
 	Renderer::runAnimation(new AnimatableColor(toolbar->color, 0x3f51b500, 0x3f51b5ff), 5, EasingFunction::OUT_QUAD);
 	Renderer::runAnimation(new AnimatableFloat(&page->y, 480+128, 128), 0.7f, EasingFunction::OUT_QUAD);
-	Renderer::runAnimation(new AnimatableFloat(&title->y, 480+128-4, 128-4), 0.5f, EasingFunction::OUT_QUAD);
+	Renderer::runAnimation(new AnimatableFloat(&title->y, 480+128-4, 128-4), 0.5f, EasingFunction::OUT_QUAD);*/
 	
 	//((void *(*)())module_bin)();
 

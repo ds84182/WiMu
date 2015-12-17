@@ -29,8 +29,8 @@ LOAD build/module.elf
                 0x0000000000000000       0x10 build/module.elf
                 0x0000000000000000                Renderable::~Renderable()
 
-.text.module    0x0000000000000000      0x1e4
- .text.module   0x0000000000000000      0x1e4 build/module.elf
+.text.module    0x0000000000000000      0x5d8
+ .text.module   0x0000000000000000      0x5d8 build/module.elf
                 0x0000000000000000                module
 
 .text._ZNSs4_Rep9_S_createEjjRKSaIcE
@@ -471,9 +471,9 @@ LOAD build/module.elf
  .rodata        0x000000000000004c      0xe30 build/module.elf
 
 .gcc_except_table.module
-                0x0000000000000000       0x1f
+                0x0000000000000000       0x41
  .gcc_except_table.module
-                0x0000000000000000       0x1f build/module.elf
+                0x0000000000000000       0x41 build/module.elf
 
 .rodata._ZTI10Renderable
                 0x0000000000000000        0x8
@@ -493,12 +493,12 @@ LOAD build/module.elf
                 0x0000000000000000       0x14 build/module.elf
                 0x0000000000000000                vtable for Renderable
 
-.rodata.cst4    0x0000000000000000        0x8
- .rodata.cst4   0x0000000000000000        0x8 build/module.elf
+.rodata.cst4    0x0000000000000000       0x30
+ .rodata.cst4   0x0000000000000000       0x30 build/module.elf
 
-.rodata.str1.4  0x0000000000000000      0x9a3
+.rodata.str1.4  0x0000000000000000      0x9ab
  .rodata.str1.4
-                0x0000000000000000      0x9a3 build/module.elf
+                0x0000000000000000      0x9ab build/module.elf
 
 .gcc_except_table._Znwj
                 0x0000000000000000       0x1a

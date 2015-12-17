@@ -19,7 +19,7 @@ public:
 	AnimatableFloat(f32 *d, f32 s = 0.0f, f32 e = 1.0f) :
 		dest(d), start(s), end(e) {};
 
-	virtual ~AnimatableFloat() {};
+	virtual ~AnimatableFloat();
 	virtual void update(f32 progress) {
 		*dest = progress*(end-start)+start;
 	}
@@ -34,7 +34,7 @@ public:
 	AnimatableColor(u32 *d, u32 s = 0x000000FF, u32 e = 0xFFFFFFFF) :
 		dest(d), start(s), end(e) {};
 
-	virtual ~AnimatableColor() {};
+	virtual ~AnimatableColor();
 	virtual void update(f32 progress) {
 		u8 sr = start>>24, sg = (start>>16)&0xFF, sb = (start>>8)&0xFF, sa = start&0xFF;
 		u8 er = end>>24, eg = (end>>16)&0xFF, eb = (end>>8)&0xFF, ea = end&0xFF;

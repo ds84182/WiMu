@@ -2,6 +2,14 @@
 
 #include <math.h>
 
+AnimatableFloat::~AnimatableFloat() {
+
+}
+
+AnimatableColor::~AnimatableColor() {
+
+}
+
 namespace EasingFunction {
 	f32 linear(f32 t, f32 d) {
 		return t/d;
