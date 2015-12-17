@@ -32,9 +32,9 @@ INCLUDES	:=	include src gen
 #---------------------------------------------------------------------------------
 
 CFLAGS		=	-g -O2 -Wall $(MACHDEP) $(INCLUDE)
-CXXFLAGS	=	$(CFLAGS) -std=gnu++11
+CXXFLAGS	=	$(CFLAGS) -std=gnu++11 -Wl,--no-as-needed -Wl,--copy-dt-needed-entries -fvisibility=default
 
-LDFLAGS	=	-g $(MACHDEP) -Wl,-Map,$(notdir $@).map
+LDFLAGS	=	-g $(MACHDEP) -Wl,-Map,$(notdir $@).map -fvisibility=default -Wl,-T,externs.ld
 
 #---------------------------------------------------------------------------------
 # any extra libraries we wish to link with the project
@@ -127,11 +127,18 @@ generate:
 #---------------------------------------------------------------------------------
 else
 
+.PHONY: generate_externs
+
 #---------------------------------------------------------------------------------
 # main targets
 #---------------------------------------------------------------------------------
+all: $(OFILES) generate_externs $(OUTPUT).dol
 $(OUTPUT).dol: $(OUTPUT).elf
 $(OUTPUT).elf: $(OFILES)
+
+generate_externs:
+	@echo generating externs
+	@lua ../generate_externs.lua > externs.ld
 
 #---------------------------------------------------------------------------------
 # This rule links in binary data with the .bin extension

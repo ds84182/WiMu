@@ -15,6 +15,7 @@ extern void *af_indic_script_class;
 extern void *af_latin_script_class;
 extern void *afm_parser_funcs;
 extern void *__alloc_handle;
+extern void *__any_on;
 extern void *apply_ir_smoothing;
 extern void *apply_smoothing;
 extern void *__Arena1Hi;
@@ -31,6 +32,7 @@ extern void *atangentf;
 extern void *__atexit_lock;
 extern void *atol;
 extern void *autofit_module_class;
+extern void *__b2d;
 extern void *_Balloc;
 extern void *bdf_cmap_class;
 extern void *bdf_driver_class;
@@ -123,6 +125,7 @@ extern void *console_font_8x16;
 extern void *__console_init;
 extern void *__console_write;
 extern void *_context_switch_want;
+extern void *__copybits;
 extern void *core_context;
 extern void *cos;
 extern void *cosf;
@@ -281,8 +284,10 @@ extern void *_FAT_unlink_r;
 extern void *_FAT_write_r;
 extern void *fclose;
 extern void *_fclose_r;
+extern void *ferror;
 extern void *fflush;
 extern void *_fflush_r;
+extern void *fgetc;
 extern void *FindDevice;
 extern void *FindFirstValidPartition_buf;
 extern void *find_sensorbar;
@@ -523,6 +528,7 @@ extern void *g_CSD;
 extern void *getcwd;
 extern void *GetDeviceOpTab;
 extern void *__get_handle;
+extern void *__gethex;
 extern void *gettick;
 extern void *gettime;
 extern void *__gettzinfo;
@@ -653,10 +659,15 @@ extern void *hci_write_page_scan_type;
 extern void *hci_write_page_timeout;
 extern void *hci_write_pin_type;
 extern void *hci_write_scan_enable;
+extern void *__hexdig;
+extern void *__hexdig_init;
+extern void *__hexnan;
 extern void *__hi0bits;
 extern void *__i2b;
+extern void *I8_POSITION;
 extern void *I8_POSITION_COLOR;
 extern void *I8_POSITION_COLOR_TEX;
+extern void *I8_POSITION_TEX;
 extern void *ICBlockInvalidate;
 extern void *ICDisable;
 extern void *ICEnable;
@@ -718,10 +729,13 @@ extern void *IRQ_GetHandler;
 extern void *__irq_init;
 extern void *IRQ_Request;
 extern void *IRQ_Restore;
+extern void *isalpha;
 extern void *_isatty_r;
 extern void *__isIPL;
 extern void *ispos;
 extern void *isposf;
+extern void *isspace;
+extern void *iswspace;
 extern void *_jp2uc;
 extern void *kprintf;
 extern void *kvsprintf;
@@ -940,6 +954,7 @@ extern void *__multadd;
 extern void *__multiply;
 extern void *__myArena1Hi;
 extern void *__myArena1Lo;
+extern void *nanf;
 extern void *nanosleep;
 extern void *net_close;
 extern void *net_connect;
@@ -1186,6 +1201,7 @@ extern void *_putc_r;
 extern void *puts;
 extern void *_puts_r;
 extern void *qsort;
+extern void *__ratio;
 extern void *_read_r;
 extern void *realloc;
 extern void *_realloc_r;
@@ -1240,6 +1256,7 @@ extern void *_restgpr_31_x;
 extern void *Roboto_Regular_ttf;
 extern void *Roboto_Regular_ttf_end;
 extern void *Roboto_Regular_ttf_size;
+extern void *__s2b;
 extern void *_savefpr_14;
 extern void *_savefpr_15;
 extern void *_savefpr_16;
@@ -1263,6 +1280,7 @@ extern void *__SBSS2_END__;
 extern void *__sbss_end;
 extern void *__SBSS_END__;
 extern void *__sbss_start;
+extern void *__sccl;
 extern void *__sclose;
 extern void *__SDATA2_START__;
 extern void *__SDATA_START__;
@@ -1283,6 +1301,7 @@ extern void *sdio_ReadSectors;
 extern void *sdio_Shutdown;
 extern void *sdio_Startup;
 extern void *sdio_WriteSectors;
+extern void *__seofread;
 extern void *setDefaultDevice;
 extern void *setjmp;
 extern void *setvbuf;
@@ -1293,6 +1312,7 @@ extern void *sfnt_module_class;
 extern void *__sfp;
 extern void *__sfp_lock_acquire;
 extern void *__sfp_lock_release;
+extern void *_sfread_r;
 extern void *__sfvwrite_r;
 extern void *SI_Busy;
 extern void *SI_DisablePolling;
@@ -1331,8 +1351,12 @@ extern void *sramcntrl;
 extern void *__sram_init;
 extern void *__sread;
 extern void *__srefill_r;
+extern void *__srget_r;
+extern void *sscanf;
 extern void *__sseek;
 extern void *__ssprint_r;
+extern void *__ssrefill_r;
+extern void *__ssvfscanf_r;
 extern void *__stack_addr;
 extern void *__stack_end;
 extern void *_start;
@@ -1360,10 +1384,14 @@ extern void *strnlen;
 extern void *strpbrk;
 extern void *strrchr;
 extern void *strstr;
+extern void *_strtod_r;
 extern void *strtol;
+extern void *_strtoll_r;
 extern void *_strtol_r;
 extern void *_strtoull_r;
 extern void *_strtoul_r;
+extern void *__submore;
+extern void *_sungetc_r;
 extern void *_svfprintf_r;
 extern void *__swbuf_r;
 extern void *__swrite;
@@ -1456,6 +1484,7 @@ extern void *__tz_lock;
 extern void *__tz_unlock;
 extern void *udelay;
 extern void *__udivdi3;
+extern void *__ulp;
 extern void *__umoddi3;
 extern void *__UnmaskIrq;
 extern void *_Unwind_Backtrace;
@@ -1516,6 +1545,7 @@ extern void *usleep;
 extern void *__utf8_mbtowc;
 extern void *__utf8_wctomb;
 extern void *_V_EXPORTNAME;
+extern void *vfprintf;
 extern void *_vfprintf_r;
 extern void *VIDEO_Configure;
 extern void *VIDEO_Flush;
@@ -1590,8 +1620,10 @@ extern void *WPAD_Shutdown;
 extern void *_wrapup_reent;
 extern void *write;
 extern void *_write_r;
+extern void *_Z10testThreadP6Future;
 extern void *_Z12InitFreeTypev;
 extern void *_Z14charToWideCharPKc;
+extern void *_Z14DeinitFreeTypev;
 extern void *zcalloc;
 extern void *zcfree;
 extern void *_ZdaPv;
@@ -1611,26 +1643,53 @@ extern void *_ZN10__cxxabiv120__si_class_type_infoD0Ev;
 extern void *_ZN10__cxxabiv120__si_class_type_infoD1Ev;
 extern void *_ZN10__cxxabiv120__si_class_type_infoD2Ev;
 extern void *_ZN10__cxxabiv120__unexpected_handlerE;
+extern void *_ZN10EventQueue10eventMutexE;
+extern void *_ZN10EventQueue7currentE;
+extern void *_ZN10FreeTypeGX10unloadFontEv;
 extern void *_ZN10FreeTypeGX13loadGlyphDataEP10FT_Bitmap_P13ftgxCharData_;
 extern void *_ZN10FreeTypeGX14cacheGlyphDataEw;
 extern void *_ZN10FreeTypeGX14setDefaultModeEv;
 extern void *_ZN10FreeTypeGX15drawTextFeatureEsstP15ftgxDataOffset_t9_gx_color;
 extern void *_ZN10FreeTypeGX15setVertexFormatEh;
+extern void *_ZN10FreeTypeGX18adjustTextureWidthEt;
+extern void *_ZN10FreeTypeGX19adjustTextureHeightEt;
+extern void *_ZN10FreeTypeGX19getStyleOffsetWidthEtt;
 extern void *_ZN10FreeTypeGX20getStyleOffsetHeightEP15ftgxDataOffset_t;
+extern void *_ZN10FreeTypeGX20setCompatibilityModeEj;
+extern void *_ZN10FreeTypeGX22cacheGlyphDataCompleteEv;
 extern void *_ZN10FreeTypeGX24copyFeatureToFramebufferEffss9_gx_color;
 extern void *_ZN10FreeTypeGX24copyTextureToFramebufferEP10_gx_texobjffss9_gx_color;
+extern void *_ZN10FreeTypeGX8drawTextEssPKw9_gx_colort;
 extern void *_ZN10FreeTypeGX8drawTextEssPw9_gx_colort;
+extern void *_ZN10FreeTypeGX8getWidthEPKw;
 extern void *_ZN10FreeTypeGX8getWidthEPw;
+extern void *_ZN10FreeTypeGX9getHeightEPKw;
+extern void *_ZN10FreeTypeGX9getHeightEPw;
+extern void *_ZN10FreeTypeGX9getOffsetEPKwP15ftgxDataOffset_;
 extern void *_ZN10FreeTypeGX9getOffsetEPwP15ftgxDataOffset_;
 extern void *_ZN10FreeTypeGXC1EPKhljh;
 extern void *_ZN10FreeTypeGXC2EPKhljh;
+extern void *_ZN10FreeTypeGXD1Ev;
+extern void *_ZN10FreeTypeGXD2Ev;
 extern void *_ZN10ObjectPoolIP9UIElementED1Ev;
 extern void *_ZN10ObjectPoolIP9UIElementED2Ev;
 extern void *_ZN10RenderableD0Ev;
 extern void *_ZN10RenderableD1Ev;
 extern void *_ZN10RenderableD2Ev;
+extern void *_ZN11AsyncObject13handleMessageEPv;
+extern void *_ZN11AsyncObjectD0Ev;
+extern void *_ZN11AsyncObjectD1Ev;
+extern void *_ZN11AsyncObjectD2Ev;
+extern void *_ZN14EasingFunction11IN_OUT_QUADE;
+extern void *_ZN14EasingFunction11OUT_IN_QUADE;
+extern void *_ZN14EasingFunction6inQuadEff;
+extern void *_ZN14EasingFunction6LINEARE;
+extern void *_ZN14EasingFunction6linearEff;
+extern void *_ZN14EasingFunction7IN_QUADE;
 extern void *_ZN14EasingFunction7outQuadEff;
 extern void *_ZN14EasingFunction8OUT_QUADE;
+extern void *_ZN14EasingFunction9inOutQuadEff;
+extern void *_ZN14EasingFunction9outInQuadEff;
 extern void *_ZN14RenderableText6renderEv;
 extern void *_ZN14RenderableTextD0Ev;
 extern void *_ZN14RenderableTextD1Ev;
@@ -1647,6 +1706,16 @@ extern void *_ZN15RenderableGroup6renderEv;
 extern void *_ZN15RenderableGroupD0Ev;
 extern void *_ZN15RenderableGroupD1Ev;
 extern void *_ZN15RenderableGroupD2Ev;
+extern void *_ZN16EventQueueThreadC1EPFPvS0_ES0_;
+extern void *_ZN16EventQueueThreadC2EPFPvS0_ES0_;
+extern void *_ZN16FilesystemEntityD1Ev;
+extern void *_ZN16FilesystemEntityD2Ev;
+extern void *_ZN16HomebrewAppState4loadEj;
+extern void *_ZN16HomebrewAppState6unloadEv;
+extern void *_ZN16HomebrewAppStateD0Ev;
+extern void *_ZN16HomebrewAppStateD1Ev;
+extern void *_ZN16HomebrewAppStateD2Ev;
+extern void *_ZN17EventSubscription13handleMessageEPv;
 extern void *_ZN17RenderableTexture6renderEv;
 extern void *_ZN17RenderableTextureD0Ev;
 extern void *_ZN17RenderableTextureD1Ev;
@@ -1665,6 +1734,8 @@ extern void *_ZN19RenderableRectangle6renderEv;
 extern void *_ZN19RenderableRectangleD0Ev;
 extern void *_ZN19RenderableRectangleD1Ev;
 extern void *_ZN19RenderableRectangleD2Ev;
+extern void *_ZN2UI10AddCommand7executeEv;
+extern void *_ZN2UI10getElementEP5State;
 extern void *_ZN2UI10stopThreadE;
 extern void *_ZN2UI12addForRenderEP5State;
 extern void *_ZN2UI12elementPoolsE;
@@ -1689,6 +1760,13 @@ extern void *_ZN2UI9UICommandD0Ev;
 extern void *_ZN2UI9UICommandD1Ev;
 extern void *_ZN2UI9UICommandD2Ev;
 extern void *_ZN4Font4initEv;
+extern void *_ZN5StateD0Ev;
+extern void *_ZN5StateD1Ev;
+extern void *_ZN5StateD2Ev;
+extern void *_ZN6Future13handleMessageEPv;
+extern void *_ZN6FutureD0Ev;
+extern void *_ZN6FutureD1Ev;
+extern void *_ZN6FutureD2Ev;
 extern void *_ZN6Loader11stopThreadsE;
 extern void *_ZN6Loader4mainEPv;
 extern void *_ZN6Loader4stopEv;
@@ -1715,12 +1793,213 @@ extern void *_ZN7Globals6deinitEv;
 extern void *_ZN7Globals6noIconE;
 extern void *_ZN8Renderer10stopThreadE;
 extern void *_ZN8Renderer11renderQueueE;
-extern void *_ZN8Renderer12runAnimationEP10AnimatablefPFfffE;
 extern void *_ZN8Renderer13addRenderableEP10Renderable;
 extern void *_ZN8Renderer4mainEPv;
 extern void *_ZN8Renderer4stopEv;
 extern void *_ZN8Renderer5startEv;
 extern void *_ZN8Renderer6threadE;
+extern void *_ZN8tinyxml210XMLComment9ParseDeepEPcPNS_7StrPairE;
+extern void *_ZN8tinyxml210XMLComment9ToCommentEv;
+extern void *_ZN8tinyxml210XMLCommentC1EPNS_11XMLDocumentE;
+extern void *_ZN8tinyxml210XMLCommentC2EPNS_11XMLDocumentE;
+extern void *_ZN8tinyxml210XMLCommentD0Ev;
+extern void *_ZN8tinyxml210XMLCommentD1Ev;
+extern void *_ZN8tinyxml210XMLCommentD2Ev;
+extern void *_ZN8tinyxml210XMLElement15DeleteAttributeEPKc;
+extern void *_ZN8tinyxml210XMLElement15DeleteAttributeEPNS_12XMLAttributeE;
+extern void *_ZN8tinyxml210XMLElement15ParseAttributesEPc;
+extern void *_ZN8tinyxml210XMLElement21FindOrCreateAttributeEPKc;
+extern void *_ZN8tinyxml210XMLElement7SetTextEb;
+extern void *_ZN8tinyxml210XMLElement7SetTextEd;
+extern void *_ZN8tinyxml210XMLElement7SetTextEf;
+extern void *_ZN8tinyxml210XMLElement7SetTextEi;
+extern void *_ZN8tinyxml210XMLElement7SetTextEj;
+extern void *_ZN8tinyxml210XMLElement7SetTextEPKc;
+extern void *_ZN8tinyxml210XMLElement9ParseDeepEPcPNS_7StrPairE;
+extern void *_ZN8tinyxml210XMLElement9ToElementEv;
+extern void *_ZN8tinyxml210XMLElementC1EPNS_11XMLDocumentE;
+extern void *_ZN8tinyxml210XMLElementC2EPNS_11XMLDocumentE;
+extern void *_ZN8tinyxml210XMLElementD0Ev;
+extern void *_ZN8tinyxml210XMLElementD1Ev;
+extern void *_ZN8tinyxml210XMLElementD2Ev;
+extern void *_ZN8tinyxml210XMLPrinter10PrintSpaceEi;
+extern void *_ZN8tinyxml210XMLPrinter10PushHeaderEbb;
+extern void *_ZN8tinyxml210XMLPrinter10VisitEnterERKNS_10XMLElementEPKNS_12XMLAttributeE;
+extern void *_ZN8tinyxml210XMLPrinter10VisitEnterERKNS_11XMLDocumentE;
+extern void *_ZN8tinyxml210XMLPrinter11CompactModeERKNS_10XMLElementE;
+extern void *_ZN8tinyxml210XMLPrinter11OpenElementEPKcb;
+extern void *_ZN8tinyxml210XMLPrinter11PrintStringEPKcb;
+extern void *_ZN8tinyxml210XMLPrinter11PushCommentEPKc;
+extern void *_ZN8tinyxml210XMLPrinter11PushUnknownEPKc;
+extern void *_ZN8tinyxml210XMLPrinter12CloseElementEb;
+extern void *_ZN8tinyxml210XMLPrinter13PushAttributeEPKcb;
+extern void *_ZN8tinyxml210XMLPrinter13PushAttributeEPKcd;
+extern void *_ZN8tinyxml210XMLPrinter13PushAttributeEPKci;
+extern void *_ZN8tinyxml210XMLPrinter13PushAttributeEPKcj;
+extern void *_ZN8tinyxml210XMLPrinter13PushAttributeEPKcS2_;
+extern void *_ZN8tinyxml210XMLPrinter15PushDeclarationEPKc;
+extern void *_ZN8tinyxml210XMLPrinter23SealElementIfJustOpenedEv;
+extern void *_ZN8tinyxml210XMLPrinter5PrintEPKcz;
+extern void *_ZN8tinyxml210XMLPrinter5VisitERKNS_10XMLCommentE;
+extern void *_ZN8tinyxml210XMLPrinter5VisitERKNS_10XMLUnknownE;
+extern void *_ZN8tinyxml210XMLPrinter5VisitERKNS_14XMLDeclarationE;
+extern void *_ZN8tinyxml210XMLPrinter5VisitERKNS_7XMLTextE;
+extern void *_ZN8tinyxml210XMLPrinter8PushTextEb;
+extern void *_ZN8tinyxml210XMLPrinter8PushTextEd;
+extern void *_ZN8tinyxml210XMLPrinter8PushTextEf;
+extern void *_ZN8tinyxml210XMLPrinter8PushTextEi;
+extern void *_ZN8tinyxml210XMLPrinter8PushTextEj;
+extern void *_ZN8tinyxml210XMLPrinter8PushTextEPKcb;
+extern void *_ZN8tinyxml210XMLPrinter9VisitExitERKNS_10XMLElementE;
+extern void *_ZN8tinyxml210XMLPrinter9VisitExitERKNS_11XMLDocumentE;
+extern void *_ZN8tinyxml210XMLPrinterC1EP7__sFILEbi;
+extern void *_ZN8tinyxml210XMLPrinterC2EP7__sFILEbi;
+extern void *_ZN8tinyxml210XMLPrinterD0Ev;
+extern void *_ZN8tinyxml210XMLPrinterD1Ev;
+extern void *_ZN8tinyxml210XMLPrinterD2Ev;
+extern void *_ZN8tinyxml210XMLUnknown9ParseDeepEPcPNS_7StrPairE;
+extern void *_ZN8tinyxml210XMLUnknown9ToUnknownEv;
+extern void *_ZN8tinyxml210XMLUnknownC1EPNS_11XMLDocumentE;
+extern void *_ZN8tinyxml210XMLUnknownC2EPNS_11XMLDocumentE;
+extern void *_ZN8tinyxml210XMLUnknownD0Ev;
+extern void *_ZN8tinyxml210XMLUnknownD1Ev;
+extern void *_ZN8tinyxml210XMLUnknownD2Ev;
+extern void *_ZN8tinyxml210XMLVisitor10VisitEnterERKNS_10XMLElementEPKNS_12XMLAttributeE;
+extern void *_ZN8tinyxml210XMLVisitor10VisitEnterERKNS_11XMLDocumentE;
+extern void *_ZN8tinyxml210XMLVisitor5VisitERKNS_10XMLCommentE;
+extern void *_ZN8tinyxml210XMLVisitor5VisitERKNS_10XMLUnknownE;
+extern void *_ZN8tinyxml210XMLVisitor5VisitERKNS_14XMLDeclarationE;
+extern void *_ZN8tinyxml210XMLVisitor5VisitERKNS_7XMLTextE;
+extern void *_ZN8tinyxml210XMLVisitor9VisitExitERKNS_10XMLElementE;
+extern void *_ZN8tinyxml210XMLVisitor9VisitExitERKNS_11XMLDocumentE;
+extern void *_ZN8tinyxml210XMLVisitorD0Ev;
+extern void *_ZN8tinyxml210XMLVisitorD1Ev;
+extern void *_ZN8tinyxml210XMLVisitorD2Ev;
+extern void *_ZN8tinyxml211XMLDocument10DeleteNodeEPNS_7XMLNodeE;
+extern void *_ZN8tinyxml211XMLDocument10NewCommentEPKc;
+extern void *_ZN8tinyxml211XMLDocument10NewElementEPKc;
+extern void *_ZN8tinyxml211XMLDocument10NewUnknownEPKc;
+extern void *_ZN8tinyxml211XMLDocument10ToDocumentEv;
+extern void *_ZN8tinyxml211XMLDocument11_errorNamesE;
+extern void *_ZN8tinyxml211XMLDocument14NewDeclarationEPKc;
+extern void *_ZN8tinyxml211XMLDocument5ClearEv;
+extern void *_ZN8tinyxml211XMLDocument5ParseEPKcj;
+extern void *_ZN8tinyxml211XMLDocument5ParseEv;
+extern void *_ZN8tinyxml211XMLDocument7NewTextEPKc;
+extern void *_ZN8tinyxml211XMLDocument8IdentifyEPcPPNS_7XMLNodeE;
+extern void *_ZN8tinyxml211XMLDocument8LoadFileEP7__sFILE;
+extern void *_ZN8tinyxml211XMLDocument8LoadFileEPKc;
+extern void *_ZN8tinyxml211XMLDocument8SaveFileEP7__sFILEb;
+extern void *_ZN8tinyxml211XMLDocument8SaveFileEPKcb;
+extern void *_ZN8tinyxml211XMLDocument8SetErrorENS_8XMLErrorEPKcS3_;
+extern void *_ZN8tinyxml211XMLDocumentC1EbNS_10WhitespaceE;
+extern void *_ZN8tinyxml211XMLDocumentC2EbNS_10WhitespaceE;
+extern void *_ZN8tinyxml211XMLDocumentD0Ev;
+extern void *_ZN8tinyxml211XMLDocumentD1Ev;
+extern void *_ZN8tinyxml211XMLDocumentD2Ev;
+extern void *_ZN8tinyxml212XMLAttribute12SetAttributeEb;
+extern void *_ZN8tinyxml212XMLAttribute12SetAttributeEd;
+extern void *_ZN8tinyxml212XMLAttribute12SetAttributeEf;
+extern void *_ZN8tinyxml212XMLAttribute12SetAttributeEi;
+extern void *_ZN8tinyxml212XMLAttribute12SetAttributeEj;
+extern void *_ZN8tinyxml212XMLAttribute12SetAttributeEPKc;
+extern void *_ZN8tinyxml212XMLAttribute7SetNameEPKc;
+extern void *_ZN8tinyxml212XMLAttribute9ParseDeepEPcb;
+extern void *_ZN8tinyxml212XMLAttributeD0Ev;
+extern void *_ZN8tinyxml212XMLAttributeD1Ev;
+extern void *_ZN8tinyxml212XMLAttributeD2Ev;
+extern void *_ZN8tinyxml214XMLDeclaration13ToDeclarationEv;
+extern void *_ZN8tinyxml214XMLDeclaration9ParseDeepEPcPNS_7StrPairE;
+extern void *_ZN8tinyxml214XMLDeclarationC1EPNS_11XMLDocumentE;
+extern void *_ZN8tinyxml214XMLDeclarationC2EPNS_11XMLDocumentE;
+extern void *_ZN8tinyxml214XMLDeclarationD0Ev;
+extern void *_ZN8tinyxml214XMLDeclarationD1Ev;
+extern void *_ZN8tinyxml214XMLDeclarationD2Ev;
+extern void *_ZN8tinyxml225LongFitsIntoSizeTMinusOneILb0EE4FitsEm;
+extern void *_ZN8tinyxml27MemPoolD0Ev;
+extern void *_ZN8tinyxml27MemPoolD1Ev;
+extern void *_ZN8tinyxml27MemPoolD2Ev;
+extern void *_ZN8tinyxml27StrPair10TransferToEPS0_;
+extern void *_ZN8tinyxml27StrPair18CollapseWhitespaceEv;
+extern void *_ZN8tinyxml27StrPair5ResetEv;
+extern void *_ZN8tinyxml27StrPair6GetStrEv;
+extern void *_ZN8tinyxml27StrPair6SetStrEPKci;
+extern void *_ZN8tinyxml27StrPair9ParseNameEPc;
+extern void *_ZN8tinyxml27StrPair9ParseTextEPcPKci;
+extern void *_ZN8tinyxml27StrPairD1Ev;
+extern void *_ZN8tinyxml27StrPairD2Ev;
+extern void *_ZN8tinyxml27XMLNode10DeleteNodeEPS0_;
+extern void *_ZN8tinyxml27XMLNode10ToDocumentEv;
+extern void *_ZN8tinyxml27XMLNode11DeleteChildEPS0_;
+extern void *_ZN8tinyxml27XMLNode13ToDeclarationEv;
+extern void *_ZN8tinyxml27XMLNode14DeleteChildrenEv;
+extern void *_ZN8tinyxml27XMLNode14InsertEndChildEPS0_;
+extern void *_ZN8tinyxml27XMLNode16InsertAfterChildEPS0_S1_;
+extern void *_ZN8tinyxml27XMLNode16InsertFirstChildEPS0_;
+extern void *_ZN8tinyxml27XMLNode6ToTextEv;
+extern void *_ZN8tinyxml27XMLNode6UnlinkEPS0_;
+extern void *_ZN8tinyxml27XMLNode8SetValueEPKcb;
+extern void *_ZN8tinyxml27XMLNode9ParseDeepEPcPNS_7StrPairE;
+extern void *_ZN8tinyxml27XMLNode9ToCommentEv;
+extern void *_ZN8tinyxml27XMLNode9ToElementEv;
+extern void *_ZN8tinyxml27XMLNode9ToUnknownEv;
+extern void *_ZN8tinyxml27XMLNodeC1EPNS_11XMLDocumentE;
+extern void *_ZN8tinyxml27XMLNodeC2EPNS_11XMLDocumentE;
+extern void *_ZN8tinyxml27XMLNodeD0Ev;
+extern void *_ZN8tinyxml27XMLNodeD1Ev;
+extern void *_ZN8tinyxml27XMLNodeD2Ev;
+extern void *_ZN8tinyxml27XMLText6ToTextEv;
+extern void *_ZN8tinyxml27XMLText9ParseDeepEPcPNS_7StrPairE;
+extern void *_ZN8tinyxml27XMLTextD0Ev;
+extern void *_ZN8tinyxml27XMLTextD1Ev;
+extern void *_ZN8tinyxml27XMLTextD2Ev;
+extern void *_ZN8tinyxml27XMLUtil10ToUnsignedEPKcPj;
+extern void *_ZN8tinyxml27XMLUtil15GetCharacterRefEPKcPcPi;
+extern void *_ZN8tinyxml27XMLUtil18ConvertUTF32ToUTF8EmPcPi;
+extern void *_ZN8tinyxml27XMLUtil5ToIntEPKcPi;
+extern void *_ZN8tinyxml27XMLUtil5ToStrEbPci;
+extern void *_ZN8tinyxml27XMLUtil5ToStrEdPci;
+extern void *_ZN8tinyxml27XMLUtil5ToStrEfPci;
+extern void *_ZN8tinyxml27XMLUtil5ToStrEiPci;
+extern void *_ZN8tinyxml27XMLUtil5ToStrEjPci;
+extern void *_ZN8tinyxml27XMLUtil6ToBoolEPKcPb;
+extern void *_ZN8tinyxml27XMLUtil7ReadBOMEPKcPb;
+extern void *_ZN8tinyxml27XMLUtil7ToFloatEPKcPf;
+extern void *_ZN8tinyxml27XMLUtil8ToDoubleEPKcPd;
+extern void *_ZN8tinyxml28MemPoolTILi36EE10SetTrackedEv;
+extern void *_ZN8tinyxml28MemPoolTILi36EE4FreeEPv;
+extern void *_ZN8tinyxml28MemPoolTILi36EE5AllocEv;
+extern void *_ZN8tinyxml28MemPoolTILi36EE5ClearEv;
+extern void *_ZN8tinyxml28MemPoolTILi36EED0Ev;
+extern void *_ZN8tinyxml28MemPoolTILi36EED1Ev;
+extern void *_ZN8tinyxml28MemPoolTILi36EED2Ev;
+extern void *_ZN8tinyxml28MemPoolTILi44EE10SetTrackedEv;
+extern void *_ZN8tinyxml28MemPoolTILi44EE4FreeEPv;
+extern void *_ZN8tinyxml28MemPoolTILi44EE5AllocEv;
+extern void *_ZN8tinyxml28MemPoolTILi44EE5ClearEv;
+extern void *_ZN8tinyxml28MemPoolTILi44EED0Ev;
+extern void *_ZN8tinyxml28MemPoolTILi44EED1Ev;
+extern void *_ZN8tinyxml28MemPoolTILi44EED2Ev;
+extern void *_ZN8tinyxml28MemPoolTILi48EE10SetTrackedEv;
+extern void *_ZN8tinyxml28MemPoolTILi48EE4FreeEPv;
+extern void *_ZN8tinyxml28MemPoolTILi48EE5AllocEv;
+extern void *_ZN8tinyxml28MemPoolTILi48EE5ClearEv;
+extern void *_ZN8tinyxml28MemPoolTILi48EED0Ev;
+extern void *_ZN8tinyxml28MemPoolTILi48EED1Ev;
+extern void *_ZN8tinyxml28MemPoolTILi48EED2Ev;
+extern void *_ZN8tinyxml28MemPoolTILi52EE10SetTrackedEv;
+extern void *_ZN8tinyxml28MemPoolTILi52EE4FreeEPv;
+extern void *_ZN8tinyxml28MemPoolTILi52EE5AllocEv;
+extern void *_ZN8tinyxml28MemPoolTILi52EE5ClearEv;
+extern void *_ZN8tinyxml28MemPoolTILi52EED0Ev;
+extern void *_ZN8tinyxml28MemPoolTILi52EED1Ev;
+extern void *_ZN8tinyxml28MemPoolTILi52EED2Ev;
+extern void *_ZN9Completer8completeEPv;
+extern void *_ZN9CompleterC1Ev;
+extern void *_ZN9CompleterC2Ev;
+extern void *_ZN9CompleterD0Ev;
+extern void *_ZN9CompleterD1Ev;
+extern void *_ZN9CompleterD2Ev;
 extern void *_ZN9__gnu_cxx27__verbose_terminate_handlerEv;
 extern void *_ZN9TCPSocket4recvEPvji;
 extern void *_ZN9TCPSocket4sendEPKvji;
@@ -1736,6 +2015,65 @@ extern void *_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_
 extern void *_ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE;
 extern void *_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE;
 extern void *_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_;
+extern void *_ZNK8tinyxml210XMLComment12ShallowCloneEPNS_11XMLDocumentE;
+extern void *_ZNK8tinyxml210XMLComment12ShallowEqualEPKNS_7XMLNodeE;
+extern void *_ZNK8tinyxml210XMLComment6AcceptEPNS_10XMLVisitorE;
+extern void *_ZNK8tinyxml210XMLComment9ToCommentEv;
+extern void *_ZNK8tinyxml210XMLElement12QueryIntTextEPi;
+extern void *_ZNK8tinyxml210XMLElement12ShallowCloneEPNS_11XMLDocumentE;
+extern void *_ZNK8tinyxml210XMLElement12ShallowEqualEPKNS_7XMLNodeE;
+extern void *_ZNK8tinyxml210XMLElement13FindAttributeEPKc;
+extern void *_ZNK8tinyxml210XMLElement13QueryBoolTextEPb;
+extern void *_ZNK8tinyxml210XMLElement14QueryFloatTextEPf;
+extern void *_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd;
+extern void *_ZNK8tinyxml210XMLElement17QueryUnsignedTextEPj;
+extern void *_ZNK8tinyxml210XMLElement6AcceptEPNS_10XMLVisitorE;
+extern void *_ZNK8tinyxml210XMLElement7GetTextEv;
+extern void *_ZNK8tinyxml210XMLElement9AttributeEPKcS2_;
+extern void *_ZNK8tinyxml210XMLElement9ToElementEv;
+extern void *_ZNK8tinyxml210XMLUnknown12ShallowCloneEPNS_11XMLDocumentE;
+extern void *_ZNK8tinyxml210XMLUnknown12ShallowEqualEPKNS_7XMLNodeE;
+extern void *_ZNK8tinyxml210XMLUnknown6AcceptEPNS_10XMLVisitorE;
+extern void *_ZNK8tinyxml210XMLUnknown9ToUnknownEv;
+extern void *_ZNK8tinyxml211XMLDocument10PrintErrorEv;
+extern void *_ZNK8tinyxml211XMLDocument10ToDocumentEv;
+extern void *_ZNK8tinyxml211XMLDocument12ShallowCloneEPS0_;
+extern void *_ZNK8tinyxml211XMLDocument12ShallowEqualEPKNS_7XMLNodeE;
+extern void *_ZNK8tinyxml211XMLDocument5PrintEPNS_10XMLPrinterE;
+extern void *_ZNK8tinyxml211XMLDocument6AcceptEPNS_10XMLVisitorE;
+extern void *_ZNK8tinyxml211XMLDocument9ErrorNameEv;
+extern void *_ZNK8tinyxml212XMLAttribute13QueryIntValueEPi;
+extern void *_ZNK8tinyxml212XMLAttribute14QueryBoolValueEPb;
+extern void *_ZNK8tinyxml212XMLAttribute15QueryFloatValueEPf;
+extern void *_ZNK8tinyxml212XMLAttribute16QueryDoubleValueEPd;
+extern void *_ZNK8tinyxml212XMLAttribute18QueryUnsignedValueEPj;
+extern void *_ZNK8tinyxml212XMLAttribute4NameEv;
+extern void *_ZNK8tinyxml212XMLAttribute5ValueEv;
+extern void *_ZNK8tinyxml214XMLDeclaration12ShallowCloneEPNS_11XMLDocumentE;
+extern void *_ZNK8tinyxml214XMLDeclaration12ShallowEqualEPKNS_7XMLNodeE;
+extern void *_ZNK8tinyxml214XMLDeclaration13ToDeclarationEv;
+extern void *_ZNK8tinyxml214XMLDeclaration6AcceptEPNS_10XMLVisitorE;
+extern void *_ZNK8tinyxml27XMLNode10ToDocumentEv;
+extern void *_ZNK8tinyxml27XMLNode13ToDeclarationEv;
+extern void *_ZNK8tinyxml27XMLNode16LastChildElementEPKc;
+extern void *_ZNK8tinyxml27XMLNode17FirstChildElementEPKc;
+extern void *_ZNK8tinyxml27XMLNode18NextSiblingElementEPKc;
+extern void *_ZNK8tinyxml27XMLNode19InsertChildPreambleEPS0_;
+extern void *_ZNK8tinyxml27XMLNode22PreviousSiblingElementEPKc;
+extern void *_ZNK8tinyxml27XMLNode5ValueEv;
+extern void *_ZNK8tinyxml27XMLNode6ToTextEv;
+extern void *_ZNK8tinyxml27XMLNode9ToCommentEv;
+extern void *_ZNK8tinyxml27XMLNode9ToElementEv;
+extern void *_ZNK8tinyxml27XMLNode9ToUnknownEv;
+extern void *_ZNK8tinyxml27XMLText12ShallowCloneEPNS_11XMLDocumentE;
+extern void *_ZNK8tinyxml27XMLText12ShallowEqualEPKNS_7XMLNodeE;
+extern void *_ZNK8tinyxml27XMLText6AcceptEPNS_10XMLVisitorE;
+extern void *_ZNK8tinyxml27XMLText6ToTextEv;
+extern void *_ZNK8tinyxml28MemPoolTILi36EE8ItemSizeEv;
+extern void *_ZNK8tinyxml28MemPoolTILi44EE8ItemSizeEv;
+extern void *_ZNK8tinyxml28MemPoolTILi48EE8ItemSizeEv;
+extern void *_ZNK8tinyxml28MemPoolTILi52EE8ItemSizeEv;
+extern void *_ZNKSs5rfindEcj;
 extern void *_ZNKSt11logic_error4whatEv;
 extern void *_ZNKSt13bad_exception4whatEv;
 extern void *_ZNKSt14error_category10equivalentEiRKSt15error_condition;
@@ -1750,16 +2088,26 @@ extern void *_ZNKSt9type_info14__is_pointer_pEv;
 extern void *_ZNKSt9type_info15__is_function_pEv;
 extern void *z_notanum;
 extern void *z_notanum_f;
+extern void *_ZNSs12_S_constructIPcEES0_T_S1_RKSaIcESt20forward_iterator_tag;
 extern void *_ZNSs12_S_constructIPKcEEPcT_S3_RKSaIcESt20forward_iterator_tag;
+extern void *_ZNSs15_M_replace_safeEjjPKcj;
 extern void *_ZNSs4_Rep10_M_destroyERKSaIcE;
 extern void *_ZNSs4_Rep10_M_disposeERKSaIcE;
 extern void *_ZNSs4_Rep20_S_empty_rep_storageE;
 extern void *_ZNSs4_Rep8_M_cloneERKSaIcEj;
 extern void *_ZNSs4_Rep9_S_createEjjRKSaIcE;
+extern void *_ZNSs4swapERSs;
+extern void *_ZNSs6appendEPKcj;
+extern void *_ZNSs6assignEPKcj;
+extern void *_ZNSs6assignERKSs;
+extern void *_ZNSs7reserveEj;
+extern void *_ZNSs9_M_mutateEjjj;
 extern void *_ZNSsC1EPKcRKSaIcE;
 extern void *_ZNSsC1ERKSs;
+extern void *_ZNSsC1ERKSsjj;
 extern void *_ZNSsC2EPKcRKSaIcE;
 extern void *_ZNSsC2ERKSs;
+extern void *_ZNSsC2ERKSsjj;
 extern void *_ZNSsD1Ev;
 extern void *_ZNSsD2Ev;
 extern void *_ZNSt11_Deque_baseIP9UIElementSaIS1_EE17_M_initialize_mapEj;
@@ -1773,12 +2121,20 @@ extern void *_ZNSt12length_errorC2ERKSs;
 extern void *_ZNSt12length_errorD0Ev;
 extern void *_ZNSt12length_errorD1Ev;
 extern void *_ZNSt12length_errorD2Ev;
+extern void *_ZNSt12out_of_rangeC1ERKSs;
+extern void *_ZNSt12out_of_rangeC2ERKSs;
+extern void *_ZNSt12out_of_rangeD0Ev;
+extern void *_ZNSt12out_of_rangeD1Ev;
+extern void *_ZNSt12out_of_rangeD2Ev;
 extern void *_ZNSt13bad_exceptionD0Ev;
 extern void *_ZNSt13bad_exceptionD1Ev;
 extern void *_ZNSt13bad_exceptionD2Ev;
 extern void *_ZNSt14error_categoryD0Ev;
 extern void *_ZNSt14error_categoryD1Ev;
 extern void *_ZNSt14error_categoryD2Ev;
+extern void *_ZNSt17bad_function_callD0Ev;
+extern void *_ZNSt17bad_function_callD1Ev;
+extern void *_ZNSt17bad_function_callD2Ev;
 extern void *_ZNSt5dequeIP9UIElementSaIS1_EE16_M_push_back_auxIIRS1_EEEvDpOT_;
 extern void *_ZNSt5dequeIP9UIElementSaIS1_EE16_M_push_back_auxIJRS1_EEEvDpOT_;
 extern void *_ZNSt6vectorIP10RenderableSaIS1_EE19_M_emplace_back_auxIIRS1_EEEvDpOT_;
@@ -1787,6 +2143,8 @@ extern void *_ZNSt6vectorIP11EasingStateSaIS1_EE12emplace_backIIRS1_EEEvDpOT_;
 extern void *_ZNSt6vectorIP11EasingStateSaIS1_EE12emplace_backIJRS1_EEEvDpOT_;
 extern void *_ZNSt6vectorIP11EasingStateSaIS1_EE19_M_emplace_back_auxIIRS1_EEEvDpOT_;
 extern void *_ZNSt6vectorIP11EasingStateSaIS1_EE19_M_emplace_back_auxIJRS1_EEEvDpOT_;
+extern void *_ZNSt6vectorIP5StateSaIS1_EE19_M_emplace_back_auxIIRS1_EEEvDpOT_;
+extern void *_ZNSt6vectorIP5StateSaIS1_EE19_M_emplace_back_auxIJRS1_EEEvDpOT_;
 extern void *_ZNSt8_Rb_treeIjSt4pairIKjP12AllocSectionESt10_Select1stIS4_ESt4lessIjESaIS4_EE14_M_insert_nodeEPSt18_Rb_tree_node_baseSC_PSt13_Rb_tree_nodeIS4_E;
 extern void *_ZNSt8_Rb_treeIjSt4pairIKjP12AllocSectionESt10_Select1stIS4_ESt4lessIjESaIS4_EE24_M_get_insert_unique_posERS1_;
 extern void *_ZNSt8_Rb_treeIjSt4pairIKjP12AllocSectionESt10_Select1stIS4_ESt4lessIjESaIS4_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS4_ERS1_;
@@ -1827,21 +2185,28 @@ extern void *_ZSt18_Rb_tree_incrementPKSt18_Rb_tree_node_base;
 extern void *_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base;
 extern void *_ZSt19__throw_logic_errorPKc;
 extern void *_ZSt20__throw_length_errorPKc;
+extern void *_ZSt20__throw_out_of_rangePKc;
+extern void *_ZSt25__throw_bad_function_callv;
 extern void *_ZSt28_Rb_tree_rebalance_for_erasePSt18_Rb_tree_node_baseRS_;
 extern void *_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_;
 extern void *_ZSt6removeIN9__gnu_cxx17__normal_iteratorIPP10RenderableSt6vectorIS3_SaIS3_EEEES3_ET_S9_S9_RKT0_;
 extern void *_ZSt9terminatev;
 extern void *_ZTI10Animatable;
 extern void *_ZTI10Renderable;
+extern void *_ZTI11AsyncObject;
 extern void *_ZTI14RenderableText;
 extern void *_ZTI15AnimatableColor;
 extern void *_ZTI15AnimatableFloat;
 extern void *_ZTI15RenderableGroup;
+extern void *_ZTI16HomebrewAppState;
 extern void *_ZTI17RenderableTexture;
 extern void *_ZTI18HomebrewAppElement;
 extern void *_ZTI18RenderableTriangle;
 extern void *_ZTI19RenderableRectangle;
+extern void *_ZTI5State;
+extern void *_ZTI6Future;
 extern void *_ZTI6Socket;
+extern void *_ZTI9Completer;
 extern void *_ZTI9TCPSocket;
 extern void *_ZTI9UIElement;
 extern void *_ZTIN10__cxxabiv115__forced_unwindE;
@@ -1853,25 +2218,47 @@ extern void *_ZTIN2UI13UpdateCommandE;
 extern void *_ZTIN2UI14UIElementMakerE;
 extern void *_ZTIN2UI23HomebrewAppElementMakerE;
 extern void *_ZTIN2UI9UICommandE;
+extern void *_ZTIN8tinyxml210XMLCommentE;
+extern void *_ZTIN8tinyxml210XMLElementE;
+extern void *_ZTIN8tinyxml210XMLPrinterE;
+extern void *_ZTIN8tinyxml210XMLUnknownE;
+extern void *_ZTIN8tinyxml210XMLVisitorE;
+extern void *_ZTIN8tinyxml211XMLDocumentE;
+extern void *_ZTIN8tinyxml212XMLAttributeE;
+extern void *_ZTIN8tinyxml214XMLDeclarationE;
+extern void *_ZTIN8tinyxml27MemPoolE;
+extern void *_ZTIN8tinyxml27XMLNodeE;
+extern void *_ZTIN8tinyxml27XMLTextE;
+extern void *_ZTIN8tinyxml28MemPoolTILi36EEE;
+extern void *_ZTIN8tinyxml28MemPoolTILi44EEE;
+extern void *_ZTIN8tinyxml28MemPoolTILi48EEE;
+extern void *_ZTIN8tinyxml28MemPoolTILi52EEE;
 extern void *_ZTISt11logic_error;
 extern void *_ZTISt12length_error;
+extern void *_ZTISt12out_of_range;
 extern void *_ZTISt13bad_exception;
 extern void *_ZTISt14error_category;
+extern void *_ZTISt17bad_function_call;
 extern void *_ZTISt9bad_alloc;
 extern void *_ZTISt9exception;
 extern void *_ZTISt9type_info;
 extern void *_ZTS10Animatable;
 extern void *_ZTS10Renderable;
+extern void *_ZTS11AsyncObject;
 extern void *_ZTS14RenderableText;
 extern void *_ZTS15AnimatableColor;
 extern void *_ZTS15AnimatableFloat;
 extern void *_ZTS15RenderableGroup;
+extern void *_ZTS16HomebrewAppState;
 extern void *_ZTS17RenderableTexture;
 extern void *_ZTS18HomebrewAppElement;
 extern void *_ZTS18RenderableTriangle;
 extern void *_ZTS19RenderableRectangle;
 extern void *_ZTS3ELF;
+extern void *_ZTS5State;
+extern void *_ZTS6Future;
 extern void *_ZTS6Socket;
+extern void *_ZTS9Completer;
 extern void *_ZTS9TCPSocket;
 extern void *_ZTS9UIElement;
 extern void *_ZTSN10__cxxabiv115__forced_unwindE;
@@ -1883,23 +2270,45 @@ extern void *_ZTSN2UI13UpdateCommandE;
 extern void *_ZTSN2UI14UIElementMakerE;
 extern void *_ZTSN2UI23HomebrewAppElementMakerE;
 extern void *_ZTSN2UI9UICommandE;
+extern void *_ZTSN8tinyxml210XMLCommentE;
+extern void *_ZTSN8tinyxml210XMLElementE;
+extern void *_ZTSN8tinyxml210XMLPrinterE;
+extern void *_ZTSN8tinyxml210XMLUnknownE;
+extern void *_ZTSN8tinyxml210XMLVisitorE;
+extern void *_ZTSN8tinyxml211XMLDocumentE;
+extern void *_ZTSN8tinyxml212XMLAttributeE;
+extern void *_ZTSN8tinyxml214XMLDeclarationE;
+extern void *_ZTSN8tinyxml27MemPoolE;
+extern void *_ZTSN8tinyxml27XMLNodeE;
+extern void *_ZTSN8tinyxml27XMLTextE;
+extern void *_ZTSN8tinyxml28MemPoolTILi36EEE;
+extern void *_ZTSN8tinyxml28MemPoolTILi44EEE;
+extern void *_ZTSN8tinyxml28MemPoolTILi48EEE;
+extern void *_ZTSN8tinyxml28MemPoolTILi52EEE;
 extern void *_ZTSSt11logic_error;
 extern void *_ZTSSt12length_error;
+extern void *_ZTSSt12out_of_range;
 extern void *_ZTSSt13bad_exception;
 extern void *_ZTSSt14error_category;
+extern void *_ZTSSt17bad_function_call;
 extern void *_ZTSSt9bad_alloc;
 extern void *_ZTSSt9exception;
 extern void *_ZTSSt9type_info;
 extern void *_ZTV10Animatable;
 extern void *_ZTV10Renderable;
+extern void *_ZTV11AsyncObject;
 extern void *_ZTV14RenderableText;
 extern void *_ZTV15AnimatableColor;
 extern void *_ZTV15AnimatableFloat;
 extern void *_ZTV15RenderableGroup;
+extern void *_ZTV16HomebrewAppState;
 extern void *_ZTV17RenderableTexture;
 extern void *_ZTV18HomebrewAppElement;
 extern void *_ZTV18RenderableTriangle;
 extern void *_ZTV19RenderableRectangle;
+extern void *_ZTV5State;
+extern void *_ZTV6Future;
+extern void *_ZTV9Completer;
 extern void *_ZTV9TCPSocket;
 extern void *_ZTV9UIElement;
 extern void *_ZTVN10__cxxabiv117__class_type_infoE;
@@ -1908,10 +2317,27 @@ extern void *_ZTVN2UI13RemoveCommandE;
 extern void *_ZTVN2UI13UpdateCommandE;
 extern void *_ZTVN2UI23HomebrewAppElementMakerE;
 extern void *_ZTVN2UI9UICommandE;
+extern void *_ZTVN8tinyxml210XMLCommentE;
+extern void *_ZTVN8tinyxml210XMLElementE;
+extern void *_ZTVN8tinyxml210XMLPrinterE;
+extern void *_ZTVN8tinyxml210XMLUnknownE;
+extern void *_ZTVN8tinyxml210XMLVisitorE;
+extern void *_ZTVN8tinyxml211XMLDocumentE;
+extern void *_ZTVN8tinyxml212XMLAttributeE;
+extern void *_ZTVN8tinyxml214XMLDeclarationE;
+extern void *_ZTVN8tinyxml27MemPoolE;
+extern void *_ZTVN8tinyxml27XMLNodeE;
+extern void *_ZTVN8tinyxml27XMLTextE;
+extern void *_ZTVN8tinyxml28MemPoolTILi36EEE;
+extern void *_ZTVN8tinyxml28MemPoolTILi44EEE;
+extern void *_ZTVN8tinyxml28MemPoolTILi48EEE;
+extern void *_ZTVN8tinyxml28MemPoolTILi52EEE;
 extern void *_ZTVSt11logic_error;
 extern void *_ZTVSt12length_error;
+extern void *_ZTVSt12out_of_range;
 extern void *_ZTVSt13bad_exception;
 extern void *_ZTVSt14error_category;
+extern void *_ZTVSt17bad_function_call;
 extern void *_ZTVSt9bad_alloc;
 extern void *_ZTVSt9exception;
 extern void *_ZTVSt9type_info;
@@ -1934,6 +2360,7 @@ linkdef linkdefs[] = {
 {"af_latin_script_class", (void*)&af_latin_script_class},
 {"afm_parser_funcs", (void*)&afm_parser_funcs},
 {"__alloc_handle", (void*)&__alloc_handle},
+{"__any_on", (void*)&__any_on},
 {"apply_ir_smoothing", (void*)&apply_ir_smoothing},
 {"apply_smoothing", (void*)&apply_smoothing},
 {"__Arena1Hi", (void*)&__Arena1Hi},
@@ -1950,6 +2377,7 @@ linkdef linkdefs[] = {
 {"__atexit_lock", (void*)&__atexit_lock},
 {"atol", (void*)&atol},
 {"autofit_module_class", (void*)&autofit_module_class},
+{"__b2d", (void*)&__b2d},
 {"_Balloc", (void*)&_Balloc},
 {"bdf_cmap_class", (void*)&bdf_cmap_class},
 {"bdf_driver_class", (void*)&bdf_driver_class},
@@ -2042,6 +2470,7 @@ linkdef linkdefs[] = {
 {"__console_init", (void*)&__console_init},
 {"__console_write", (void*)&__console_write},
 {"_context_switch_want", (void*)&_context_switch_want},
+{"__copybits", (void*)&__copybits},
 {"core_context", (void*)&core_context},
 {"cos", (void*)&cos},
 {"cosf", (void*)&cosf},
@@ -2200,8 +2629,10 @@ linkdef linkdefs[] = {
 {"_FAT_write_r", (void*)&_FAT_write_r},
 {"fclose", (void*)&fclose},
 {"_fclose_r", (void*)&_fclose_r},
+{"ferror", (void*)&ferror},
 {"fflush", (void*)&fflush},
 {"_fflush_r", (void*)&_fflush_r},
+{"fgetc", (void*)&fgetc},
 {"FindDevice", (void*)&FindDevice},
 {"FindFirstValidPartition_buf", (void*)&FindFirstValidPartition_buf},
 {"find_sensorbar", (void*)&find_sensorbar},
@@ -2442,6 +2873,7 @@ linkdef linkdefs[] = {
 {"getcwd", (void*)&getcwd},
 {"GetDeviceOpTab", (void*)&GetDeviceOpTab},
 {"__get_handle", (void*)&__get_handle},
+{"__gethex", (void*)&__gethex},
 {"gettick", (void*)&gettick},
 {"gettime", (void*)&gettime},
 {"__gettzinfo", (void*)&__gettzinfo},
@@ -2572,10 +3004,15 @@ linkdef linkdefs[] = {
 {"hci_write_page_timeout", (void*)&hci_write_page_timeout},
 {"hci_write_pin_type", (void*)&hci_write_pin_type},
 {"hci_write_scan_enable", (void*)&hci_write_scan_enable},
+{"__hexdig", (void*)&__hexdig},
+{"__hexdig_init", (void*)&__hexdig_init},
+{"__hexnan", (void*)&__hexnan},
 {"__hi0bits", (void*)&__hi0bits},
 {"__i2b", (void*)&__i2b},
+{"I8_POSITION", (void*)&I8_POSITION},
 {"I8_POSITION_COLOR", (void*)&I8_POSITION_COLOR},
 {"I8_POSITION_COLOR_TEX", (void*)&I8_POSITION_COLOR_TEX},
+{"I8_POSITION_TEX", (void*)&I8_POSITION_TEX},
 {"ICBlockInvalidate", (void*)&ICBlockInvalidate},
 {"ICDisable", (void*)&ICDisable},
 {"ICEnable", (void*)&ICEnable},
@@ -2637,10 +3074,13 @@ linkdef linkdefs[] = {
 {"__irq_init", (void*)&__irq_init},
 {"IRQ_Request", (void*)&IRQ_Request},
 {"IRQ_Restore", (void*)&IRQ_Restore},
+{"isalpha", (void*)&isalpha},
 {"_isatty_r", (void*)&_isatty_r},
 {"__isIPL", (void*)&__isIPL},
 {"ispos", (void*)&ispos},
 {"isposf", (void*)&isposf},
+{"isspace", (void*)&isspace},
+{"iswspace", (void*)&iswspace},
 {"_jp2uc", (void*)&_jp2uc},
 {"kprintf", (void*)&kprintf},
 {"kvsprintf", (void*)&kvsprintf},
@@ -2859,6 +3299,7 @@ linkdef linkdefs[] = {
 {"__multiply", (void*)&__multiply},
 {"__myArena1Hi", (void*)&__myArena1Hi},
 {"__myArena1Lo", (void*)&__myArena1Lo},
+{"nanf", (void*)&nanf},
 {"nanosleep", (void*)&nanosleep},
 {"net_close", (void*)&net_close},
 {"net_connect", (void*)&net_connect},
@@ -3105,6 +3546,7 @@ linkdef linkdefs[] = {
 {"puts", (void*)&puts},
 {"_puts_r", (void*)&_puts_r},
 {"qsort", (void*)&qsort},
+{"__ratio", (void*)&__ratio},
 {"_read_r", (void*)&_read_r},
 {"realloc", (void*)&realloc},
 {"_realloc_r", (void*)&_realloc_r},
@@ -3159,6 +3601,7 @@ linkdef linkdefs[] = {
 {"Roboto_Regular_ttf", (void*)&Roboto_Regular_ttf},
 {"Roboto_Regular_ttf_end", (void*)&Roboto_Regular_ttf_end},
 {"Roboto_Regular_ttf_size", (void*)&Roboto_Regular_ttf_size},
+{"__s2b", (void*)&__s2b},
 {"_savefpr_14", (void*)&_savefpr_14},
 {"_savefpr_15", (void*)&_savefpr_15},
 {"_savefpr_16", (void*)&_savefpr_16},
@@ -3182,6 +3625,7 @@ linkdef linkdefs[] = {
 {"__sbss_end", (void*)&__sbss_end},
 {"__SBSS_END__", (void*)&__SBSS_END__},
 {"__sbss_start", (void*)&__sbss_start},
+{"__sccl", (void*)&__sccl},
 {"__sclose", (void*)&__sclose},
 {"__SDATA2_START__", (void*)&__SDATA2_START__},
 {"__SDATA_START__", (void*)&__SDATA_START__},
@@ -3202,6 +3646,7 @@ linkdef linkdefs[] = {
 {"sdio_Shutdown", (void*)&sdio_Shutdown},
 {"sdio_Startup", (void*)&sdio_Startup},
 {"sdio_WriteSectors", (void*)&sdio_WriteSectors},
+{"__seofread", (void*)&__seofread},
 {"setDefaultDevice", (void*)&setDefaultDevice},
 {"setjmp", (void*)&setjmp},
 {"setvbuf", (void*)&setvbuf},
@@ -3212,6 +3657,7 @@ linkdef linkdefs[] = {
 {"__sfp", (void*)&__sfp},
 {"__sfp_lock_acquire", (void*)&__sfp_lock_acquire},
 {"__sfp_lock_release", (void*)&__sfp_lock_release},
+{"_sfread_r", (void*)&_sfread_r},
 {"__sfvwrite_r", (void*)&__sfvwrite_r},
 {"SI_Busy", (void*)&SI_Busy},
 {"SI_DisablePolling", (void*)&SI_DisablePolling},
@@ -3250,8 +3696,12 @@ linkdef linkdefs[] = {
 {"__sram_init", (void*)&__sram_init},
 {"__sread", (void*)&__sread},
 {"__srefill_r", (void*)&__srefill_r},
+{"__srget_r", (void*)&__srget_r},
+{"sscanf", (void*)&sscanf},
 {"__sseek", (void*)&__sseek},
 {"__ssprint_r", (void*)&__ssprint_r},
+{"__ssrefill_r", (void*)&__ssrefill_r},
+{"__ssvfscanf_r", (void*)&__ssvfscanf_r},
 {"__stack_addr", (void*)&__stack_addr},
 {"__stack_end", (void*)&__stack_end},
 {"_start", (void*)&_start},
@@ -3279,10 +3729,14 @@ linkdef linkdefs[] = {
 {"strpbrk", (void*)&strpbrk},
 {"strrchr", (void*)&strrchr},
 {"strstr", (void*)&strstr},
+{"_strtod_r", (void*)&_strtod_r},
 {"strtol", (void*)&strtol},
+{"_strtoll_r", (void*)&_strtoll_r},
 {"_strtol_r", (void*)&_strtol_r},
 {"_strtoull_r", (void*)&_strtoull_r},
 {"_strtoul_r", (void*)&_strtoul_r},
+{"__submore", (void*)&__submore},
+{"_sungetc_r", (void*)&_sungetc_r},
 {"_svfprintf_r", (void*)&_svfprintf_r},
 {"__swbuf_r", (void*)&__swbuf_r},
 {"__swrite", (void*)&__swrite},
@@ -3375,6 +3829,7 @@ linkdef linkdefs[] = {
 {"__tz_unlock", (void*)&__tz_unlock},
 {"udelay", (void*)&udelay},
 {"__udivdi3", (void*)&__udivdi3},
+{"__ulp", (void*)&__ulp},
 {"__umoddi3", (void*)&__umoddi3},
 {"__UnmaskIrq", (void*)&__UnmaskIrq},
 {"_Unwind_Backtrace", (void*)&_Unwind_Backtrace},
@@ -3435,6 +3890,7 @@ linkdef linkdefs[] = {
 {"__utf8_mbtowc", (void*)&__utf8_mbtowc},
 {"__utf8_wctomb", (void*)&__utf8_wctomb},
 {"_V_EXPORTNAME", (void*)&_V_EXPORTNAME},
+{"vfprintf", (void*)&vfprintf},
 {"_vfprintf_r", (void*)&_vfprintf_r},
 {"VIDEO_Configure", (void*)&VIDEO_Configure},
 {"VIDEO_Flush", (void*)&VIDEO_Flush},
@@ -3509,8 +3965,10 @@ linkdef linkdefs[] = {
 {"_wrapup_reent", (void*)&_wrapup_reent},
 {"write", (void*)&write},
 {"_write_r", (void*)&_write_r},
+{"_Z10testThreadP6Future", (void*)&_Z10testThreadP6Future},
 {"_Z12InitFreeTypev", (void*)&_Z12InitFreeTypev},
 {"_Z14charToWideCharPKc", (void*)&_Z14charToWideCharPKc},
+{"_Z14DeinitFreeTypev", (void*)&_Z14DeinitFreeTypev},
 {"zcalloc", (void*)&zcalloc},
 {"zcfree", (void*)&zcfree},
 {"_ZdaPv", (void*)&_ZdaPv},
@@ -3530,26 +3988,53 @@ linkdef linkdefs[] = {
 {"_ZN10__cxxabiv120__si_class_type_infoD1Ev", (void*)&_ZN10__cxxabiv120__si_class_type_infoD1Ev},
 {"_ZN10__cxxabiv120__si_class_type_infoD2Ev", (void*)&_ZN10__cxxabiv120__si_class_type_infoD2Ev},
 {"_ZN10__cxxabiv120__unexpected_handlerE", (void*)&_ZN10__cxxabiv120__unexpected_handlerE},
+{"_ZN10EventQueue10eventMutexE", (void*)&_ZN10EventQueue10eventMutexE},
+{"_ZN10EventQueue7currentE", (void*)&_ZN10EventQueue7currentE},
+{"_ZN10FreeTypeGX10unloadFontEv", (void*)&_ZN10FreeTypeGX10unloadFontEv},
 {"_ZN10FreeTypeGX13loadGlyphDataEP10FT_Bitmap_P13ftgxCharData_", (void*)&_ZN10FreeTypeGX13loadGlyphDataEP10FT_Bitmap_P13ftgxCharData_},
 {"_ZN10FreeTypeGX14cacheGlyphDataEw", (void*)&_ZN10FreeTypeGX14cacheGlyphDataEw},
 {"_ZN10FreeTypeGX14setDefaultModeEv", (void*)&_ZN10FreeTypeGX14setDefaultModeEv},
 {"_ZN10FreeTypeGX15drawTextFeatureEsstP15ftgxDataOffset_t9_gx_color", (void*)&_ZN10FreeTypeGX15drawTextFeatureEsstP15ftgxDataOffset_t9_gx_color},
 {"_ZN10FreeTypeGX15setVertexFormatEh", (void*)&_ZN10FreeTypeGX15setVertexFormatEh},
+{"_ZN10FreeTypeGX18adjustTextureWidthEt", (void*)&_ZN10FreeTypeGX18adjustTextureWidthEt},
+{"_ZN10FreeTypeGX19adjustTextureHeightEt", (void*)&_ZN10FreeTypeGX19adjustTextureHeightEt},
+{"_ZN10FreeTypeGX19getStyleOffsetWidthEtt", (void*)&_ZN10FreeTypeGX19getStyleOffsetWidthEtt},
 {"_ZN10FreeTypeGX20getStyleOffsetHeightEP15ftgxDataOffset_t", (void*)&_ZN10FreeTypeGX20getStyleOffsetHeightEP15ftgxDataOffset_t},
+{"_ZN10FreeTypeGX20setCompatibilityModeEj", (void*)&_ZN10FreeTypeGX20setCompatibilityModeEj},
+{"_ZN10FreeTypeGX22cacheGlyphDataCompleteEv", (void*)&_ZN10FreeTypeGX22cacheGlyphDataCompleteEv},
 {"_ZN10FreeTypeGX24copyFeatureToFramebufferEffss9_gx_color", (void*)&_ZN10FreeTypeGX24copyFeatureToFramebufferEffss9_gx_color},
 {"_ZN10FreeTypeGX24copyTextureToFramebufferEP10_gx_texobjffss9_gx_color", (void*)&_ZN10FreeTypeGX24copyTextureToFramebufferEP10_gx_texobjffss9_gx_color},
+{"_ZN10FreeTypeGX8drawTextEssPKw9_gx_colort", (void*)&_ZN10FreeTypeGX8drawTextEssPKw9_gx_colort},
 {"_ZN10FreeTypeGX8drawTextEssPw9_gx_colort", (void*)&_ZN10FreeTypeGX8drawTextEssPw9_gx_colort},
+{"_ZN10FreeTypeGX8getWidthEPKw", (void*)&_ZN10FreeTypeGX8getWidthEPKw},
 {"_ZN10FreeTypeGX8getWidthEPw", (void*)&_ZN10FreeTypeGX8getWidthEPw},
+{"_ZN10FreeTypeGX9getHeightEPKw", (void*)&_ZN10FreeTypeGX9getHeightEPKw},
+{"_ZN10FreeTypeGX9getHeightEPw", (void*)&_ZN10FreeTypeGX9getHeightEPw},
+{"_ZN10FreeTypeGX9getOffsetEPKwP15ftgxDataOffset_", (void*)&_ZN10FreeTypeGX9getOffsetEPKwP15ftgxDataOffset_},
 {"_ZN10FreeTypeGX9getOffsetEPwP15ftgxDataOffset_", (void*)&_ZN10FreeTypeGX9getOffsetEPwP15ftgxDataOffset_},
 {"_ZN10FreeTypeGXC1EPKhljh", (void*)&_ZN10FreeTypeGXC1EPKhljh},
 {"_ZN10FreeTypeGXC2EPKhljh", (void*)&_ZN10FreeTypeGXC2EPKhljh},
+{"_ZN10FreeTypeGXD1Ev", (void*)&_ZN10FreeTypeGXD1Ev},
+{"_ZN10FreeTypeGXD2Ev", (void*)&_ZN10FreeTypeGXD2Ev},
 {"_ZN10ObjectPoolIP9UIElementED1Ev", (void*)&_ZN10ObjectPoolIP9UIElementED1Ev},
 {"_ZN10ObjectPoolIP9UIElementED2Ev", (void*)&_ZN10ObjectPoolIP9UIElementED2Ev},
 {"_ZN10RenderableD0Ev", (void*)&_ZN10RenderableD0Ev},
 {"_ZN10RenderableD1Ev", (void*)&_ZN10RenderableD1Ev},
 {"_ZN10RenderableD2Ev", (void*)&_ZN10RenderableD2Ev},
+{"_ZN11AsyncObject13handleMessageEPv", (void*)&_ZN11AsyncObject13handleMessageEPv},
+{"_ZN11AsyncObjectD0Ev", (void*)&_ZN11AsyncObjectD0Ev},
+{"_ZN11AsyncObjectD1Ev", (void*)&_ZN11AsyncObjectD1Ev},
+{"_ZN11AsyncObjectD2Ev", (void*)&_ZN11AsyncObjectD2Ev},
+{"_ZN14EasingFunction11IN_OUT_QUADE", (void*)&_ZN14EasingFunction11IN_OUT_QUADE},
+{"_ZN14EasingFunction11OUT_IN_QUADE", (void*)&_ZN14EasingFunction11OUT_IN_QUADE},
+{"_ZN14EasingFunction6inQuadEff", (void*)&_ZN14EasingFunction6inQuadEff},
+{"_ZN14EasingFunction6LINEARE", (void*)&_ZN14EasingFunction6LINEARE},
+{"_ZN14EasingFunction6linearEff", (void*)&_ZN14EasingFunction6linearEff},
+{"_ZN14EasingFunction7IN_QUADE", (void*)&_ZN14EasingFunction7IN_QUADE},
 {"_ZN14EasingFunction7outQuadEff", (void*)&_ZN14EasingFunction7outQuadEff},
 {"_ZN14EasingFunction8OUT_QUADE", (void*)&_ZN14EasingFunction8OUT_QUADE},
+{"_ZN14EasingFunction9inOutQuadEff", (void*)&_ZN14EasingFunction9inOutQuadEff},
+{"_ZN14EasingFunction9outInQuadEff", (void*)&_ZN14EasingFunction9outInQuadEff},
 {"_ZN14RenderableText6renderEv", (void*)&_ZN14RenderableText6renderEv},
 {"_ZN14RenderableTextD0Ev", (void*)&_ZN14RenderableTextD0Ev},
 {"_ZN14RenderableTextD1Ev", (void*)&_ZN14RenderableTextD1Ev},
@@ -3566,6 +4051,16 @@ linkdef linkdefs[] = {
 {"_ZN15RenderableGroupD0Ev", (void*)&_ZN15RenderableGroupD0Ev},
 {"_ZN15RenderableGroupD1Ev", (void*)&_ZN15RenderableGroupD1Ev},
 {"_ZN15RenderableGroupD2Ev", (void*)&_ZN15RenderableGroupD2Ev},
+{"_ZN16EventQueueThreadC1EPFPvS0_ES0_", (void*)&_ZN16EventQueueThreadC1EPFPvS0_ES0_},
+{"_ZN16EventQueueThreadC2EPFPvS0_ES0_", (void*)&_ZN16EventQueueThreadC2EPFPvS0_ES0_},
+{"_ZN16FilesystemEntityD1Ev", (void*)&_ZN16FilesystemEntityD1Ev},
+{"_ZN16FilesystemEntityD2Ev", (void*)&_ZN16FilesystemEntityD2Ev},
+{"_ZN16HomebrewAppState4loadEj", (void*)&_ZN16HomebrewAppState4loadEj},
+{"_ZN16HomebrewAppState6unloadEv", (void*)&_ZN16HomebrewAppState6unloadEv},
+{"_ZN16HomebrewAppStateD0Ev", (void*)&_ZN16HomebrewAppStateD0Ev},
+{"_ZN16HomebrewAppStateD1Ev", (void*)&_ZN16HomebrewAppStateD1Ev},
+{"_ZN16HomebrewAppStateD2Ev", (void*)&_ZN16HomebrewAppStateD2Ev},
+{"_ZN17EventSubscription13handleMessageEPv", (void*)&_ZN17EventSubscription13handleMessageEPv},
 {"_ZN17RenderableTexture6renderEv", (void*)&_ZN17RenderableTexture6renderEv},
 {"_ZN17RenderableTextureD0Ev", (void*)&_ZN17RenderableTextureD0Ev},
 {"_ZN17RenderableTextureD1Ev", (void*)&_ZN17RenderableTextureD1Ev},
@@ -3584,6 +4079,8 @@ linkdef linkdefs[] = {
 {"_ZN19RenderableRectangleD0Ev", (void*)&_ZN19RenderableRectangleD0Ev},
 {"_ZN19RenderableRectangleD1Ev", (void*)&_ZN19RenderableRectangleD1Ev},
 {"_ZN19RenderableRectangleD2Ev", (void*)&_ZN19RenderableRectangleD2Ev},
+{"_ZN2UI10AddCommand7executeEv", (void*)&_ZN2UI10AddCommand7executeEv},
+{"_ZN2UI10getElementEP5State", (void*)&_ZN2UI10getElementEP5State},
 {"_ZN2UI10stopThreadE", (void*)&_ZN2UI10stopThreadE},
 {"_ZN2UI12addForRenderEP5State", (void*)&_ZN2UI12addForRenderEP5State},
 {"_ZN2UI12elementPoolsE", (void*)&_ZN2UI12elementPoolsE},
@@ -3608,6 +4105,13 @@ linkdef linkdefs[] = {
 {"_ZN2UI9UICommandD1Ev", (void*)&_ZN2UI9UICommandD1Ev},
 {"_ZN2UI9UICommandD2Ev", (void*)&_ZN2UI9UICommandD2Ev},
 {"_ZN4Font4initEv", (void*)&_ZN4Font4initEv},
+{"_ZN5StateD0Ev", (void*)&_ZN5StateD0Ev},
+{"_ZN5StateD1Ev", (void*)&_ZN5StateD1Ev},
+{"_ZN5StateD2Ev", (void*)&_ZN5StateD2Ev},
+{"_ZN6Future13handleMessageEPv", (void*)&_ZN6Future13handleMessageEPv},
+{"_ZN6FutureD0Ev", (void*)&_ZN6FutureD0Ev},
+{"_ZN6FutureD1Ev", (void*)&_ZN6FutureD1Ev},
+{"_ZN6FutureD2Ev", (void*)&_ZN6FutureD2Ev},
 {"_ZN6Loader11stopThreadsE", (void*)&_ZN6Loader11stopThreadsE},
 {"_ZN6Loader4mainEPv", (void*)&_ZN6Loader4mainEPv},
 {"_ZN6Loader4stopEv", (void*)&_ZN6Loader4stopEv},
@@ -3634,12 +4138,213 @@ linkdef linkdefs[] = {
 {"_ZN7Globals6noIconE", (void*)&_ZN7Globals6noIconE},
 {"_ZN8Renderer10stopThreadE", (void*)&_ZN8Renderer10stopThreadE},
 {"_ZN8Renderer11renderQueueE", (void*)&_ZN8Renderer11renderQueueE},
-{"_ZN8Renderer12runAnimationEP10AnimatablefPFfffE", (void*)&_ZN8Renderer12runAnimationEP10AnimatablefPFfffE},
 {"_ZN8Renderer13addRenderableEP10Renderable", (void*)&_ZN8Renderer13addRenderableEP10Renderable},
 {"_ZN8Renderer4mainEPv", (void*)&_ZN8Renderer4mainEPv},
 {"_ZN8Renderer4stopEv", (void*)&_ZN8Renderer4stopEv},
 {"_ZN8Renderer5startEv", (void*)&_ZN8Renderer5startEv},
 {"_ZN8Renderer6threadE", (void*)&_ZN8Renderer6threadE},
+{"_ZN8tinyxml210XMLComment9ParseDeepEPcPNS_7StrPairE", (void*)&_ZN8tinyxml210XMLComment9ParseDeepEPcPNS_7StrPairE},
+{"_ZN8tinyxml210XMLComment9ToCommentEv", (void*)&_ZN8tinyxml210XMLComment9ToCommentEv},
+{"_ZN8tinyxml210XMLCommentC1EPNS_11XMLDocumentE", (void*)&_ZN8tinyxml210XMLCommentC1EPNS_11XMLDocumentE},
+{"_ZN8tinyxml210XMLCommentC2EPNS_11XMLDocumentE", (void*)&_ZN8tinyxml210XMLCommentC2EPNS_11XMLDocumentE},
+{"_ZN8tinyxml210XMLCommentD0Ev", (void*)&_ZN8tinyxml210XMLCommentD0Ev},
+{"_ZN8tinyxml210XMLCommentD1Ev", (void*)&_ZN8tinyxml210XMLCommentD1Ev},
+{"_ZN8tinyxml210XMLCommentD2Ev", (void*)&_ZN8tinyxml210XMLCommentD2Ev},
+{"_ZN8tinyxml210XMLElement15DeleteAttributeEPKc", (void*)&_ZN8tinyxml210XMLElement15DeleteAttributeEPKc},
+{"_ZN8tinyxml210XMLElement15DeleteAttributeEPNS_12XMLAttributeE", (void*)&_ZN8tinyxml210XMLElement15DeleteAttributeEPNS_12XMLAttributeE},
+{"_ZN8tinyxml210XMLElement15ParseAttributesEPc", (void*)&_ZN8tinyxml210XMLElement15ParseAttributesEPc},
+{"_ZN8tinyxml210XMLElement21FindOrCreateAttributeEPKc", (void*)&_ZN8tinyxml210XMLElement21FindOrCreateAttributeEPKc},
+{"_ZN8tinyxml210XMLElement7SetTextEb", (void*)&_ZN8tinyxml210XMLElement7SetTextEb},
+{"_ZN8tinyxml210XMLElement7SetTextEd", (void*)&_ZN8tinyxml210XMLElement7SetTextEd},
+{"_ZN8tinyxml210XMLElement7SetTextEf", (void*)&_ZN8tinyxml210XMLElement7SetTextEf},
+{"_ZN8tinyxml210XMLElement7SetTextEi", (void*)&_ZN8tinyxml210XMLElement7SetTextEi},
+{"_ZN8tinyxml210XMLElement7SetTextEj", (void*)&_ZN8tinyxml210XMLElement7SetTextEj},
+{"_ZN8tinyxml210XMLElement7SetTextEPKc", (void*)&_ZN8tinyxml210XMLElement7SetTextEPKc},
+{"_ZN8tinyxml210XMLElement9ParseDeepEPcPNS_7StrPairE", (void*)&_ZN8tinyxml210XMLElement9ParseDeepEPcPNS_7StrPairE},
+{"_ZN8tinyxml210XMLElement9ToElementEv", (void*)&_ZN8tinyxml210XMLElement9ToElementEv},
+{"_ZN8tinyxml210XMLElementC1EPNS_11XMLDocumentE", (void*)&_ZN8tinyxml210XMLElementC1EPNS_11XMLDocumentE},
+{"_ZN8tinyxml210XMLElementC2EPNS_11XMLDocumentE", (void*)&_ZN8tinyxml210XMLElementC2EPNS_11XMLDocumentE},
+{"_ZN8tinyxml210XMLElementD0Ev", (void*)&_ZN8tinyxml210XMLElementD0Ev},
+{"_ZN8tinyxml210XMLElementD1Ev", (void*)&_ZN8tinyxml210XMLElementD1Ev},
+{"_ZN8tinyxml210XMLElementD2Ev", (void*)&_ZN8tinyxml210XMLElementD2Ev},
+{"_ZN8tinyxml210XMLPrinter10PrintSpaceEi", (void*)&_ZN8tinyxml210XMLPrinter10PrintSpaceEi},
+{"_ZN8tinyxml210XMLPrinter10PushHeaderEbb", (void*)&_ZN8tinyxml210XMLPrinter10PushHeaderEbb},
+{"_ZN8tinyxml210XMLPrinter10VisitEnterERKNS_10XMLElementEPKNS_12XMLAttributeE", (void*)&_ZN8tinyxml210XMLPrinter10VisitEnterERKNS_10XMLElementEPKNS_12XMLAttributeE},
+{"_ZN8tinyxml210XMLPrinter10VisitEnterERKNS_11XMLDocumentE", (void*)&_ZN8tinyxml210XMLPrinter10VisitEnterERKNS_11XMLDocumentE},
+{"_ZN8tinyxml210XMLPrinter11CompactModeERKNS_10XMLElementE", (void*)&_ZN8tinyxml210XMLPrinter11CompactModeERKNS_10XMLElementE},
+{"_ZN8tinyxml210XMLPrinter11OpenElementEPKcb", (void*)&_ZN8tinyxml210XMLPrinter11OpenElementEPKcb},
+{"_ZN8tinyxml210XMLPrinter11PrintStringEPKcb", (void*)&_ZN8tinyxml210XMLPrinter11PrintStringEPKcb},
+{"_ZN8tinyxml210XMLPrinter11PushCommentEPKc", (void*)&_ZN8tinyxml210XMLPrinter11PushCommentEPKc},
+{"_ZN8tinyxml210XMLPrinter11PushUnknownEPKc", (void*)&_ZN8tinyxml210XMLPrinter11PushUnknownEPKc},
+{"_ZN8tinyxml210XMLPrinter12CloseElementEb", (void*)&_ZN8tinyxml210XMLPrinter12CloseElementEb},
+{"_ZN8tinyxml210XMLPrinter13PushAttributeEPKcb", (void*)&_ZN8tinyxml210XMLPrinter13PushAttributeEPKcb},
+{"_ZN8tinyxml210XMLPrinter13PushAttributeEPKcd", (void*)&_ZN8tinyxml210XMLPrinter13PushAttributeEPKcd},
+{"_ZN8tinyxml210XMLPrinter13PushAttributeEPKci", (void*)&_ZN8tinyxml210XMLPrinter13PushAttributeEPKci},
+{"_ZN8tinyxml210XMLPrinter13PushAttributeEPKcj", (void*)&_ZN8tinyxml210XMLPrinter13PushAttributeEPKcj},
+{"_ZN8tinyxml210XMLPrinter13PushAttributeEPKcS2_", (void*)&_ZN8tinyxml210XMLPrinter13PushAttributeEPKcS2_},
+{"_ZN8tinyxml210XMLPrinter15PushDeclarationEPKc", (void*)&_ZN8tinyxml210XMLPrinter15PushDeclarationEPKc},
+{"_ZN8tinyxml210XMLPrinter23SealElementIfJustOpenedEv", (void*)&_ZN8tinyxml210XMLPrinter23SealElementIfJustOpenedEv},
+{"_ZN8tinyxml210XMLPrinter5PrintEPKcz", (void*)&_ZN8tinyxml210XMLPrinter5PrintEPKcz},
+{"_ZN8tinyxml210XMLPrinter5VisitERKNS_10XMLCommentE", (void*)&_ZN8tinyxml210XMLPrinter5VisitERKNS_10XMLCommentE},
+{"_ZN8tinyxml210XMLPrinter5VisitERKNS_10XMLUnknownE", (void*)&_ZN8tinyxml210XMLPrinter5VisitERKNS_10XMLUnknownE},
+{"_ZN8tinyxml210XMLPrinter5VisitERKNS_14XMLDeclarationE", (void*)&_ZN8tinyxml210XMLPrinter5VisitERKNS_14XMLDeclarationE},
+{"_ZN8tinyxml210XMLPrinter5VisitERKNS_7XMLTextE", (void*)&_ZN8tinyxml210XMLPrinter5VisitERKNS_7XMLTextE},
+{"_ZN8tinyxml210XMLPrinter8PushTextEb", (void*)&_ZN8tinyxml210XMLPrinter8PushTextEb},
+{"_ZN8tinyxml210XMLPrinter8PushTextEd", (void*)&_ZN8tinyxml210XMLPrinter8PushTextEd},
+{"_ZN8tinyxml210XMLPrinter8PushTextEf", (void*)&_ZN8tinyxml210XMLPrinter8PushTextEf},
+{"_ZN8tinyxml210XMLPrinter8PushTextEi", (void*)&_ZN8tinyxml210XMLPrinter8PushTextEi},
+{"_ZN8tinyxml210XMLPrinter8PushTextEj", (void*)&_ZN8tinyxml210XMLPrinter8PushTextEj},
+{"_ZN8tinyxml210XMLPrinter8PushTextEPKcb", (void*)&_ZN8tinyxml210XMLPrinter8PushTextEPKcb},
+{"_ZN8tinyxml210XMLPrinter9VisitExitERKNS_10XMLElementE", (void*)&_ZN8tinyxml210XMLPrinter9VisitExitERKNS_10XMLElementE},
+{"_ZN8tinyxml210XMLPrinter9VisitExitERKNS_11XMLDocumentE", (void*)&_ZN8tinyxml210XMLPrinter9VisitExitERKNS_11XMLDocumentE},
+{"_ZN8tinyxml210XMLPrinterC1EP7__sFILEbi", (void*)&_ZN8tinyxml210XMLPrinterC1EP7__sFILEbi},
+{"_ZN8tinyxml210XMLPrinterC2EP7__sFILEbi", (void*)&_ZN8tinyxml210XMLPrinterC2EP7__sFILEbi},
+{"_ZN8tinyxml210XMLPrinterD0Ev", (void*)&_ZN8tinyxml210XMLPrinterD0Ev},
+{"_ZN8tinyxml210XMLPrinterD1Ev", (void*)&_ZN8tinyxml210XMLPrinterD1Ev},
+{"_ZN8tinyxml210XMLPrinterD2Ev", (void*)&_ZN8tinyxml210XMLPrinterD2Ev},
+{"_ZN8tinyxml210XMLUnknown9ParseDeepEPcPNS_7StrPairE", (void*)&_ZN8tinyxml210XMLUnknown9ParseDeepEPcPNS_7StrPairE},
+{"_ZN8tinyxml210XMLUnknown9ToUnknownEv", (void*)&_ZN8tinyxml210XMLUnknown9ToUnknownEv},
+{"_ZN8tinyxml210XMLUnknownC1EPNS_11XMLDocumentE", (void*)&_ZN8tinyxml210XMLUnknownC1EPNS_11XMLDocumentE},
+{"_ZN8tinyxml210XMLUnknownC2EPNS_11XMLDocumentE", (void*)&_ZN8tinyxml210XMLUnknownC2EPNS_11XMLDocumentE},
+{"_ZN8tinyxml210XMLUnknownD0Ev", (void*)&_ZN8tinyxml210XMLUnknownD0Ev},
+{"_ZN8tinyxml210XMLUnknownD1Ev", (void*)&_ZN8tinyxml210XMLUnknownD1Ev},
+{"_ZN8tinyxml210XMLUnknownD2Ev", (void*)&_ZN8tinyxml210XMLUnknownD2Ev},
+{"_ZN8tinyxml210XMLVisitor10VisitEnterERKNS_10XMLElementEPKNS_12XMLAttributeE", (void*)&_ZN8tinyxml210XMLVisitor10VisitEnterERKNS_10XMLElementEPKNS_12XMLAttributeE},
+{"_ZN8tinyxml210XMLVisitor10VisitEnterERKNS_11XMLDocumentE", (void*)&_ZN8tinyxml210XMLVisitor10VisitEnterERKNS_11XMLDocumentE},
+{"_ZN8tinyxml210XMLVisitor5VisitERKNS_10XMLCommentE", (void*)&_ZN8tinyxml210XMLVisitor5VisitERKNS_10XMLCommentE},
+{"_ZN8tinyxml210XMLVisitor5VisitERKNS_10XMLUnknownE", (void*)&_ZN8tinyxml210XMLVisitor5VisitERKNS_10XMLUnknownE},
+{"_ZN8tinyxml210XMLVisitor5VisitERKNS_14XMLDeclarationE", (void*)&_ZN8tinyxml210XMLVisitor5VisitERKNS_14XMLDeclarationE},
+{"_ZN8tinyxml210XMLVisitor5VisitERKNS_7XMLTextE", (void*)&_ZN8tinyxml210XMLVisitor5VisitERKNS_7XMLTextE},
+{"_ZN8tinyxml210XMLVisitor9VisitExitERKNS_10XMLElementE", (void*)&_ZN8tinyxml210XMLVisitor9VisitExitERKNS_10XMLElementE},
+{"_ZN8tinyxml210XMLVisitor9VisitExitERKNS_11XMLDocumentE", (void*)&_ZN8tinyxml210XMLVisitor9VisitExitERKNS_11XMLDocumentE},
+{"_ZN8tinyxml210XMLVisitorD0Ev", (void*)&_ZN8tinyxml210XMLVisitorD0Ev},
+{"_ZN8tinyxml210XMLVisitorD1Ev", (void*)&_ZN8tinyxml210XMLVisitorD1Ev},
+{"_ZN8tinyxml210XMLVisitorD2Ev", (void*)&_ZN8tinyxml210XMLVisitorD2Ev},
+{"_ZN8tinyxml211XMLDocument10DeleteNodeEPNS_7XMLNodeE", (void*)&_ZN8tinyxml211XMLDocument10DeleteNodeEPNS_7XMLNodeE},
+{"_ZN8tinyxml211XMLDocument10NewCommentEPKc", (void*)&_ZN8tinyxml211XMLDocument10NewCommentEPKc},
+{"_ZN8tinyxml211XMLDocument10NewElementEPKc", (void*)&_ZN8tinyxml211XMLDocument10NewElementEPKc},
+{"_ZN8tinyxml211XMLDocument10NewUnknownEPKc", (void*)&_ZN8tinyxml211XMLDocument10NewUnknownEPKc},
+{"_ZN8tinyxml211XMLDocument10ToDocumentEv", (void*)&_ZN8tinyxml211XMLDocument10ToDocumentEv},
+{"_ZN8tinyxml211XMLDocument11_errorNamesE", (void*)&_ZN8tinyxml211XMLDocument11_errorNamesE},
+{"_ZN8tinyxml211XMLDocument14NewDeclarationEPKc", (void*)&_ZN8tinyxml211XMLDocument14NewDeclarationEPKc},
+{"_ZN8tinyxml211XMLDocument5ClearEv", (void*)&_ZN8tinyxml211XMLDocument5ClearEv},
+{"_ZN8tinyxml211XMLDocument5ParseEPKcj", (void*)&_ZN8tinyxml211XMLDocument5ParseEPKcj},
+{"_ZN8tinyxml211XMLDocument5ParseEv", (void*)&_ZN8tinyxml211XMLDocument5ParseEv},
+{"_ZN8tinyxml211XMLDocument7NewTextEPKc", (void*)&_ZN8tinyxml211XMLDocument7NewTextEPKc},
+{"_ZN8tinyxml211XMLDocument8IdentifyEPcPPNS_7XMLNodeE", (void*)&_ZN8tinyxml211XMLDocument8IdentifyEPcPPNS_7XMLNodeE},
+{"_ZN8tinyxml211XMLDocument8LoadFileEP7__sFILE", (void*)&_ZN8tinyxml211XMLDocument8LoadFileEP7__sFILE},
+{"_ZN8tinyxml211XMLDocument8LoadFileEPKc", (void*)&_ZN8tinyxml211XMLDocument8LoadFileEPKc},
+{"_ZN8tinyxml211XMLDocument8SaveFileEP7__sFILEb", (void*)&_ZN8tinyxml211XMLDocument8SaveFileEP7__sFILEb},
+{"_ZN8tinyxml211XMLDocument8SaveFileEPKcb", (void*)&_ZN8tinyxml211XMLDocument8SaveFileEPKcb},
+{"_ZN8tinyxml211XMLDocument8SetErrorENS_8XMLErrorEPKcS3_", (void*)&_ZN8tinyxml211XMLDocument8SetErrorENS_8XMLErrorEPKcS3_},
+{"_ZN8tinyxml211XMLDocumentC1EbNS_10WhitespaceE", (void*)&_ZN8tinyxml211XMLDocumentC1EbNS_10WhitespaceE},
+{"_ZN8tinyxml211XMLDocumentC2EbNS_10WhitespaceE", (void*)&_ZN8tinyxml211XMLDocumentC2EbNS_10WhitespaceE},
+{"_ZN8tinyxml211XMLDocumentD0Ev", (void*)&_ZN8tinyxml211XMLDocumentD0Ev},
+{"_ZN8tinyxml211XMLDocumentD1Ev", (void*)&_ZN8tinyxml211XMLDocumentD1Ev},
+{"_ZN8tinyxml211XMLDocumentD2Ev", (void*)&_ZN8tinyxml211XMLDocumentD2Ev},
+{"_ZN8tinyxml212XMLAttribute12SetAttributeEb", (void*)&_ZN8tinyxml212XMLAttribute12SetAttributeEb},
+{"_ZN8tinyxml212XMLAttribute12SetAttributeEd", (void*)&_ZN8tinyxml212XMLAttribute12SetAttributeEd},
+{"_ZN8tinyxml212XMLAttribute12SetAttributeEf", (void*)&_ZN8tinyxml212XMLAttribute12SetAttributeEf},
+{"_ZN8tinyxml212XMLAttribute12SetAttributeEi", (void*)&_ZN8tinyxml212XMLAttribute12SetAttributeEi},
+{"_ZN8tinyxml212XMLAttribute12SetAttributeEj", (void*)&_ZN8tinyxml212XMLAttribute12SetAttributeEj},
+{"_ZN8tinyxml212XMLAttribute12SetAttributeEPKc", (void*)&_ZN8tinyxml212XMLAttribute12SetAttributeEPKc},
+{"_ZN8tinyxml212XMLAttribute7SetNameEPKc", (void*)&_ZN8tinyxml212XMLAttribute7SetNameEPKc},
+{"_ZN8tinyxml212XMLAttribute9ParseDeepEPcb", (void*)&_ZN8tinyxml212XMLAttribute9ParseDeepEPcb},
+{"_ZN8tinyxml212XMLAttributeD0Ev", (void*)&_ZN8tinyxml212XMLAttributeD0Ev},
+{"_ZN8tinyxml212XMLAttributeD1Ev", (void*)&_ZN8tinyxml212XMLAttributeD1Ev},
+{"_ZN8tinyxml212XMLAttributeD2Ev", (void*)&_ZN8tinyxml212XMLAttributeD2Ev},
+{"_ZN8tinyxml214XMLDeclaration13ToDeclarationEv", (void*)&_ZN8tinyxml214XMLDeclaration13ToDeclarationEv},
+{"_ZN8tinyxml214XMLDeclaration9ParseDeepEPcPNS_7StrPairE", (void*)&_ZN8tinyxml214XMLDeclaration9ParseDeepEPcPNS_7StrPairE},
+{"_ZN8tinyxml214XMLDeclarationC1EPNS_11XMLDocumentE", (void*)&_ZN8tinyxml214XMLDeclarationC1EPNS_11XMLDocumentE},
+{"_ZN8tinyxml214XMLDeclarationC2EPNS_11XMLDocumentE", (void*)&_ZN8tinyxml214XMLDeclarationC2EPNS_11XMLDocumentE},
+{"_ZN8tinyxml214XMLDeclarationD0Ev", (void*)&_ZN8tinyxml214XMLDeclarationD0Ev},
+{"_ZN8tinyxml214XMLDeclarationD1Ev", (void*)&_ZN8tinyxml214XMLDeclarationD1Ev},
+{"_ZN8tinyxml214XMLDeclarationD2Ev", (void*)&_ZN8tinyxml214XMLDeclarationD2Ev},
+{"_ZN8tinyxml225LongFitsIntoSizeTMinusOneILb0EE4FitsEm", (void*)&_ZN8tinyxml225LongFitsIntoSizeTMinusOneILb0EE4FitsEm},
+{"_ZN8tinyxml27MemPoolD0Ev", (void*)&_ZN8tinyxml27MemPoolD0Ev},
+{"_ZN8tinyxml27MemPoolD1Ev", (void*)&_ZN8tinyxml27MemPoolD1Ev},
+{"_ZN8tinyxml27MemPoolD2Ev", (void*)&_ZN8tinyxml27MemPoolD2Ev},
+{"_ZN8tinyxml27StrPair10TransferToEPS0_", (void*)&_ZN8tinyxml27StrPair10TransferToEPS0_},
+{"_ZN8tinyxml27StrPair18CollapseWhitespaceEv", (void*)&_ZN8tinyxml27StrPair18CollapseWhitespaceEv},
+{"_ZN8tinyxml27StrPair5ResetEv", (void*)&_ZN8tinyxml27StrPair5ResetEv},
+{"_ZN8tinyxml27StrPair6GetStrEv", (void*)&_ZN8tinyxml27StrPair6GetStrEv},
+{"_ZN8tinyxml27StrPair6SetStrEPKci", (void*)&_ZN8tinyxml27StrPair6SetStrEPKci},
+{"_ZN8tinyxml27StrPair9ParseNameEPc", (void*)&_ZN8tinyxml27StrPair9ParseNameEPc},
+{"_ZN8tinyxml27StrPair9ParseTextEPcPKci", (void*)&_ZN8tinyxml27StrPair9ParseTextEPcPKci},
+{"_ZN8tinyxml27StrPairD1Ev", (void*)&_ZN8tinyxml27StrPairD1Ev},
+{"_ZN8tinyxml27StrPairD2Ev", (void*)&_ZN8tinyxml27StrPairD2Ev},
+{"_ZN8tinyxml27XMLNode10DeleteNodeEPS0_", (void*)&_ZN8tinyxml27XMLNode10DeleteNodeEPS0_},
+{"_ZN8tinyxml27XMLNode10ToDocumentEv", (void*)&_ZN8tinyxml27XMLNode10ToDocumentEv},
+{"_ZN8tinyxml27XMLNode11DeleteChildEPS0_", (void*)&_ZN8tinyxml27XMLNode11DeleteChildEPS0_},
+{"_ZN8tinyxml27XMLNode13ToDeclarationEv", (void*)&_ZN8tinyxml27XMLNode13ToDeclarationEv},
+{"_ZN8tinyxml27XMLNode14DeleteChildrenEv", (void*)&_ZN8tinyxml27XMLNode14DeleteChildrenEv},
+{"_ZN8tinyxml27XMLNode14InsertEndChildEPS0_", (void*)&_ZN8tinyxml27XMLNode14InsertEndChildEPS0_},
+{"_ZN8tinyxml27XMLNode16InsertAfterChildEPS0_S1_", (void*)&_ZN8tinyxml27XMLNode16InsertAfterChildEPS0_S1_},
+{"_ZN8tinyxml27XMLNode16InsertFirstChildEPS0_", (void*)&_ZN8tinyxml27XMLNode16InsertFirstChildEPS0_},
+{"_ZN8tinyxml27XMLNode6ToTextEv", (void*)&_ZN8tinyxml27XMLNode6ToTextEv},
+{"_ZN8tinyxml27XMLNode6UnlinkEPS0_", (void*)&_ZN8tinyxml27XMLNode6UnlinkEPS0_},
+{"_ZN8tinyxml27XMLNode8SetValueEPKcb", (void*)&_ZN8tinyxml27XMLNode8SetValueEPKcb},
+{"_ZN8tinyxml27XMLNode9ParseDeepEPcPNS_7StrPairE", (void*)&_ZN8tinyxml27XMLNode9ParseDeepEPcPNS_7StrPairE},
+{"_ZN8tinyxml27XMLNode9ToCommentEv", (void*)&_ZN8tinyxml27XMLNode9ToCommentEv},
+{"_ZN8tinyxml27XMLNode9ToElementEv", (void*)&_ZN8tinyxml27XMLNode9ToElementEv},
+{"_ZN8tinyxml27XMLNode9ToUnknownEv", (void*)&_ZN8tinyxml27XMLNode9ToUnknownEv},
+{"_ZN8tinyxml27XMLNodeC1EPNS_11XMLDocumentE", (void*)&_ZN8tinyxml27XMLNodeC1EPNS_11XMLDocumentE},
+{"_ZN8tinyxml27XMLNodeC2EPNS_11XMLDocumentE", (void*)&_ZN8tinyxml27XMLNodeC2EPNS_11XMLDocumentE},
+{"_ZN8tinyxml27XMLNodeD0Ev", (void*)&_ZN8tinyxml27XMLNodeD0Ev},
+{"_ZN8tinyxml27XMLNodeD1Ev", (void*)&_ZN8tinyxml27XMLNodeD1Ev},
+{"_ZN8tinyxml27XMLNodeD2Ev", (void*)&_ZN8tinyxml27XMLNodeD2Ev},
+{"_ZN8tinyxml27XMLText6ToTextEv", (void*)&_ZN8tinyxml27XMLText6ToTextEv},
+{"_ZN8tinyxml27XMLText9ParseDeepEPcPNS_7StrPairE", (void*)&_ZN8tinyxml27XMLText9ParseDeepEPcPNS_7StrPairE},
+{"_ZN8tinyxml27XMLTextD0Ev", (void*)&_ZN8tinyxml27XMLTextD0Ev},
+{"_ZN8tinyxml27XMLTextD1Ev", (void*)&_ZN8tinyxml27XMLTextD1Ev},
+{"_ZN8tinyxml27XMLTextD2Ev", (void*)&_ZN8tinyxml27XMLTextD2Ev},
+{"_ZN8tinyxml27XMLUtil10ToUnsignedEPKcPj", (void*)&_ZN8tinyxml27XMLUtil10ToUnsignedEPKcPj},
+{"_ZN8tinyxml27XMLUtil15GetCharacterRefEPKcPcPi", (void*)&_ZN8tinyxml27XMLUtil15GetCharacterRefEPKcPcPi},
+{"_ZN8tinyxml27XMLUtil18ConvertUTF32ToUTF8EmPcPi", (void*)&_ZN8tinyxml27XMLUtil18ConvertUTF32ToUTF8EmPcPi},
+{"_ZN8tinyxml27XMLUtil5ToIntEPKcPi", (void*)&_ZN8tinyxml27XMLUtil5ToIntEPKcPi},
+{"_ZN8tinyxml27XMLUtil5ToStrEbPci", (void*)&_ZN8tinyxml27XMLUtil5ToStrEbPci},
+{"_ZN8tinyxml27XMLUtil5ToStrEdPci", (void*)&_ZN8tinyxml27XMLUtil5ToStrEdPci},
+{"_ZN8tinyxml27XMLUtil5ToStrEfPci", (void*)&_ZN8tinyxml27XMLUtil5ToStrEfPci},
+{"_ZN8tinyxml27XMLUtil5ToStrEiPci", (void*)&_ZN8tinyxml27XMLUtil5ToStrEiPci},
+{"_ZN8tinyxml27XMLUtil5ToStrEjPci", (void*)&_ZN8tinyxml27XMLUtil5ToStrEjPci},
+{"_ZN8tinyxml27XMLUtil6ToBoolEPKcPb", (void*)&_ZN8tinyxml27XMLUtil6ToBoolEPKcPb},
+{"_ZN8tinyxml27XMLUtil7ReadBOMEPKcPb", (void*)&_ZN8tinyxml27XMLUtil7ReadBOMEPKcPb},
+{"_ZN8tinyxml27XMLUtil7ToFloatEPKcPf", (void*)&_ZN8tinyxml27XMLUtil7ToFloatEPKcPf},
+{"_ZN8tinyxml27XMLUtil8ToDoubleEPKcPd", (void*)&_ZN8tinyxml27XMLUtil8ToDoubleEPKcPd},
+{"_ZN8tinyxml28MemPoolTILi36EE10SetTrackedEv", (void*)&_ZN8tinyxml28MemPoolTILi36EE10SetTrackedEv},
+{"_ZN8tinyxml28MemPoolTILi36EE4FreeEPv", (void*)&_ZN8tinyxml28MemPoolTILi36EE4FreeEPv},
+{"_ZN8tinyxml28MemPoolTILi36EE5AllocEv", (void*)&_ZN8tinyxml28MemPoolTILi36EE5AllocEv},
+{"_ZN8tinyxml28MemPoolTILi36EE5ClearEv", (void*)&_ZN8tinyxml28MemPoolTILi36EE5ClearEv},
+{"_ZN8tinyxml28MemPoolTILi36EED0Ev", (void*)&_ZN8tinyxml28MemPoolTILi36EED0Ev},
+{"_ZN8tinyxml28MemPoolTILi36EED1Ev", (void*)&_ZN8tinyxml28MemPoolTILi36EED1Ev},
+{"_ZN8tinyxml28MemPoolTILi36EED2Ev", (void*)&_ZN8tinyxml28MemPoolTILi36EED2Ev},
+{"_ZN8tinyxml28MemPoolTILi44EE10SetTrackedEv", (void*)&_ZN8tinyxml28MemPoolTILi44EE10SetTrackedEv},
+{"_ZN8tinyxml28MemPoolTILi44EE4FreeEPv", (void*)&_ZN8tinyxml28MemPoolTILi44EE4FreeEPv},
+{"_ZN8tinyxml28MemPoolTILi44EE5AllocEv", (void*)&_ZN8tinyxml28MemPoolTILi44EE5AllocEv},
+{"_ZN8tinyxml28MemPoolTILi44EE5ClearEv", (void*)&_ZN8tinyxml28MemPoolTILi44EE5ClearEv},
+{"_ZN8tinyxml28MemPoolTILi44EED0Ev", (void*)&_ZN8tinyxml28MemPoolTILi44EED0Ev},
+{"_ZN8tinyxml28MemPoolTILi44EED1Ev", (void*)&_ZN8tinyxml28MemPoolTILi44EED1Ev},
+{"_ZN8tinyxml28MemPoolTILi44EED2Ev", (void*)&_ZN8tinyxml28MemPoolTILi44EED2Ev},
+{"_ZN8tinyxml28MemPoolTILi48EE10SetTrackedEv", (void*)&_ZN8tinyxml28MemPoolTILi48EE10SetTrackedEv},
+{"_ZN8tinyxml28MemPoolTILi48EE4FreeEPv", (void*)&_ZN8tinyxml28MemPoolTILi48EE4FreeEPv},
+{"_ZN8tinyxml28MemPoolTILi48EE5AllocEv", (void*)&_ZN8tinyxml28MemPoolTILi48EE5AllocEv},
+{"_ZN8tinyxml28MemPoolTILi48EE5ClearEv", (void*)&_ZN8tinyxml28MemPoolTILi48EE5ClearEv},
+{"_ZN8tinyxml28MemPoolTILi48EED0Ev", (void*)&_ZN8tinyxml28MemPoolTILi48EED0Ev},
+{"_ZN8tinyxml28MemPoolTILi48EED1Ev", (void*)&_ZN8tinyxml28MemPoolTILi48EED1Ev},
+{"_ZN8tinyxml28MemPoolTILi48EED2Ev", (void*)&_ZN8tinyxml28MemPoolTILi48EED2Ev},
+{"_ZN8tinyxml28MemPoolTILi52EE10SetTrackedEv", (void*)&_ZN8tinyxml28MemPoolTILi52EE10SetTrackedEv},
+{"_ZN8tinyxml28MemPoolTILi52EE4FreeEPv", (void*)&_ZN8tinyxml28MemPoolTILi52EE4FreeEPv},
+{"_ZN8tinyxml28MemPoolTILi52EE5AllocEv", (void*)&_ZN8tinyxml28MemPoolTILi52EE5AllocEv},
+{"_ZN8tinyxml28MemPoolTILi52EE5ClearEv", (void*)&_ZN8tinyxml28MemPoolTILi52EE5ClearEv},
+{"_ZN8tinyxml28MemPoolTILi52EED0Ev", (void*)&_ZN8tinyxml28MemPoolTILi52EED0Ev},
+{"_ZN8tinyxml28MemPoolTILi52EED1Ev", (void*)&_ZN8tinyxml28MemPoolTILi52EED1Ev},
+{"_ZN8tinyxml28MemPoolTILi52EED2Ev", (void*)&_ZN8tinyxml28MemPoolTILi52EED2Ev},
+{"_ZN9Completer8completeEPv", (void*)&_ZN9Completer8completeEPv},
+{"_ZN9CompleterC1Ev", (void*)&_ZN9CompleterC1Ev},
+{"_ZN9CompleterC2Ev", (void*)&_ZN9CompleterC2Ev},
+{"_ZN9CompleterD0Ev", (void*)&_ZN9CompleterD0Ev},
+{"_ZN9CompleterD1Ev", (void*)&_ZN9CompleterD1Ev},
+{"_ZN9CompleterD2Ev", (void*)&_ZN9CompleterD2Ev},
 {"_ZN9__gnu_cxx27__verbose_terminate_handlerEv", (void*)&_ZN9__gnu_cxx27__verbose_terminate_handlerEv},
 {"_ZN9TCPSocket4recvEPvji", (void*)&_ZN9TCPSocket4recvEPvji},
 {"_ZN9TCPSocket4sendEPKvji", (void*)&_ZN9TCPSocket4sendEPKvji},
@@ -3655,6 +4360,65 @@ linkdef linkdefs[] = {
 {"_ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE", (void*)&_ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE},
 {"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE", (void*)&_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE},
 {"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_", (void*)&_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_},
+{"_ZNK8tinyxml210XMLComment12ShallowCloneEPNS_11XMLDocumentE", (void*)&_ZNK8tinyxml210XMLComment12ShallowCloneEPNS_11XMLDocumentE},
+{"_ZNK8tinyxml210XMLComment12ShallowEqualEPKNS_7XMLNodeE", (void*)&_ZNK8tinyxml210XMLComment12ShallowEqualEPKNS_7XMLNodeE},
+{"_ZNK8tinyxml210XMLComment6AcceptEPNS_10XMLVisitorE", (void*)&_ZNK8tinyxml210XMLComment6AcceptEPNS_10XMLVisitorE},
+{"_ZNK8tinyxml210XMLComment9ToCommentEv", (void*)&_ZNK8tinyxml210XMLComment9ToCommentEv},
+{"_ZNK8tinyxml210XMLElement12QueryIntTextEPi", (void*)&_ZNK8tinyxml210XMLElement12QueryIntTextEPi},
+{"_ZNK8tinyxml210XMLElement12ShallowCloneEPNS_11XMLDocumentE", (void*)&_ZNK8tinyxml210XMLElement12ShallowCloneEPNS_11XMLDocumentE},
+{"_ZNK8tinyxml210XMLElement12ShallowEqualEPKNS_7XMLNodeE", (void*)&_ZNK8tinyxml210XMLElement12ShallowEqualEPKNS_7XMLNodeE},
+{"_ZNK8tinyxml210XMLElement13FindAttributeEPKc", (void*)&_ZNK8tinyxml210XMLElement13FindAttributeEPKc},
+{"_ZNK8tinyxml210XMLElement13QueryBoolTextEPb", (void*)&_ZNK8tinyxml210XMLElement13QueryBoolTextEPb},
+{"_ZNK8tinyxml210XMLElement14QueryFloatTextEPf", (void*)&_ZNK8tinyxml210XMLElement14QueryFloatTextEPf},
+{"_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd", (void*)&_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd},
+{"_ZNK8tinyxml210XMLElement17QueryUnsignedTextEPj", (void*)&_ZNK8tinyxml210XMLElement17QueryUnsignedTextEPj},
+{"_ZNK8tinyxml210XMLElement6AcceptEPNS_10XMLVisitorE", (void*)&_ZNK8tinyxml210XMLElement6AcceptEPNS_10XMLVisitorE},
+{"_ZNK8tinyxml210XMLElement7GetTextEv", (void*)&_ZNK8tinyxml210XMLElement7GetTextEv},
+{"_ZNK8tinyxml210XMLElement9AttributeEPKcS2_", (void*)&_ZNK8tinyxml210XMLElement9AttributeEPKcS2_},
+{"_ZNK8tinyxml210XMLElement9ToElementEv", (void*)&_ZNK8tinyxml210XMLElement9ToElementEv},
+{"_ZNK8tinyxml210XMLUnknown12ShallowCloneEPNS_11XMLDocumentE", (void*)&_ZNK8tinyxml210XMLUnknown12ShallowCloneEPNS_11XMLDocumentE},
+{"_ZNK8tinyxml210XMLUnknown12ShallowEqualEPKNS_7XMLNodeE", (void*)&_ZNK8tinyxml210XMLUnknown12ShallowEqualEPKNS_7XMLNodeE},
+{"_ZNK8tinyxml210XMLUnknown6AcceptEPNS_10XMLVisitorE", (void*)&_ZNK8tinyxml210XMLUnknown6AcceptEPNS_10XMLVisitorE},
+{"_ZNK8tinyxml210XMLUnknown9ToUnknownEv", (void*)&_ZNK8tinyxml210XMLUnknown9ToUnknownEv},
+{"_ZNK8tinyxml211XMLDocument10PrintErrorEv", (void*)&_ZNK8tinyxml211XMLDocument10PrintErrorEv},
+{"_ZNK8tinyxml211XMLDocument10ToDocumentEv", (void*)&_ZNK8tinyxml211XMLDocument10ToDocumentEv},
+{"_ZNK8tinyxml211XMLDocument12ShallowCloneEPS0_", (void*)&_ZNK8tinyxml211XMLDocument12ShallowCloneEPS0_},
+{"_ZNK8tinyxml211XMLDocument12ShallowEqualEPKNS_7XMLNodeE", (void*)&_ZNK8tinyxml211XMLDocument12ShallowEqualEPKNS_7XMLNodeE},
+{"_ZNK8tinyxml211XMLDocument5PrintEPNS_10XMLPrinterE", (void*)&_ZNK8tinyxml211XMLDocument5PrintEPNS_10XMLPrinterE},
+{"_ZNK8tinyxml211XMLDocument6AcceptEPNS_10XMLVisitorE", (void*)&_ZNK8tinyxml211XMLDocument6AcceptEPNS_10XMLVisitorE},
+{"_ZNK8tinyxml211XMLDocument9ErrorNameEv", (void*)&_ZNK8tinyxml211XMLDocument9ErrorNameEv},
+{"_ZNK8tinyxml212XMLAttribute13QueryIntValueEPi", (void*)&_ZNK8tinyxml212XMLAttribute13QueryIntValueEPi},
+{"_ZNK8tinyxml212XMLAttribute14QueryBoolValueEPb", (void*)&_ZNK8tinyxml212XMLAttribute14QueryBoolValueEPb},
+{"_ZNK8tinyxml212XMLAttribute15QueryFloatValueEPf", (void*)&_ZNK8tinyxml212XMLAttribute15QueryFloatValueEPf},
+{"_ZNK8tinyxml212XMLAttribute16QueryDoubleValueEPd", (void*)&_ZNK8tinyxml212XMLAttribute16QueryDoubleValueEPd},
+{"_ZNK8tinyxml212XMLAttribute18QueryUnsignedValueEPj", (void*)&_ZNK8tinyxml212XMLAttribute18QueryUnsignedValueEPj},
+{"_ZNK8tinyxml212XMLAttribute4NameEv", (void*)&_ZNK8tinyxml212XMLAttribute4NameEv},
+{"_ZNK8tinyxml212XMLAttribute5ValueEv", (void*)&_ZNK8tinyxml212XMLAttribute5ValueEv},
+{"_ZNK8tinyxml214XMLDeclaration12ShallowCloneEPNS_11XMLDocumentE", (void*)&_ZNK8tinyxml214XMLDeclaration12ShallowCloneEPNS_11XMLDocumentE},
+{"_ZNK8tinyxml214XMLDeclaration12ShallowEqualEPKNS_7XMLNodeE", (void*)&_ZNK8tinyxml214XMLDeclaration12ShallowEqualEPKNS_7XMLNodeE},
+{"_ZNK8tinyxml214XMLDeclaration13ToDeclarationEv", (void*)&_ZNK8tinyxml214XMLDeclaration13ToDeclarationEv},
+{"_ZNK8tinyxml214XMLDeclaration6AcceptEPNS_10XMLVisitorE", (void*)&_ZNK8tinyxml214XMLDeclaration6AcceptEPNS_10XMLVisitorE},
+{"_ZNK8tinyxml27XMLNode10ToDocumentEv", (void*)&_ZNK8tinyxml27XMLNode10ToDocumentEv},
+{"_ZNK8tinyxml27XMLNode13ToDeclarationEv", (void*)&_ZNK8tinyxml27XMLNode13ToDeclarationEv},
+{"_ZNK8tinyxml27XMLNode16LastChildElementEPKc", (void*)&_ZNK8tinyxml27XMLNode16LastChildElementEPKc},
+{"_ZNK8tinyxml27XMLNode17FirstChildElementEPKc", (void*)&_ZNK8tinyxml27XMLNode17FirstChildElementEPKc},
+{"_ZNK8tinyxml27XMLNode18NextSiblingElementEPKc", (void*)&_ZNK8tinyxml27XMLNode18NextSiblingElementEPKc},
+{"_ZNK8tinyxml27XMLNode19InsertChildPreambleEPS0_", (void*)&_ZNK8tinyxml27XMLNode19InsertChildPreambleEPS0_},
+{"_ZNK8tinyxml27XMLNode22PreviousSiblingElementEPKc", (void*)&_ZNK8tinyxml27XMLNode22PreviousSiblingElementEPKc},
+{"_ZNK8tinyxml27XMLNode5ValueEv", (void*)&_ZNK8tinyxml27XMLNode5ValueEv},
+{"_ZNK8tinyxml27XMLNode6ToTextEv", (void*)&_ZNK8tinyxml27XMLNode6ToTextEv},
+{"_ZNK8tinyxml27XMLNode9ToCommentEv", (void*)&_ZNK8tinyxml27XMLNode9ToCommentEv},
+{"_ZNK8tinyxml27XMLNode9ToElementEv", (void*)&_ZNK8tinyxml27XMLNode9ToElementEv},
+{"_ZNK8tinyxml27XMLNode9ToUnknownEv", (void*)&_ZNK8tinyxml27XMLNode9ToUnknownEv},
+{"_ZNK8tinyxml27XMLText12ShallowCloneEPNS_11XMLDocumentE", (void*)&_ZNK8tinyxml27XMLText12ShallowCloneEPNS_11XMLDocumentE},
+{"_ZNK8tinyxml27XMLText12ShallowEqualEPKNS_7XMLNodeE", (void*)&_ZNK8tinyxml27XMLText12ShallowEqualEPKNS_7XMLNodeE},
+{"_ZNK8tinyxml27XMLText6AcceptEPNS_10XMLVisitorE", (void*)&_ZNK8tinyxml27XMLText6AcceptEPNS_10XMLVisitorE},
+{"_ZNK8tinyxml27XMLText6ToTextEv", (void*)&_ZNK8tinyxml27XMLText6ToTextEv},
+{"_ZNK8tinyxml28MemPoolTILi36EE8ItemSizeEv", (void*)&_ZNK8tinyxml28MemPoolTILi36EE8ItemSizeEv},
+{"_ZNK8tinyxml28MemPoolTILi44EE8ItemSizeEv", (void*)&_ZNK8tinyxml28MemPoolTILi44EE8ItemSizeEv},
+{"_ZNK8tinyxml28MemPoolTILi48EE8ItemSizeEv", (void*)&_ZNK8tinyxml28MemPoolTILi48EE8ItemSizeEv},
+{"_ZNK8tinyxml28MemPoolTILi52EE8ItemSizeEv", (void*)&_ZNK8tinyxml28MemPoolTILi52EE8ItemSizeEv},
+{"_ZNKSs5rfindEcj", (void*)&_ZNKSs5rfindEcj},
 {"_ZNKSt11logic_error4whatEv", (void*)&_ZNKSt11logic_error4whatEv},
 {"_ZNKSt13bad_exception4whatEv", (void*)&_ZNKSt13bad_exception4whatEv},
 {"_ZNKSt14error_category10equivalentEiRKSt15error_condition", (void*)&_ZNKSt14error_category10equivalentEiRKSt15error_condition},
@@ -3669,16 +4433,26 @@ linkdef linkdefs[] = {
 {"_ZNKSt9type_info15__is_function_pEv", (void*)&_ZNKSt9type_info15__is_function_pEv},
 {"z_notanum", (void*)&z_notanum},
 {"z_notanum_f", (void*)&z_notanum_f},
+{"_ZNSs12_S_constructIPcEES0_T_S1_RKSaIcESt20forward_iterator_tag", (void*)&_ZNSs12_S_constructIPcEES0_T_S1_RKSaIcESt20forward_iterator_tag},
 {"_ZNSs12_S_constructIPKcEEPcT_S3_RKSaIcESt20forward_iterator_tag", (void*)&_ZNSs12_S_constructIPKcEEPcT_S3_RKSaIcESt20forward_iterator_tag},
+{"_ZNSs15_M_replace_safeEjjPKcj", (void*)&_ZNSs15_M_replace_safeEjjPKcj},
 {"_ZNSs4_Rep10_M_destroyERKSaIcE", (void*)&_ZNSs4_Rep10_M_destroyERKSaIcE},
 {"_ZNSs4_Rep10_M_disposeERKSaIcE", (void*)&_ZNSs4_Rep10_M_disposeERKSaIcE},
 {"_ZNSs4_Rep20_S_empty_rep_storageE", (void*)&_ZNSs4_Rep20_S_empty_rep_storageE},
 {"_ZNSs4_Rep8_M_cloneERKSaIcEj", (void*)&_ZNSs4_Rep8_M_cloneERKSaIcEj},
 {"_ZNSs4_Rep9_S_createEjjRKSaIcE", (void*)&_ZNSs4_Rep9_S_createEjjRKSaIcE},
+{"_ZNSs4swapERSs", (void*)&_ZNSs4swapERSs},
+{"_ZNSs6appendEPKcj", (void*)&_ZNSs6appendEPKcj},
+{"_ZNSs6assignEPKcj", (void*)&_ZNSs6assignEPKcj},
+{"_ZNSs6assignERKSs", (void*)&_ZNSs6assignERKSs},
+{"_ZNSs7reserveEj", (void*)&_ZNSs7reserveEj},
+{"_ZNSs9_M_mutateEjjj", (void*)&_ZNSs9_M_mutateEjjj},
 {"_ZNSsC1EPKcRKSaIcE", (void*)&_ZNSsC1EPKcRKSaIcE},
 {"_ZNSsC1ERKSs", (void*)&_ZNSsC1ERKSs},
+{"_ZNSsC1ERKSsjj", (void*)&_ZNSsC1ERKSsjj},
 {"_ZNSsC2EPKcRKSaIcE", (void*)&_ZNSsC2EPKcRKSaIcE},
 {"_ZNSsC2ERKSs", (void*)&_ZNSsC2ERKSs},
+{"_ZNSsC2ERKSsjj", (void*)&_ZNSsC2ERKSsjj},
 {"_ZNSsD1Ev", (void*)&_ZNSsD1Ev},
 {"_ZNSsD2Ev", (void*)&_ZNSsD2Ev},
 {"_ZNSt11_Deque_baseIP9UIElementSaIS1_EE17_M_initialize_mapEj", (void*)&_ZNSt11_Deque_baseIP9UIElementSaIS1_EE17_M_initialize_mapEj},
@@ -3692,12 +4466,20 @@ linkdef linkdefs[] = {
 {"_ZNSt12length_errorD0Ev", (void*)&_ZNSt12length_errorD0Ev},
 {"_ZNSt12length_errorD1Ev", (void*)&_ZNSt12length_errorD1Ev},
 {"_ZNSt12length_errorD2Ev", (void*)&_ZNSt12length_errorD2Ev},
+{"_ZNSt12out_of_rangeC1ERKSs", (void*)&_ZNSt12out_of_rangeC1ERKSs},
+{"_ZNSt12out_of_rangeC2ERKSs", (void*)&_ZNSt12out_of_rangeC2ERKSs},
+{"_ZNSt12out_of_rangeD0Ev", (void*)&_ZNSt12out_of_rangeD0Ev},
+{"_ZNSt12out_of_rangeD1Ev", (void*)&_ZNSt12out_of_rangeD1Ev},
+{"_ZNSt12out_of_rangeD2Ev", (void*)&_ZNSt12out_of_rangeD2Ev},
 {"_ZNSt13bad_exceptionD0Ev", (void*)&_ZNSt13bad_exceptionD0Ev},
 {"_ZNSt13bad_exceptionD1Ev", (void*)&_ZNSt13bad_exceptionD1Ev},
 {"_ZNSt13bad_exceptionD2Ev", (void*)&_ZNSt13bad_exceptionD2Ev},
 {"_ZNSt14error_categoryD0Ev", (void*)&_ZNSt14error_categoryD0Ev},
 {"_ZNSt14error_categoryD1Ev", (void*)&_ZNSt14error_categoryD1Ev},
 {"_ZNSt14error_categoryD2Ev", (void*)&_ZNSt14error_categoryD2Ev},
+{"_ZNSt17bad_function_callD0Ev", (void*)&_ZNSt17bad_function_callD0Ev},
+{"_ZNSt17bad_function_callD1Ev", (void*)&_ZNSt17bad_function_callD1Ev},
+{"_ZNSt17bad_function_callD2Ev", (void*)&_ZNSt17bad_function_callD2Ev},
 {"_ZNSt5dequeIP9UIElementSaIS1_EE16_M_push_back_auxIIRS1_EEEvDpOT_", (void*)&_ZNSt5dequeIP9UIElementSaIS1_EE16_M_push_back_auxIIRS1_EEEvDpOT_},
 {"_ZNSt5dequeIP9UIElementSaIS1_EE16_M_push_back_auxIJRS1_EEEvDpOT_", (void*)&_ZNSt5dequeIP9UIElementSaIS1_EE16_M_push_back_auxIJRS1_EEEvDpOT_},
 {"_ZNSt6vectorIP10RenderableSaIS1_EE19_M_emplace_back_auxIIRS1_EEEvDpOT_", (void*)&_ZNSt6vectorIP10RenderableSaIS1_EE19_M_emplace_back_auxIIRS1_EEEvDpOT_},
@@ -3706,6 +4488,8 @@ linkdef linkdefs[] = {
 {"_ZNSt6vectorIP11EasingStateSaIS1_EE12emplace_backIJRS1_EEEvDpOT_", (void*)&_ZNSt6vectorIP11EasingStateSaIS1_EE12emplace_backIJRS1_EEEvDpOT_},
 {"_ZNSt6vectorIP11EasingStateSaIS1_EE19_M_emplace_back_auxIIRS1_EEEvDpOT_", (void*)&_ZNSt6vectorIP11EasingStateSaIS1_EE19_M_emplace_back_auxIIRS1_EEEvDpOT_},
 {"_ZNSt6vectorIP11EasingStateSaIS1_EE19_M_emplace_back_auxIJRS1_EEEvDpOT_", (void*)&_ZNSt6vectorIP11EasingStateSaIS1_EE19_M_emplace_back_auxIJRS1_EEEvDpOT_},
+{"_ZNSt6vectorIP5StateSaIS1_EE19_M_emplace_back_auxIIRS1_EEEvDpOT_", (void*)&_ZNSt6vectorIP5StateSaIS1_EE19_M_emplace_back_auxIIRS1_EEEvDpOT_},
+{"_ZNSt6vectorIP5StateSaIS1_EE19_M_emplace_back_auxIJRS1_EEEvDpOT_", (void*)&_ZNSt6vectorIP5StateSaIS1_EE19_M_emplace_back_auxIJRS1_EEEvDpOT_},
 {"_ZNSt8_Rb_treeIjSt4pairIKjP12AllocSectionESt10_Select1stIS4_ESt4lessIjESaIS4_EE14_M_insert_nodeEPSt18_Rb_tree_node_baseSC_PSt13_Rb_tree_nodeIS4_E", (void*)&_ZNSt8_Rb_treeIjSt4pairIKjP12AllocSectionESt10_Select1stIS4_ESt4lessIjESaIS4_EE14_M_insert_nodeEPSt18_Rb_tree_node_baseSC_PSt13_Rb_tree_nodeIS4_E},
 {"_ZNSt8_Rb_treeIjSt4pairIKjP12AllocSectionESt10_Select1stIS4_ESt4lessIjESaIS4_EE24_M_get_insert_unique_posERS1_", (void*)&_ZNSt8_Rb_treeIjSt4pairIKjP12AllocSectionESt10_Select1stIS4_ESt4lessIjESaIS4_EE24_M_get_insert_unique_posERS1_},
 {"_ZNSt8_Rb_treeIjSt4pairIKjP12AllocSectionESt10_Select1stIS4_ESt4lessIjESaIS4_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS4_ERS1_", (void*)&_ZNSt8_Rb_treeIjSt4pairIKjP12AllocSectionESt10_Select1stIS4_ESt4lessIjESaIS4_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS4_ERS1_},
@@ -3746,21 +4530,28 @@ linkdef linkdefs[] = {
 {"_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base", (void*)&_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base},
 {"_ZSt19__throw_logic_errorPKc", (void*)&_ZSt19__throw_logic_errorPKc},
 {"_ZSt20__throw_length_errorPKc", (void*)&_ZSt20__throw_length_errorPKc},
+{"_ZSt20__throw_out_of_rangePKc", (void*)&_ZSt20__throw_out_of_rangePKc},
+{"_ZSt25__throw_bad_function_callv", (void*)&_ZSt25__throw_bad_function_callv},
 {"_ZSt28_Rb_tree_rebalance_for_erasePSt18_Rb_tree_node_baseRS_", (void*)&_ZSt28_Rb_tree_rebalance_for_erasePSt18_Rb_tree_node_baseRS_},
 {"_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_", (void*)&_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_},
 {"_ZSt6removeIN9__gnu_cxx17__normal_iteratorIPP10RenderableSt6vectorIS3_SaIS3_EEEES3_ET_S9_S9_RKT0_", (void*)&_ZSt6removeIN9__gnu_cxx17__normal_iteratorIPP10RenderableSt6vectorIS3_SaIS3_EEEES3_ET_S9_S9_RKT0_},
 {"_ZSt9terminatev", (void*)&_ZSt9terminatev},
 {"_ZTI10Animatable", (void*)&_ZTI10Animatable},
 {"_ZTI10Renderable", (void*)&_ZTI10Renderable},
+{"_ZTI11AsyncObject", (void*)&_ZTI11AsyncObject},
 {"_ZTI14RenderableText", (void*)&_ZTI14RenderableText},
 {"_ZTI15AnimatableColor", (void*)&_ZTI15AnimatableColor},
 {"_ZTI15AnimatableFloat", (void*)&_ZTI15AnimatableFloat},
 {"_ZTI15RenderableGroup", (void*)&_ZTI15RenderableGroup},
+{"_ZTI16HomebrewAppState", (void*)&_ZTI16HomebrewAppState},
 {"_ZTI17RenderableTexture", (void*)&_ZTI17RenderableTexture},
 {"_ZTI18HomebrewAppElement", (void*)&_ZTI18HomebrewAppElement},
 {"_ZTI18RenderableTriangle", (void*)&_ZTI18RenderableTriangle},
 {"_ZTI19RenderableRectangle", (void*)&_ZTI19RenderableRectangle},
+{"_ZTI5State", (void*)&_ZTI5State},
+{"_ZTI6Future", (void*)&_ZTI6Future},
 {"_ZTI6Socket", (void*)&_ZTI6Socket},
+{"_ZTI9Completer", (void*)&_ZTI9Completer},
 {"_ZTI9TCPSocket", (void*)&_ZTI9TCPSocket},
 {"_ZTI9UIElement", (void*)&_ZTI9UIElement},
 {"_ZTIN10__cxxabiv115__forced_unwindE", (void*)&_ZTIN10__cxxabiv115__forced_unwindE},
@@ -3772,25 +4563,47 @@ linkdef linkdefs[] = {
 {"_ZTIN2UI14UIElementMakerE", (void*)&_ZTIN2UI14UIElementMakerE},
 {"_ZTIN2UI23HomebrewAppElementMakerE", (void*)&_ZTIN2UI23HomebrewAppElementMakerE},
 {"_ZTIN2UI9UICommandE", (void*)&_ZTIN2UI9UICommandE},
+{"_ZTIN8tinyxml210XMLCommentE", (void*)&_ZTIN8tinyxml210XMLCommentE},
+{"_ZTIN8tinyxml210XMLElementE", (void*)&_ZTIN8tinyxml210XMLElementE},
+{"_ZTIN8tinyxml210XMLPrinterE", (void*)&_ZTIN8tinyxml210XMLPrinterE},
+{"_ZTIN8tinyxml210XMLUnknownE", (void*)&_ZTIN8tinyxml210XMLUnknownE},
+{"_ZTIN8tinyxml210XMLVisitorE", (void*)&_ZTIN8tinyxml210XMLVisitorE},
+{"_ZTIN8tinyxml211XMLDocumentE", (void*)&_ZTIN8tinyxml211XMLDocumentE},
+{"_ZTIN8tinyxml212XMLAttributeE", (void*)&_ZTIN8tinyxml212XMLAttributeE},
+{"_ZTIN8tinyxml214XMLDeclarationE", (void*)&_ZTIN8tinyxml214XMLDeclarationE},
+{"_ZTIN8tinyxml27MemPoolE", (void*)&_ZTIN8tinyxml27MemPoolE},
+{"_ZTIN8tinyxml27XMLNodeE", (void*)&_ZTIN8tinyxml27XMLNodeE},
+{"_ZTIN8tinyxml27XMLTextE", (void*)&_ZTIN8tinyxml27XMLTextE},
+{"_ZTIN8tinyxml28MemPoolTILi36EEE", (void*)&_ZTIN8tinyxml28MemPoolTILi36EEE},
+{"_ZTIN8tinyxml28MemPoolTILi44EEE", (void*)&_ZTIN8tinyxml28MemPoolTILi44EEE},
+{"_ZTIN8tinyxml28MemPoolTILi48EEE", (void*)&_ZTIN8tinyxml28MemPoolTILi48EEE},
+{"_ZTIN8tinyxml28MemPoolTILi52EEE", (void*)&_ZTIN8tinyxml28MemPoolTILi52EEE},
 {"_ZTISt11logic_error", (void*)&_ZTISt11logic_error},
 {"_ZTISt12length_error", (void*)&_ZTISt12length_error},
+{"_ZTISt12out_of_range", (void*)&_ZTISt12out_of_range},
 {"_ZTISt13bad_exception", (void*)&_ZTISt13bad_exception},
 {"_ZTISt14error_category", (void*)&_ZTISt14error_category},
+{"_ZTISt17bad_function_call", (void*)&_ZTISt17bad_function_call},
 {"_ZTISt9bad_alloc", (void*)&_ZTISt9bad_alloc},
 {"_ZTISt9exception", (void*)&_ZTISt9exception},
 {"_ZTISt9type_info", (void*)&_ZTISt9type_info},
 {"_ZTS10Animatable", (void*)&_ZTS10Animatable},
 {"_ZTS10Renderable", (void*)&_ZTS10Renderable},
+{"_ZTS11AsyncObject", (void*)&_ZTS11AsyncObject},
 {"_ZTS14RenderableText", (void*)&_ZTS14RenderableText},
 {"_ZTS15AnimatableColor", (void*)&_ZTS15AnimatableColor},
 {"_ZTS15AnimatableFloat", (void*)&_ZTS15AnimatableFloat},
 {"_ZTS15RenderableGroup", (void*)&_ZTS15RenderableGroup},
+{"_ZTS16HomebrewAppState", (void*)&_ZTS16HomebrewAppState},
 {"_ZTS17RenderableTexture", (void*)&_ZTS17RenderableTexture},
 {"_ZTS18HomebrewAppElement", (void*)&_ZTS18HomebrewAppElement},
 {"_ZTS18RenderableTriangle", (void*)&_ZTS18RenderableTriangle},
 {"_ZTS19RenderableRectangle", (void*)&_ZTS19RenderableRectangle},
 {"_ZTS3ELF", (void*)&_ZTS3ELF},
+{"_ZTS5State", (void*)&_ZTS5State},
+{"_ZTS6Future", (void*)&_ZTS6Future},
 {"_ZTS6Socket", (void*)&_ZTS6Socket},
+{"_ZTS9Completer", (void*)&_ZTS9Completer},
 {"_ZTS9TCPSocket", (void*)&_ZTS9TCPSocket},
 {"_ZTS9UIElement", (void*)&_ZTS9UIElement},
 {"_ZTSN10__cxxabiv115__forced_unwindE", (void*)&_ZTSN10__cxxabiv115__forced_unwindE},
@@ -3802,23 +4615,45 @@ linkdef linkdefs[] = {
 {"_ZTSN2UI14UIElementMakerE", (void*)&_ZTSN2UI14UIElementMakerE},
 {"_ZTSN2UI23HomebrewAppElementMakerE", (void*)&_ZTSN2UI23HomebrewAppElementMakerE},
 {"_ZTSN2UI9UICommandE", (void*)&_ZTSN2UI9UICommandE},
+{"_ZTSN8tinyxml210XMLCommentE", (void*)&_ZTSN8tinyxml210XMLCommentE},
+{"_ZTSN8tinyxml210XMLElementE", (void*)&_ZTSN8tinyxml210XMLElementE},
+{"_ZTSN8tinyxml210XMLPrinterE", (void*)&_ZTSN8tinyxml210XMLPrinterE},
+{"_ZTSN8tinyxml210XMLUnknownE", (void*)&_ZTSN8tinyxml210XMLUnknownE},
+{"_ZTSN8tinyxml210XMLVisitorE", (void*)&_ZTSN8tinyxml210XMLVisitorE},
+{"_ZTSN8tinyxml211XMLDocumentE", (void*)&_ZTSN8tinyxml211XMLDocumentE},
+{"_ZTSN8tinyxml212XMLAttributeE", (void*)&_ZTSN8tinyxml212XMLAttributeE},
+{"_ZTSN8tinyxml214XMLDeclarationE", (void*)&_ZTSN8tinyxml214XMLDeclarationE},
+{"_ZTSN8tinyxml27MemPoolE", (void*)&_ZTSN8tinyxml27MemPoolE},
+{"_ZTSN8tinyxml27XMLNodeE", (void*)&_ZTSN8tinyxml27XMLNodeE},
+{"_ZTSN8tinyxml27XMLTextE", (void*)&_ZTSN8tinyxml27XMLTextE},
+{"_ZTSN8tinyxml28MemPoolTILi36EEE", (void*)&_ZTSN8tinyxml28MemPoolTILi36EEE},
+{"_ZTSN8tinyxml28MemPoolTILi44EEE", (void*)&_ZTSN8tinyxml28MemPoolTILi44EEE},
+{"_ZTSN8tinyxml28MemPoolTILi48EEE", (void*)&_ZTSN8tinyxml28MemPoolTILi48EEE},
+{"_ZTSN8tinyxml28MemPoolTILi52EEE", (void*)&_ZTSN8tinyxml28MemPoolTILi52EEE},
 {"_ZTSSt11logic_error", (void*)&_ZTSSt11logic_error},
 {"_ZTSSt12length_error", (void*)&_ZTSSt12length_error},
+{"_ZTSSt12out_of_range", (void*)&_ZTSSt12out_of_range},
 {"_ZTSSt13bad_exception", (void*)&_ZTSSt13bad_exception},
 {"_ZTSSt14error_category", (void*)&_ZTSSt14error_category},
+{"_ZTSSt17bad_function_call", (void*)&_ZTSSt17bad_function_call},
 {"_ZTSSt9bad_alloc", (void*)&_ZTSSt9bad_alloc},
 {"_ZTSSt9exception", (void*)&_ZTSSt9exception},
 {"_ZTSSt9type_info", (void*)&_ZTSSt9type_info},
 {"_ZTV10Animatable", (void*)&_ZTV10Animatable},
 {"_ZTV10Renderable", (void*)&_ZTV10Renderable},
+{"_ZTV11AsyncObject", (void*)&_ZTV11AsyncObject},
 {"_ZTV14RenderableText", (void*)&_ZTV14RenderableText},
 {"_ZTV15AnimatableColor", (void*)&_ZTV15AnimatableColor},
 {"_ZTV15AnimatableFloat", (void*)&_ZTV15AnimatableFloat},
 {"_ZTV15RenderableGroup", (void*)&_ZTV15RenderableGroup},
+{"_ZTV16HomebrewAppState", (void*)&_ZTV16HomebrewAppState},
 {"_ZTV17RenderableTexture", (void*)&_ZTV17RenderableTexture},
 {"_ZTV18HomebrewAppElement", (void*)&_ZTV18HomebrewAppElement},
 {"_ZTV18RenderableTriangle", (void*)&_ZTV18RenderableTriangle},
 {"_ZTV19RenderableRectangle", (void*)&_ZTV19RenderableRectangle},
+{"_ZTV5State", (void*)&_ZTV5State},
+{"_ZTV6Future", (void*)&_ZTV6Future},
+{"_ZTV9Completer", (void*)&_ZTV9Completer},
 {"_ZTV9TCPSocket", (void*)&_ZTV9TCPSocket},
 {"_ZTV9UIElement", (void*)&_ZTV9UIElement},
 {"_ZTVN10__cxxabiv117__class_type_infoE", (void*)&_ZTVN10__cxxabiv117__class_type_infoE},
@@ -3827,10 +4662,27 @@ linkdef linkdefs[] = {
 {"_ZTVN2UI13UpdateCommandE", (void*)&_ZTVN2UI13UpdateCommandE},
 {"_ZTVN2UI23HomebrewAppElementMakerE", (void*)&_ZTVN2UI23HomebrewAppElementMakerE},
 {"_ZTVN2UI9UICommandE", (void*)&_ZTVN2UI9UICommandE},
+{"_ZTVN8tinyxml210XMLCommentE", (void*)&_ZTVN8tinyxml210XMLCommentE},
+{"_ZTVN8tinyxml210XMLElementE", (void*)&_ZTVN8tinyxml210XMLElementE},
+{"_ZTVN8tinyxml210XMLPrinterE", (void*)&_ZTVN8tinyxml210XMLPrinterE},
+{"_ZTVN8tinyxml210XMLUnknownE", (void*)&_ZTVN8tinyxml210XMLUnknownE},
+{"_ZTVN8tinyxml210XMLVisitorE", (void*)&_ZTVN8tinyxml210XMLVisitorE},
+{"_ZTVN8tinyxml211XMLDocumentE", (void*)&_ZTVN8tinyxml211XMLDocumentE},
+{"_ZTVN8tinyxml212XMLAttributeE", (void*)&_ZTVN8tinyxml212XMLAttributeE},
+{"_ZTVN8tinyxml214XMLDeclarationE", (void*)&_ZTVN8tinyxml214XMLDeclarationE},
+{"_ZTVN8tinyxml27MemPoolE", (void*)&_ZTVN8tinyxml27MemPoolE},
+{"_ZTVN8tinyxml27XMLNodeE", (void*)&_ZTVN8tinyxml27XMLNodeE},
+{"_ZTVN8tinyxml27XMLTextE", (void*)&_ZTVN8tinyxml27XMLTextE},
+{"_ZTVN8tinyxml28MemPoolTILi36EEE", (void*)&_ZTVN8tinyxml28MemPoolTILi36EEE},
+{"_ZTVN8tinyxml28MemPoolTILi44EEE", (void*)&_ZTVN8tinyxml28MemPoolTILi44EEE},
+{"_ZTVN8tinyxml28MemPoolTILi48EEE", (void*)&_ZTVN8tinyxml28MemPoolTILi48EEE},
+{"_ZTVN8tinyxml28MemPoolTILi52EEE", (void*)&_ZTVN8tinyxml28MemPoolTILi52EEE},
 {"_ZTVSt11logic_error", (void*)&_ZTVSt11logic_error},
 {"_ZTVSt12length_error", (void*)&_ZTVSt12length_error},
+{"_ZTVSt12out_of_range", (void*)&_ZTVSt12out_of_range},
 {"_ZTVSt13bad_exception", (void*)&_ZTVSt13bad_exception},
 {"_ZTVSt14error_category", (void*)&_ZTVSt14error_category},
+{"_ZTVSt17bad_function_call", (void*)&_ZTVSt17bad_function_call},
 {"_ZTVSt9bad_alloc", (void*)&_ZTVSt9bad_alloc},
 {"_ZTVSt9exception", (void*)&_ZTVSt9exception},
 {"_ZTVSt9type_info", (void*)&_ZTVSt9type_info},
