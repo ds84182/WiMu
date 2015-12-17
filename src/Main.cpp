@@ -71,7 +71,7 @@ int main() {
 	RenderableRectangle *page = new RenderableRectangle(0, 128, 640, 480-128, 0xf9f9f9ff);
 	Renderer::addRenderable(page);
 
-	RenderableText *title = new RenderableText("WiMu", 40, 128-4, Roboto::Title);
+	RenderableText *title = new RenderableText("WiMu", 40, 128-4, 0xFFFFFFFF, Roboto::Title);
 	Renderer::addRenderable(title);
 
 	Renderer::runAnimation(new AnimatableFloat(&toolbar->y, 480, 0), 0.5f, EasingFunction::OUT_QUAD);

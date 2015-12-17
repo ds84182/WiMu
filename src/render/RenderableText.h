@@ -12,15 +12,17 @@ class RenderableText : public Renderable {
 	
 public:
 	f32 x, y;
-	u32 color = 0xFFFFFFFF;
-	FreeTypeGX *font = Roboto::Body;
+	u32 color;
+	FreeTypeGX *font;
 	
-	RenderableText(const wchar_t *t, f32 x = 0, f32 y = 0, FreeTypeGX *font = Roboto::Body) : x(x), y(y), font(font) {
+	RenderableText(const wchar_t *t, f32 x = 0, f32 y = 0, u32 color = 0xFFFFFFFF, FreeTypeGX *font = Roboto::Body) :
+		x(x), y(y), color(color), font(font) {
 		chars = new wchar_t[wcslen(t)];
 		wcscpy(chars, t);
 	}
 	
-	RenderableText(const char *t, f32 x = 0, f32 y = 0, FreeTypeGX *font = Roboto::Body) : x(x), y(y), font(font) {
+	RenderableText(const char *t, f32 x = 0, f32 y = 0, u32 color = 0xFFFFFFFF, FreeTypeGX *font = Roboto::Body) :
+		x(x), y(y), color(color), font(font) {
 		chars = charToWideChar(t);
 	}
 
