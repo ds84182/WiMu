@@ -2,8 +2,12 @@
 
 #include "ELF.h"
 
+#include <ogc/cache.h>
+
 #include <string>
 #include <map>
+
+#include <malloc.h>
 
 class AllocSection {
 public:
@@ -15,10 +19,14 @@ public:
 	AllocSection(const char *name, const Elf32_Shdr *section, const u8 *rodata) :
 		name(name) {
 		size = section->sh_size;
-		data = new u8[size];
+		data = (u8*)memalign(32, size);
 		flags = section->sh_flags;
 
 		memcpy(data, rodata, size);
+
+		if (flags & SHF_EXECINSTR) {
+			ICInvalidateRange(data, size);
+		}
 	}
 };
 
@@ -75,7 +83,11 @@ public:
 					Logger::logf("Undefined symbol %s", name);
 				}
 			} else {
-				sym->address = reinterpret_cast<u32>(sections[symbol->st_shndx]->data+sym->address);
+				AllocSection *section = sections.count(symbol->st_shndx) == 0 ? nullptr : sections[symbol->st_shndx];
+				
+				if (section) {
+					sym->address = reinterpret_cast<u32>(section->data+sym->address);
+				}
 			}
 		}
 	}

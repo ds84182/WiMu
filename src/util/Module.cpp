@@ -40,7 +40,7 @@ bool Module::link() {
 				u32 type = ELF32_R_TYPE(relocation->r_info);
 				const Elf32_Sym *symbol = elf->getSymbol(ELF32_R_SYM(relocation->r_info));
 				const char *symbolName = elf->getSymbolName(symbol);
-				Logger::logf("%s %s %d", name, symbolName, relocation->r_addend);
+				//Logger::logf("%s %s %d", name, symbolName, relocation->r_addend);
 				
 				Symbol *sym = symbolMap[symbol];
 
@@ -57,7 +57,7 @@ bool Module::link() {
 
 				u32 offset = reinterpret_cast<u32>(target->data+relocation->r_offset);
 
-				Logger::logf("Relocation Address: %p %p %d", address, offset, sym->type);
+				//Logger::logf("Relocation Address: %p %p %d", address, offset, sym->type);
 				u32 *data = reinterpret_cast<u32*>(target->data+relocation->r_offset);
 				u16 *data16 = reinterpret_cast<u16*>(target->data+relocation->r_offset);
 				u32 value = 0;
