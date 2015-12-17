@@ -86,9 +86,14 @@ int main() {
 	ELF testModELF((u8*)test_module_mod);
 	Logger::logf("module symbol: %p", testModELF.findSymbol("module"));
 	Module testModule(&testModELF);
-	testModule.link();
-	Logger::logf("%p", testModule.getSymbol("module")->address);
-	((void *(*)())testModule.getSymbol("module")->address)();
+	if (testModule.link()) {
+		Logger::logf("%p", testModule.getSymbol("module")->address);
+		((void *(*)())testModule.getSymbol("module")->address)();
+	} else {
+		Logger::log("module link failed");
+	}
+
+	Logger::logf("%X", typeid(ELF).hash_code());
 
 	/*HomebrewAppState has("sd:/apps/3dmaze");
 	Loader::queue(&has);

@@ -1820,6 +1820,7 @@ extern void *_Znwj;
 extern void *z_rooteps;
 extern void *z_rooteps_f;
 extern void *_ZSt10unexpectedv;
+extern void *_ZSt11_Hash_bytesPKvjj;
 extern void *_ZSt17__throw_bad_allocv;
 extern void *_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base;
 extern void *_ZSt18_Rb_tree_incrementPKSt18_Rb_tree_node_base;
@@ -1869,6 +1870,7 @@ extern void *_ZTS17RenderableTexture;
 extern void *_ZTS18HomebrewAppElement;
 extern void *_ZTS18RenderableTriangle;
 extern void *_ZTS19RenderableRectangle;
+extern void *_ZTS3ELF;
 extern void *_ZTS6Socket;
 extern void *_ZTS9TCPSocket;
 extern void *_ZTS9UIElement;
@@ -3737,6 +3739,7 @@ linkdef linkdefs[] = {
 {"z_rooteps", (void*)&z_rooteps},
 {"z_rooteps_f", (void*)&z_rooteps_f},
 {"_ZSt10unexpectedv", (void*)&_ZSt10unexpectedv},
+{"_ZSt11_Hash_bytesPKvjj", (void*)&_ZSt11_Hash_bytesPKvjj},
 {"_ZSt17__throw_bad_allocv", (void*)&_ZSt17__throw_bad_allocv},
 {"_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base", (void*)&_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base},
 {"_ZSt18_Rb_tree_incrementPKSt18_Rb_tree_node_base", (void*)&_ZSt18_Rb_tree_incrementPKSt18_Rb_tree_node_base},
@@ -3786,6 +3789,7 @@ linkdef linkdefs[] = {
 {"_ZTS18HomebrewAppElement", (void*)&_ZTS18HomebrewAppElement},
 {"_ZTS18RenderableTriangle", (void*)&_ZTS18RenderableTriangle},
 {"_ZTS19RenderableRectangle", (void*)&_ZTS19RenderableRectangle},
+{"_ZTS3ELF", (void*)&_ZTS3ELF},
 {"_ZTS6Socket", (void*)&_ZTS6Socket},
 {"_ZTS9TCPSocket", (void*)&_ZTS9TCPSocket},
 {"_ZTS9UIElement", (void*)&_ZTS9UIElement},

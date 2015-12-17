@@ -68,7 +68,7 @@ OBJDUMP := $(PREFIX)objdump
 LDFLAGS  += --relocatable -s \
             -T $(LIBWIMUDIR)/module.ld \
             $(patsubst %,-Map %,$(strip $(MAP)))
-LD1FLAGS += --relocatable -s -gc-sections -e module -u malloc \
+LD1FLAGS += --relocatable -s -gc-sections -e module -u malloc -L$(DEVKITPPC)/powerpc-eabi/lib -lstdc++ \
             -T $(LIBWIMUDIR)/module.ld
 
 # -O2: optimise lots
