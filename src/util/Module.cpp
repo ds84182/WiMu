@@ -16,9 +16,6 @@ void Module::init() {
 	}
 }
 
-#define HA(x) (x & 0xFFFF)
-//((x | ((x & 0x8000) ? 1 : 0)) & 0xFFFF)
-
 bool Module::link() {
 	//link stage 1: process relocations
 	u32 i;
@@ -143,6 +140,9 @@ bool Module::link() {
 			}
 		}
 	}
+	//link stage 2: ???
+	//link stage 3: profit
+	//link stage 4: Hyaaaaah!
 
 	return true;
 }

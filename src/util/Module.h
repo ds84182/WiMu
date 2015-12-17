@@ -71,7 +71,7 @@ public:
 			const Elf32_Sym *symbol = e->getSymbol(i);
 			const char *name = e->getSymbolName(symbol);
 
-			Logger::logf("Symbol %s", name);
+			//Logger::logf("Symbol %s", name);
 
 			Symbol *sym = symbolMap[symbol] = symbols[name] = new Symbol(name, symbol, sections[symbol->st_shndx]);
 
