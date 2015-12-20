@@ -89,6 +89,7 @@ int main() {
 	if (testModule.link()) {
 		Logger::logf("%p", testModule.getSymbol("module")->address);
 		((void *(*)())testModule.getSymbol("module")->address)();
+	Module::start("init");
 	} else {
 		Logger::log("module link failed");
 	}

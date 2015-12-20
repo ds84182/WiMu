@@ -9,6 +9,8 @@
 
 #include <malloc.h>
 
+#include <util/Thread.h>
+
 class AllocSection {
 public:
 	std::string name;
@@ -50,10 +52,15 @@ public:
 class Module {
 public:
 	static std::map<std::string, Symbol*> globalSymbolMap;
+	static std::map<std::string, Module*> loadedModules;
+
 	ELF *elf;
 	std::map<std::string, Symbol*> symbols;
 	std::map<const Elf32_Sym*, Symbol*> symbolMap;
 	std::map<u32, AllocSection*> sections;
+
+	Thread *thread = nullptr;
+	std::map<std::string, void*> data;
 
 	Module(ELF *e) : elf(e) {
 		u32 i;
@@ -107,4 +114,10 @@ public:
 	}
 
 	static void init();
+	static Module *start(std::string name);
+
+	//TODO: Module queues, a system where modules
+	//can send and receive messages to other modules
+	//and broadcast messages via a thread that
+	//multiplexes message objects to other threads.
 };

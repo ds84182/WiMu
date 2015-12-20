@@ -4,15 +4,44 @@
 
 #include "LinkDefs.h"
 
-extern "C" void log(const char *s);
+#include <util/FileSystem.h>
 
 std::map<std::string, Symbol*> Module::globalSymbolMap;
+std::map<std::string, Module*> Module::loadedModules;
 
 void Module::init() {
 	linkdef *ld = linkdefs;
 	while (ld->name) {
 		globalSymbolMap[ld->name] = new Symbol(ld->name, ld->address);
 		ld++;
+	}
+}
+
+Module *Module::start(std::string name) {
+	File moduleFile("sd:/wimu/module/"+name+".mod");
+	if (moduleFile.open("rb")) {
+		long moduleFileSize = moduleFile.seek(0, SEEK_END);
+		moduleFile.seek(0, SEEK_SET);
+		u8* moduleFileData = new u8[moduleFileSize];
+		moduleFile.read(moduleFileData, moduleFileSize);
+		moduleFile.close();
+		ELF *elf = new ELF(moduleFileData);
+		Module *module = new Module(elf);
+		if (module->link()) {
+			loadedModules[name] = module;
+			Logger::logf("%p", module->getSymbol("module")->address);
+			module->thread = new Thread((void *(*)(void *))module->getSymbol("module")->address, module);
+			return module;
+		} else {
+			Logger::log("module link failed");
+			delete module;
+			delete elf;
+			delete moduleFileData;
+			return false;
+		}
+	} else {
+		Logger::log("module file open failed");
+		return nullptr;
 	}
 }
 
