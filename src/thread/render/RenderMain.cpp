@@ -37,12 +37,12 @@ void stop() {
 
 // Actual Thread Code starts here
 
-static std::vector<Renderable*> renderables;
-static std::vector<EasingState*> animations;
-
 static GXRModeObj *screenMode;
 static void *frameBuffer;
 static vu8 readyForCopy;
+
+static std::vector<Renderable*> renderables;
+static std::vector<EasingState*> animations;
 
 static void update_screen();
 static void	copy_buffers(u32 unused);
@@ -109,6 +109,9 @@ void *main(void *args) {
 			if (message->type == ADD_RENDERABLE) {
 				Logger::logf("Adding Renderable %p", message->renderable);
 				renderables.emplace_back(message->renderable);
+			} else if (message->type == ADD_RENDERABLE_FIRST) {
+				Logger::logf("Adding Renderable First %p", message->renderable);
+				renderables.emplace(renderables.begin(), message->renderable);
 			} else if (message->type == REMOVE_RENDERABLE) {
 				Logger::logf("Removing Renderable %p", message->renderable);
 				renderables.erase(std::remove(renderables.begin(), renderables.end(), message->renderable));

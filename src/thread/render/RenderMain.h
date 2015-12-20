@@ -24,6 +24,13 @@ inline void addRenderable(Renderable *renderable) {
 	renderQueue.send(addRenderable);
 }
 
+inline void addRenderableFirst(Renderable *renderable) {
+	RenderMessage *addRenderable = new RenderMessage();
+	addRenderable->type = ADD_RENDERABLE_FIRST;
+	addRenderable->renderable = renderable;
+	renderQueue.send(addRenderable);
+}
+
 inline void removeRenderable(Renderable *renderable) {
 	RenderMessage *addRenderable = new RenderMessage();
 	addRenderable->type = REMOVE_RENDERABLE;
