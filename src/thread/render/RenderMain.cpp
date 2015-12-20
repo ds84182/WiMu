@@ -86,10 +86,10 @@ void *main(void *args) {
 	
 	GX_ClearVtxDesc();
 	GX_SetVtxDescv(I8_POSITION_COLOR);
-	GX_SetVtxAttrFmt(VA_S16, GX_VA_POS,	GX_POS_XYZ,	GX_S16,	0);
+	GX_SetVtxAttrFmt(VA_S16, GX_VA_POS,	GX_POS_XY,	GX_S16,	0);
 	GX_SetVtxAttrFmt(VA_S16, GX_VA_CLR0, GX_CLR_RGBA, GX_RGBA8,	0);
 	GX_SetVtxAttrFmt(VA_S16, GX_VA_TEX0, GX_TEX_ST,	GX_F32,	0);
-	GX_SetVtxAttrFmt(VA_F32, GX_VA_POS,	GX_POS_XYZ,	GX_F32,	0);
+	GX_SetVtxAttrFmt(VA_F32, GX_VA_POS,	GX_POS_XY,	GX_F32,	0);
 	GX_SetVtxAttrFmt(VA_F32, GX_VA_CLR0, GX_CLR_RGBA, GX_RGBA8,	0);
 	GX_SetVtxAttrFmt(VA_F32, GX_VA_TEX0, GX_TEX_ST,	GX_F32,	0);
 	GX_SetNumChans(1);

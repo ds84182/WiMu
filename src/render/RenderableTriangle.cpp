@@ -6,9 +6,9 @@
 #include "VertexDescriptions.h"
 
 static s16 vertices[] ATTRIBUTE_ALIGN(32) = {
-	0, 128, 0,
-	-128, -128, 0,
-	128,	-128, 0};
+	0, 128,
+	-128, -128,
+	128,	-128};
 
 static u8 colors[] ATTRIBUTE_ALIGN(32)	= {
 	255, 0,	0, 255,		// red
@@ -30,12 +30,12 @@ void RenderableTriangle::render() {
 	GX_SetVtxDescv(I8_POSITION_COLOR);
 	GX_SetTevOp(GX_TEVSTAGE0, GX_PASSCLR);
 	
-	GX_SetArray(GX_VA_POS, vertices, 3*sizeof(s16));
+	GX_SetArray(GX_VA_POS, vertices, 2*sizeof(s16));
 	GX_SetArray(GX_VA_CLR0,	colors,	4*sizeof(u8));
 	
 	GX_LoadPosMtxImm(modelView,	GX_PNMTX0);
 
-	GX_Begin(GX_TRIANGLES, GX_VTXFMT0, 3);
+	GX_Begin(GX_TRIANGLES, VA_S16, 3);
 
 	GX_Position1x8(0);
 	GX_Color1x8(0);

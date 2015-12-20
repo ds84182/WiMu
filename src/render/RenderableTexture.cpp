@@ -6,10 +6,10 @@
 #include "VertexDescriptions.h"
 
 static s16 vertices[] ATTRIBUTE_ALIGN(32) = {
-	0, 0, 0,
-	1, 0, 0,
-	1, 1, 0,
-	0, 1, 0
+	0, 0,
+	1, 0,
+	1, 1,
+	0, 1
 };
 
 static f32 texcoords[] ATTRIBUTE_ALIGN(32) = {
@@ -40,13 +40,13 @@ void RenderableTexture::render() {
 
 	texture->use();
 	
-	GX_SetArray(GX_VA_POS, vertices, 3*sizeof(s16));
+	GX_SetArray(GX_VA_POS, vertices, 2*sizeof(s16));
 	GX_SetArray(GX_VA_CLR0, color, sizeof(u32));
 	GX_SetArray(GX_VA_TEX0, texcoords, 2*sizeof(f32));
 	
 	GX_LoadPosMtxImm(modelView,	GX_PNMTX0);
 
-	GX_Begin(GX_QUADS, GX_VTXFMT0, 4);
+	GX_Begin(GX_QUADS, VA_S16, 4);
 
 	GX_Position1x8(0);
 	GX_Color1x8(0);
