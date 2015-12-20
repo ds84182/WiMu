@@ -63,7 +63,7 @@ int main() {
 	Globals::init();
 	UI::start();
 	
-	Renderer::addRenderable(new RenderableTriangle());
+	//Renderer::addRenderable(new RenderableTriangle());
 
 	/*RenderableRectangle *toolbar = new RenderableRectangle(0, 0, 640, 128, 0x3f51b5ff);
 	Renderer::addRenderable(toolbar);

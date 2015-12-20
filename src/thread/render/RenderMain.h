@@ -29,10 +29,10 @@ inline void removeRenderable(Renderable *renderable) {
 	renderQueue.send(addRenderable);
 }
 
-inline void runAnimation(Animatable *ani, f32 duration, EasingFunc f) {
+inline void runAnimation(Animatable *ani, f32 duration, EasingFunc f, f32 delay = 0.0f) {
 	RenderMessage *runAnimation = new RenderMessage();
 	runAnimation->type = RUN_ANIMATION;
-	runAnimation->runAnimationArgs = new RenderMessageAnimationArgs(ani, duration, f);
+	runAnimation->runAnimationArgs = new RenderMessageAnimationArgs(ani, duration, f, delay);
 	renderQueue.send(runAnimation);
 }
 

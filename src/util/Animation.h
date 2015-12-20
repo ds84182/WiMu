@@ -113,24 +113,27 @@ class EasingState {
 public:
 	f32 current;
 	f32 duration;
+	f32 delay;
 	Animatable *subject;
 	EasingFunc easing;
 
-	EasingState(Animatable *s, f32 d, EasingFunc f) :
-		current(0.0f), duration(d), subject(s), easing(f) {}
+	EasingState(Animatable *s, f32 d, EasingFunc f, f32 dl = 0.0f) :
+		current(0.0f), duration(d), delay(dl), subject(s), easing(f) {}
 
 	bool update(f32 delta) {
 		current += delta;
 
-		if (current <= 0) {
+		f32 c = current-delay;
+
+		if (c <= 0) {
 			subject->update(0);
-		} else if (current >= duration) {
-			current = duration;
+		} else if (c >= duration) {
+			c = duration;
 			subject->update(1);
 		} else {
-			subject->update(easing(current, duration));
+			subject->update(easing(c, duration));
 		}
 
-		return current >= duration;
+		return c >= duration;
 	}
 };

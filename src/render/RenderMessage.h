@@ -15,9 +15,10 @@ struct RenderMessageAnimationArgs {
 	Animatable *subject;
 	f32 duration;
 	EasingFunc easing;
+	f32 delay;
 
-	RenderMessageAnimationArgs(Animatable *s, f32 dur, EasingFunc f) :
-		subject(s), duration(dur), easing(f) {};
+	RenderMessageAnimationArgs(Animatable *s, f32 dur, EasingFunc f, f32 delay) :
+		subject(s), duration(dur), easing(f), delay(delay) {};
 };
 
 struct RenderMessage {

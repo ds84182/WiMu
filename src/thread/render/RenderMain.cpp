@@ -113,7 +113,7 @@ void *main(void *args) {
 				renderables.erase(std::remove(renderables.begin(), renderables.end(), message->renderable));
 			} else if (message->type == RUN_ANIMATION) {
 				Logger::logf("Running Animation %p %f", message->runAnimationArgs->subject, message->runAnimationArgs->duration);
-				EasingState *state = new EasingState(message->runAnimationArgs->subject, message->runAnimationArgs->duration, message->runAnimationArgs->easing);
+				EasingState *state = new EasingState(message->runAnimationArgs->subject, message->runAnimationArgs->duration, message->runAnimationArgs->easing, message->runAnimationArgs->delay);
 				animations.emplace_back(state);
 			} else if (message->type == STOP_ANIMATION) {
 				Logger::log("Stop Animation NYI");
