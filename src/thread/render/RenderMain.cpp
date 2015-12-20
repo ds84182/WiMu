@@ -23,6 +23,7 @@ namespace Renderer {
 
 vu8 stopThread = 0;
 MessageQueue renderQueue;
+SyncQueue renderSync;
 Thread *thread = nullptr;
 
 void start() {
@@ -143,6 +144,8 @@ void *main(void *args) {
 		GX_InvVtxCache();
 		GX_InvalidateTexAll();
 		update_screen();
+
+		renderSync.broadcast();
 	}
 
 	for (Renderable *r : renderables) {

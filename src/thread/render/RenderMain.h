@@ -6,10 +6,12 @@
 #include <util/Animation.h>
 #include <util/Thread.h>
 #include <util/MessageQueue.h>
+#include <util/SyncQueue.h>
 
 namespace Renderer {
 
 extern MessageQueue renderQueue;
+extern SyncQueue renderSync;
 extern Thread *thread;
 
 void start();
@@ -41,6 +43,10 @@ inline void stopAnimation(Animatable *ani) {
 	stopAnimation->type = STOP_ANIMATION;
 	stopAnimation->animationSubject = ani;
 	renderQueue.send(stopAnimation);
+}
+
+inline void sync() {
+	renderSync.sleep();
 }
 
 void *main(void *args);
