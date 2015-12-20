@@ -1,0 +1,987 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD build/module.elf
+                0x0000000000000034                . = (0x0 + SIZEOF_HEADERS)
+
+.text           0x0000000000000034     0x7930
+ *(.text.boot)
+ *(.text)
+ .text          0x0000000000000034     0x7930 build/module.elf
+                0x0000000000007774                __cxa_demangle
+                0x0000000000007918                __gcclibcxx_demangle_callback
+
+.text._ZN10RenderableD2Ev
+                0x0000000000000000       0x10
+ .text._ZN10RenderableD2Ev
+                0x0000000000000000       0x10 build/module.elf
+                0x0000000000000000                Renderable::~Renderable()
+                0x0000000000000000                Renderable::~Renderable()
+
+.text._ZN10RenderableD0Ev
+                0x0000000000000000       0x10
+ .text._ZN10RenderableD0Ev
+                0x0000000000000000       0x10 build/module.elf
+                0x0000000000000000                Renderable::~Renderable()
+
+.text._ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE24_M_get_insert_unique_posERS1_
+                0x0000000000000000      0x190
+ .text._ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE24_M_get_insert_unique_posERS1_
+                0x0000000000000000      0x190 build/module.elf
+                0x0000000000000000                std::_Rb_tree<std::string, std::pair<std::string const, Module*>, std::_Select1st<std::pair<std::string const, Module*> >, std::less<std::string>, std::allocator<std::pair<std::string const, Module*> > >::_M_get_insert_unique_pos(std::string const&)
+
+.text._ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS4_ERS1_
+                0x0000000000000000      0x254
+ .text._ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS4_ERS1_
+                0x0000000000000000      0x254 build/module.elf
+                0x0000000000000000                std::_Rb_tree<std::string, std::pair<std::string const, Module*>, std::_Select1st<std::pair<std::string const, Module*> >, std::less<std::string>, std::allocator<std::pair<std::string const, Module*> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::string const, Module*> >, std::string const&)
+
+.text._ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESF_IIEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_
+                0x0000000000000000      0x1ac
+ .text._ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESF_IIEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_
+                0x0000000000000000      0x1ac build/module.elf
+                0x0000000000000000                std::_Rb_tree_iterator<std::pair<std::string const, Module*> > std::_Rb_tree<std::string, std::pair<std::string const, Module*>, std::_Select1st<std::pair<std::string const, Module*> >, std::less<std::string>, std::allocator<std::pair<std::string const, Module*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::string const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<std::string const, Module*> >, std::piecewise_construct_t const&, std::tuple<std::string const&>&&, std::tuple<>&&)
+                0x0000000000000000                std::_Rb_tree_iterator<std::pair<std::string const, Module*> > std::_Rb_tree<std::string, std::pair<std::string const, Module*>, std::_Select1st<std::pair<std::string const, Module*> >, std::less<std::string>, std::allocator<std::pair<std::string const, Module*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::string const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<std::string const, Module*> >, std::piecewise_construct_t const&, std::tuple<std::string const&>&&, std::tuple<>&&)
+
+.text._ZNSt8_Rb_treeISsSt4pairIKSsPvESt10_Select1stIS3_ESt4lessISsESaIS3_EE24_M_get_insert_unique_posERS1_
+                0x0000000000000000      0x190
+ .text._ZNSt8_Rb_treeISsSt4pairIKSsPvESt10_Select1stIS3_ESt4lessISsESaIS3_EE24_M_get_insert_unique_posERS1_
+                0x0000000000000000      0x190 build/module.elf
+                0x0000000000000000                std::_Rb_tree<std::string, std::pair<std::string const, void*>, std::_Select1st<std::pair<std::string const, void*> >, std::less<std::string>, std::allocator<std::pair<std::string const, void*> > >::_M_get_insert_unique_pos(std::string const&)
+
+.text._ZNSt8_Rb_treeISsSt4pairIKSsPvESt10_Select1stIS3_ESt4lessISsESaIS3_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS3_ERS1_
+                0x0000000000000000      0x254
+ .text._ZNSt8_Rb_treeISsSt4pairIKSsPvESt10_Select1stIS3_ESt4lessISsESaIS3_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS3_ERS1_
+                0x0000000000000000      0x254 build/module.elf
+                0x0000000000000000                std::_Rb_tree<std::string, std::pair<std::string const, void*>, std::_Select1st<std::pair<std::string const, void*> >, std::less<std::string>, std::allocator<std::pair<std::string const, void*> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::string const, void*> >, std::string const&)
+
+.text.module    0x0000000000000000      0x82c
+ .text.module   0x0000000000000000      0x82c build/module.elf
+                0x0000000000000000                module
+
+.text._ZStL25local_Rb_tree_rotate_leftPSt18_Rb_tree_node_baseRS0_
+                0x0000000000000000       0x64
+ .text._ZStL25local_Rb_tree_rotate_leftPSt18_Rb_tree_node_baseRS0_
+                0x0000000000000000       0x64 build/module.elf
+
+.text._ZStL26local_Rb_tree_rotate_rightPSt18_Rb_tree_node_baseRS0_
+                0x0000000000000000       0x64
+ .text._ZStL26local_Rb_tree_rotate_rightPSt18_Rb_tree_node_baseRS0_
+                0x0000000000000000       0x64 build/module.elf
+
+.text._ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base
+                0x0000000000000000       0x70
+ .text._ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base
+                0x0000000000000000       0x70 build/module.elf
+                0x0000000000000000                std::_Rb_tree_increment(std::_Rb_tree_node_base*)
+
+.text._ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base
+                0x0000000000000000       0x80
+ .text._ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base
+                0x0000000000000000       0x80 build/module.elf
+                0x0000000000000000                std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
+
+.text._ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_
+                0x0000000000000000      0x1bc
+ .text._ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_
+                0x0000000000000000      0x1bc build/module.elf
+                0x0000000000000000                std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+
+.text._ZNSs4_Rep9_S_createEjjRKSaIcE
+                0x0000000000000000       0xb0
+ .text._ZNSs4_Rep9_S_createEjjRKSaIcE
+                0x0000000000000000       0xb0 build/module.elf
+                0x0000000000000000                std::string::_Rep::_S_create(unsigned int, unsigned int, std::allocator<char> const&)
+
+.text._ZNSs4_Rep10_M_destroyERKSaIcE
+                0x0000000000000000       0x20
+ .text._ZNSs4_Rep10_M_destroyERKSaIcE
+                0x0000000000000000       0x20 build/module.elf
+                0x0000000000000000                std::string::_Rep::_M_destroy(std::allocator<char> const&)
+
+.text.unlikely._ZNSs4_Rep10_M_disposeERKSaIcE.part.21
+                0x0000000000000000       0x34
+ .text.unlikely._ZNSs4_Rep10_M_disposeERKSaIcE.part.21
+                0x0000000000000000       0x34 build/module.elf
+
+.text._ZNSs4_Rep10_M_disposeERKSaIcE
+                0x0000000000000000       0x14
+ .text._ZNSs4_Rep10_M_disposeERKSaIcE
+                0x0000000000000000       0x14 build/module.elf
+                0x0000000000000000                std::string::_Rep::_M_dispose(std::allocator<char> const&)
+
+.text._ZNSsD2Ev
+                0x0000000000000000       0x40
+ .text._ZNSsD2Ev
+                0x0000000000000000       0x40 build/module.elf
+                0x0000000000000000                std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+                0x0000000000000000                std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()
+
+.text._ZNSs4_Rep8_M_cloneERKSaIcEj
+                0x0000000000000000       0xc0
+ .text._ZNSs4_Rep8_M_cloneERKSaIcEj
+                0x0000000000000000       0xc0 build/module.elf
+                0x0000000000000000                std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned int)
+
+.text._ZNSsC2ERKSs
+                0x0000000000000000       0x84
+ .text._ZNSsC2ERKSs
+                0x0000000000000000       0x84 build/module.elf
+                0x0000000000000000                std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)
+                0x0000000000000000                std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)
+
+.text._ZNSs12_S_constructIPKcEEPcT_S3_RKSaIcESt20forward_iterator_tag
+                0x0000000000000000      0x108
+ .text._ZNSs12_S_constructIPKcEEPcT_S3_RKSaIcESt20forward_iterator_tag
+                0x0000000000000000      0x108 build/module.elf
+                0x0000000000000000                char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag)
+
+.text._ZNSsC2EPKcRKSaIcE
+                0x0000000000000000       0x68
+ .text._ZNSsC2EPKcRKSaIcE
+                0x0000000000000000       0x68 build/module.elf
+                0x0000000000000000                std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+                0x0000000000000000                std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+
+.text._ZL23__gxx_exception_cleanup19_Unwind_Reason_CodeP17_Unwind_Exception
+                0x0000000000000000       0x80
+ .text._ZL23__gxx_exception_cleanup19_Unwind_Reason_CodeP17_Unwind_Exception
+                0x0000000000000000       0x80 build/module.elf
+
+.text.__cxa_throw
+                0x0000000000000000       0x74
+ .text.__cxa_throw
+                0x0000000000000000       0x74 build/module.elf
+                0x0000000000000000                __cxa_throw
+
+.text.__cxa_rethrow
+                0x0000000000000000       0x8c
+ .text.__cxa_rethrow
+                0x0000000000000000       0x8c build/module.elf
+                0x0000000000000000                __cxa_rethrow
+
+.text.__cxa_pure_virtual
+                0x0000000000000000       0x24
+ .text.__cxa_pure_virtual
+                0x0000000000000000       0x24 build/module.elf
+                0x0000000000000000                __cxa_pure_virtual
+
+.text.__cxa_get_globals_fast
+                0x0000000000000000        0xc
+ .text.__cxa_get_globals_fast
+                0x0000000000000000        0xc build/module.elf
+                0x0000000000000000                __cxa_get_globals_fast
+
+.text.__cxa_get_globals
+                0x0000000000000000        0xc
+ .text.__cxa_get_globals
+                0x0000000000000000        0xc build/module.elf
+                0x0000000000000000                __cxa_get_globals
+
+.text.__cxa_begin_catch
+                0x0000000000000000       0xc8
+ .text.__cxa_begin_catch
+                0x0000000000000000       0xc8 build/module.elf
+                0x0000000000000000                __cxa_begin_catch
+
+.text.__cxa_end_catch
+                0x0000000000000000       0xd0
+ .text.__cxa_end_catch
+                0x0000000000000000       0xd0 build/module.elf
+                0x0000000000000000                __cxa_end_catch
+
+.text._Znwj     0x0000000000000000       0xb8
+ .text._Znwj    0x0000000000000000       0xb8 build/module.elf
+                0x0000000000000000                operator new(unsigned int)
+
+.text._ZL12read_sleb128PKhPl
+                0x0000000000000000       0x4c
+ .text._ZL12read_sleb128PKhPl
+                0x0000000000000000       0x4c build/module.elf
+
+.text._ZL21base_of_encoded_valuehP15_Unwind_Context
+                0x0000000000000000       0xb0
+ .text._ZL21base_of_encoded_valuehP15_Unwind_Context
+                0x0000000000000000       0xb0 build/module.elf
+
+.text._ZL28read_encoded_value_with_basehjPKhPj
+                0x0000000000000000      0x168
+ .text._ZL28read_encoded_value_with_basehjPKhPj
+                0x0000000000000000      0x168 build/module.elf
+
+.text._ZL17parse_lsda_headerP15_Unwind_ContextPKhP16lsda_header_info.constprop.5
+                0x0000000000000000      0x134
+ .text._ZL17parse_lsda_headerP15_Unwind_ContextPKhP16lsda_header_info.constprop.5
+                0x0000000000000000      0x134 build/module.elf
+
+.text._ZL15get_ttype_entryP16lsda_header_infom.constprop.6
+                0x0000000000000000       0xe8
+ .text._ZL15get_ttype_entryP16lsda_header_infom.constprop.6
+                0x0000000000000000       0xe8 build/module.elf
+
+.text._ZL20check_exception_specP16lsda_header_infoPKSt9type_infoPvl.constprop.4
+                0x0000000000000000      0x118
+ .text._ZL20check_exception_specP16lsda_header_infoPKSt9type_infoPvl.constprop.4
+                0x0000000000000000      0x118 build/module.elf
+
+.text.__gxx_personality_v0
+                0x0000000000000000      0x540
+ .text.__gxx_personality_v0
+                0x0000000000000000      0x540 build/module.elf
+                0x0000000000000000                __gxx_personality_v0
+
+.text.__cxa_call_unexpected
+                0x0000000000000000       0xf4
+ .text.__cxa_call_unexpected
+                0x0000000000000000       0xf4 build/module.elf
+                0x0000000000000000                __cxa_call_unexpected
+
+.text._ZdlPv    0x0000000000000000       0x28
+ .text._ZdlPv   0x0000000000000000       0x28 build/module.elf
+                0x0000000000000000                operator delete(void*)
+
+.text._ZN10__cxxabiv111__terminateEPFvvE
+                0x0000000000000000       0x44
+ .text._ZN10__cxxabiv111__terminateEPFvvE
+                0x0000000000000000       0x44 build/module.elf
+                0x0000000000000000                __cxxabiv1::__terminate(void (*)())
+
+.text._ZSt9terminatev
+                0x0000000000000000       0x18
+ .text._ZSt9terminatev
+                0x0000000000000000       0x18 build/module.elf
+                0x0000000000000000                std::terminate()
+
+.text._ZN10__cxxabiv112__unexpectedEPFvvE
+                0x0000000000000000       0x18
+ .text._ZN10__cxxabiv112__unexpectedEPFvvE
+                0x0000000000000000       0x18 build/module.elf
+                0x0000000000000000                __cxxabiv1::__unexpected(void (*)())
+
+.text._ZSt10unexpectedv
+                0x0000000000000000       0x20
+ .text._ZSt10unexpectedv
+                0x0000000000000000       0x20 build/module.elf
+                0x0000000000000000                std::unexpected()
+
+.text._ZNSt9exceptionD2Ev
+                0x0000000000000000       0x10
+ .text._ZNSt9exceptionD2Ev
+                0x0000000000000000       0x10 build/module.elf
+                0x0000000000000000                std::exception::~exception()
+                0x0000000000000000                std::exception::~exception()
+
+.text._ZNSt13bad_exceptionD2Ev
+                0x0000000000000000       0x10
+ .text._ZNSt13bad_exceptionD2Ev
+                0x0000000000000000       0x10 build/module.elf
+                0x0000000000000000                std::bad_exception::~bad_exception()
+                0x0000000000000000                std::bad_exception::~bad_exception()
+
+.text._ZNKSt9exception4whatEv
+                0x0000000000000000        0xc
+ .text._ZNKSt9exception4whatEv
+                0x0000000000000000        0xc build/module.elf
+                0x0000000000000000                std::exception::what() const
+
+.text._ZNKSt13bad_exception4whatEv
+                0x0000000000000000        0xc
+ .text._ZNKSt13bad_exception4whatEv
+                0x0000000000000000        0xc build/module.elf
+                0x0000000000000000                std::bad_exception::what() const
+
+.text._ZNSt13bad_exceptionD0Ev
+                0x0000000000000000       0x2c
+ .text._ZNSt13bad_exceptionD0Ev
+                0x0000000000000000       0x2c build/module.elf
+                0x0000000000000000                std::bad_exception::~bad_exception()
+
+.text._ZNSt9exceptionD0Ev
+                0x0000000000000000       0x2c
+ .text._ZNSt9exceptionD0Ev
+                0x0000000000000000       0x2c build/module.elf
+                0x0000000000000000                std::exception::~exception()
+
+.text.__cxa_allocate_exception
+                0x0000000000000000       0xc4
+ .text.__cxa_allocate_exception
+                0x0000000000000000       0xc4 build/module.elf
+                0x0000000000000000                __cxa_allocate_exception
+
+.text.__cxa_free_exception
+                0x0000000000000000       0x70
+ .text.__cxa_free_exception
+                0x0000000000000000       0x70 build/module.elf
+                0x0000000000000000                __cxa_free_exception
+
+.text._ZNKSt9bad_alloc4whatEv
+                0x0000000000000000        0xc
+ .text._ZNKSt9bad_alloc4whatEv
+                0x0000000000000000        0xc build/module.elf
+                0x0000000000000000                std::bad_alloc::what() const
+
+.text._ZNSt9bad_allocD2Ev
+                0x0000000000000000       0x2c
+ .text._ZNSt9bad_allocD2Ev
+                0x0000000000000000       0x2c build/module.elf
+                0x0000000000000000                std::bad_alloc::~bad_alloc()
+                0x0000000000000000                std::bad_alloc::~bad_alloc()
+
+.text._ZNSt9bad_allocD0Ev
+                0x0000000000000000       0x34
+ .text._ZNSt9bad_allocD0Ev
+                0x0000000000000000       0x34 build/module.elf
+                0x0000000000000000                std::bad_alloc::~bad_alloc()
+
+.text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
+                0x0000000000000000       0x78
+ .text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
+                0x0000000000000000       0x78 build/module.elf
+                0x0000000000000000                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
+
+.text._ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_
+                0x0000000000000000       0x14
+ .text._ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_
+                0x0000000000000000       0x14 build/module.elf
+                0x0000000000000000                __cxxabiv1::__class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+
+.text._ZN10__cxxabiv117__class_type_infoD2Ev
+                0x0000000000000000       0x2c
+ .text._ZN10__cxxabiv117__class_type_infoD2Ev
+                0x0000000000000000       0x2c build/module.elf
+                0x0000000000000000                __cxxabiv1::__class_type_info::~__class_type_info()
+                0x0000000000000000                __cxxabiv1::__class_type_info::~__class_type_info()
+
+.text._ZN10__cxxabiv117__class_type_infoD0Ev
+                0x0000000000000000       0x34
+ .text._ZN10__cxxabiv117__class_type_infoD0Ev
+                0x0000000000000000       0x34 build/module.elf
+                0x0000000000000000                __cxxabiv1::__class_type_info::~__class_type_info()
+
+.text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
+                0x0000000000000000       0xa8
+ .text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
+                0x0000000000000000       0xa8 build/module.elf
+                0x0000000000000000                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+
+.text._ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
+                0x0000000000000000       0xdc
+ .text._ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
+                0x0000000000000000       0xdc build/module.elf
+                0x0000000000000000                __cxxabiv1::__class_type_info::__do_catch(std::type_info const*, void**, unsigned int) const
+
+.text._ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
+                0x0000000000000000       0xd8
+ .text._ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
+                0x0000000000000000       0xd8 build/module.elf
+                0x0000000000000000                __cxxabiv1::__class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+
+.text._ZSt19__throw_logic_errorPKc
+                0x0000000000000000       0x84
+ .text._ZSt19__throw_logic_errorPKc
+                0x0000000000000000       0x84 build/module.elf
+                0x0000000000000000                std::__throw_logic_error(char const*)
+
+.text._ZSt20__throw_length_errorPKc
+                0x0000000000000000       0x84
+ .text._ZSt20__throw_length_errorPKc
+                0x0000000000000000       0x84 build/module.elf
+                0x0000000000000000                std::__throw_length_error(char const*)
+
+.text._ZNKSt11logic_error4whatEv
+                0x0000000000000000        0x8
+ .text._ZNKSt11logic_error4whatEv
+                0x0000000000000000        0x8 build/module.elf
+                0x0000000000000000                std::logic_error::what() const
+
+.text._ZNSt11logic_errorD2Ev
+                0x0000000000000000       0x74
+ .text._ZNSt11logic_errorD2Ev
+                0x0000000000000000       0x74 build/module.elf
+                0x0000000000000000                std::logic_error::~logic_error()
+                0x0000000000000000                std::logic_error::~logic_error()
+
+.text._ZNSt12length_errorD2Ev
+                0x0000000000000000       0x10
+ .text._ZNSt12length_errorD2Ev
+                0x0000000000000000       0x10 build/module.elf
+                0x0000000000000000                std::length_error::~length_error()
+                0x0000000000000000                std::length_error::~length_error()
+
+.text._ZNSt12length_errorD0Ev
+                0x0000000000000000       0x34
+ .text._ZNSt12length_errorD0Ev
+                0x0000000000000000       0x34 build/module.elf
+                0x0000000000000000                std::length_error::~length_error()
+
+.text._ZNSt11logic_errorD0Ev
+                0x0000000000000000       0x34
+ .text._ZNSt11logic_errorD0Ev
+                0x0000000000000000       0x34 build/module.elf
+                0x0000000000000000                std::logic_error::~logic_error()
+
+.text._ZNSt11logic_errorC2ERKSs
+                0x0000000000000000       0x58
+ .text._ZNSt11logic_errorC2ERKSs
+                0x0000000000000000       0x58 build/module.elf
+                0x0000000000000000                std::logic_error::logic_error(std::string const&)
+                0x0000000000000000                std::logic_error::logic_error(std::string const&)
+
+.text._ZNSt12length_errorC2ERKSs
+                0x0000000000000000       0x38
+ .text._ZNSt12length_errorC2ERKSs
+                0x0000000000000000       0x38 build/module.elf
+                0x0000000000000000                std::length_error::length_error(std::string const&)
+                0x0000000000000000                std::length_error::length_error(std::string const&)
+
+.text._ZN9__gnu_cxx27__verbose_terminate_handlerEv
+                0x0000000000000000      0x1c0
+ .text._ZN9__gnu_cxx27__verbose_terminate_handlerEv
+                0x0000000000000000      0x1c0 build/module.elf
+                0x0000000000000000                __gnu_cxx::__verbose_terminate_handler()
+
+.text._ZN10__cxxabiv120__si_class_type_infoD2Ev
+                0x0000000000000000       0x2c
+ .text._ZN10__cxxabiv120__si_class_type_infoD2Ev
+                0x0000000000000000       0x2c build/module.elf
+                0x0000000000000000                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+                0x0000000000000000                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+
+.text._ZN10__cxxabiv120__si_class_type_infoD0Ev
+                0x0000000000000000       0x34
+ .text._ZN10__cxxabiv120__si_class_type_infoD0Ev
+                0x0000000000000000       0x34 build/module.elf
+                0x0000000000000000                __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+
+.text._ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE
+                0x0000000000000000       0x7c
+ .text._ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE
+                0x0000000000000000       0x7c build/module.elf
+                0x0000000000000000                __cxxabiv1::__si_class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+
+.text._ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE
+                0x0000000000000000      0x194
+ .text._ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE
+                0x0000000000000000      0x194 build/module.elf
+                0x0000000000000000                __cxxabiv1::__si_class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+
+.text._ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_
+                0x0000000000000000       0xac
+ .text._ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_
+                0x0000000000000000       0xac build/module.elf
+                0x0000000000000000                __cxxabiv1::__si_class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+
+.text.__cxa_call_terminate
+                0x0000000000000000       0x58
+ .text.__cxa_call_terminate
+                0x0000000000000000       0x58 build/module.elf
+                0x0000000000000000                __cxa_call_terminate
+
+.text._ZNSt9type_infoD2Ev
+                0x0000000000000000       0x10
+ .text._ZNSt9type_infoD2Ev
+                0x0000000000000000       0x10 build/module.elf
+                0x0000000000000000                std::type_info::~type_info()
+                0x0000000000000000                std::type_info::~type_info()
+
+.text._ZNKSt9type_info14__is_pointer_pEv
+                0x0000000000000000        0x8
+ .text._ZNKSt9type_info14__is_pointer_pEv
+                0x0000000000000000        0x8 build/module.elf
+                0x0000000000000000                std::type_info::__is_pointer_p() const
+
+.text._ZNKSt9type_info15__is_function_pEv
+                0x0000000000000000        0x8
+ .text._ZNKSt9type_info15__is_function_pEv
+                0x0000000000000000        0x8 build/module.elf
+                0x0000000000000000                std::type_info::__is_function_p() const
+
+.text._ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv
+                0x0000000000000000        0x8
+ .text._ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv
+                0x0000000000000000        0x8 build/module.elf
+                0x0000000000000000                std::type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
+
+.text._ZNKSt9type_info10__do_catchEPKS_PPvj
+                0x0000000000000000       0x50
+ .text._ZNKSt9type_info10__do_catchEPKS_PPvj
+                0x0000000000000000       0x50 build/module.elf
+                0x0000000000000000                std::type_info::__do_catch(std::type_info const*, void**, unsigned int) const
+
+.text._ZNSt9type_infoD0Ev
+                0x0000000000000000       0x2c
+ .text._ZNSt9type_infoD0Ev
+                0x0000000000000000       0x2c build/module.elf
+                0x0000000000000000                std::type_info::~type_info()
+
+.text.__cxa_current_exception_type
+                0x0000000000000000       0x4c
+ .text.__cxa_current_exception_type
+                0x0000000000000000       0x4c build/module.elf
+                0x0000000000000000                __cxa_current_exception_type
+
+.rodata         0x000000000000004c      0xe30
+ *(.rodata)
+ .rodata        0x000000000000004c      0xe30 build/module.elf
+
+.gcc_except_table._ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESF_IIEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_
+                0x0000000000000000       0x20
+ .gcc_except_table._ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESF_IIEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_
+                0x0000000000000000       0x20 build/module.elf
+
+.gcc_except_table.module
+                0x0000000000000000       0x3c
+ .gcc_except_table.module
+                0x0000000000000000       0x3c build/module.elf
+
+.rodata._ZTI10Renderable
+                0x0000000000000000        0x8
+ .rodata._ZTI10Renderable
+                0x0000000000000000        0x8 build/module.elf
+                0x0000000000000000                typeinfo for Renderable
+
+.rodata._ZTS10Renderable
+                0x0000000000000000        0xd
+ .rodata._ZTS10Renderable
+                0x0000000000000000        0xd build/module.elf
+                0x0000000000000000                typeinfo name for Renderable
+
+.rodata._ZTV10Renderable
+                0x0000000000000000       0x14
+ .rodata._ZTV10Renderable
+                0x0000000000000000       0x14 build/module.elf
+                0x0000000000000000                vtable for Renderable
+
+.rodata.cst4    0x0000000000000000       0x18
+ .rodata.cst4   0x0000000000000000       0x18 build/module.elf
+
+.rodata._ZStL19piecewise_construct
+                0x0000000000000000        0x1
+ .rodata._ZStL19piecewise_construct
+                0x0000000000000000        0x1 build/module.elf
+
+.rodata.str1.4  0x0000000000000000      0x9c3
+ .rodata.str1.4
+                0x0000000000000000      0x9c3 build/module.elf
+
+.gcc_except_table._Znwj
+                0x0000000000000000       0x1a
+ .gcc_except_table._Znwj
+                0x0000000000000000       0x1a build/module.elf
+
+.rodata._ZL28read_encoded_value_with_basehjPKhPj
+                0x0000000000000000       0x34
+ .rodata._ZL28read_encoded_value_with_basehjPKhPj
+                0x0000000000000000       0x34 build/module.elf
+
+.gcc_except_table.__gxx_personality_v0
+                0x0000000000000000       0x18
+ .gcc_except_table.__gxx_personality_v0
+                0x0000000000000000       0x18 build/module.elf
+
+.gcc_except_table.__cxa_call_unexpected
+                0x0000000000000000       0x20
+ .gcc_except_table.__cxa_call_unexpected
+                0x0000000000000000       0x20 build/module.elf
+
+.gcc_except_table._ZN10__cxxabiv111__terminateEPFvvE
+                0x0000000000000000       0x1d
+ .gcc_except_table._ZN10__cxxabiv111__terminateEPFvvE
+                0x0000000000000000       0x1d build/module.elf
+
+.rodata._ZTSSt9exception
+                0x0000000000000000        0xd
+ .rodata._ZTSSt9exception
+                0x0000000000000000        0xd build/module.elf
+                0x0000000000000000                typeinfo name for std::exception
+
+.rodata._ZTSSt13bad_exception
+                0x0000000000000000       0x12
+ .rodata._ZTSSt13bad_exception
+                0x0000000000000000       0x12 build/module.elf
+                0x0000000000000000                typeinfo name for std::bad_exception
+
+.rodata._ZTISt13bad_exception
+                0x0000000000000000        0xc
+ .rodata._ZTISt13bad_exception
+                0x0000000000000000        0xc build/module.elf
+                0x0000000000000000                typeinfo for std::bad_exception
+
+.rodata._ZTSN10__cxxabiv115__forced_unwindE
+                0x0000000000000000       0x20
+ .rodata._ZTSN10__cxxabiv115__forced_unwindE
+                0x0000000000000000       0x20 build/module.elf
+                0x0000000000000000                typeinfo name for __cxxabiv1::__forced_unwind
+
+.rodata._ZTSN10__cxxabiv119__foreign_exceptionE
+                0x0000000000000000       0x24
+ .rodata._ZTSN10__cxxabiv119__foreign_exceptionE
+                0x0000000000000000       0x24 build/module.elf
+                0x0000000000000000                typeinfo name for __cxxabiv1::__foreign_exception
+
+.rodata._ZTVSt9exception
+                0x0000000000000000       0x14
+ .rodata._ZTVSt9exception
+                0x0000000000000000       0x14 build/module.elf
+                0x0000000000000000                vtable for std::exception
+
+.rodata._ZTVSt13bad_exception
+                0x0000000000000000       0x14
+ .rodata._ZTVSt13bad_exception
+                0x0000000000000000       0x14 build/module.elf
+                0x0000000000000000                vtable for std::bad_exception
+
+.rodata._ZTSSt9bad_alloc
+                0x0000000000000000        0xd
+ .rodata._ZTSSt9bad_alloc
+                0x0000000000000000        0xd build/module.elf
+                0x0000000000000000                typeinfo name for std::bad_alloc
+
+.rodata._ZTISt9bad_alloc
+                0x0000000000000000        0xc
+ .rodata._ZTISt9bad_alloc
+                0x0000000000000000        0xc build/module.elf
+                0x0000000000000000                typeinfo for std::bad_alloc
+
+.rodata._ZTVSt9bad_alloc
+                0x0000000000000000       0x14
+ .rodata._ZTVSt9bad_alloc
+                0x0000000000000000       0x14 build/module.elf
+                0x0000000000000000                vtable for std::bad_alloc
+
+.rodata._ZTSN10__cxxabiv117__class_type_infoE
+                0x0000000000000000       0x22
+ .rodata._ZTSN10__cxxabiv117__class_type_infoE
+                0x0000000000000000       0x22 build/module.elf
+                0x0000000000000000                typeinfo name for __cxxabiv1::__class_type_info
+
+.rodata._ZTIN10__cxxabiv117__class_type_infoE
+                0x0000000000000000        0xc
+ .rodata._ZTIN10__cxxabiv117__class_type_infoE
+                0x0000000000000000        0xc build/module.elf
+                0x0000000000000000                typeinfo for __cxxabiv1::__class_type_info
+
+.rodata._ZTVN10__cxxabiv117__class_type_infoE
+                0x0000000000000000       0x2c
+ .rodata._ZTVN10__cxxabiv117__class_type_infoE
+                0x0000000000000000       0x2c build/module.elf
+                0x0000000000000000                vtable for __cxxabiv1::__class_type_info
+
+.gcc_except_table._ZSt19__throw_logic_errorPKc
+                0x0000000000000000       0x10
+ .gcc_except_table._ZSt19__throw_logic_errorPKc
+                0x0000000000000000       0x10 build/module.elf
+
+.gcc_except_table._ZSt20__throw_length_errorPKc
+                0x0000000000000000       0x10
+ .gcc_except_table._ZSt20__throw_length_errorPKc
+                0x0000000000000000       0x10 build/module.elf
+
+.gcc_except_table._ZNSt11logic_errorC2ERKSs
+                0x0000000000000000        0xc
+ .gcc_except_table._ZNSt11logic_errorC2ERKSs
+                0x0000000000000000        0xc build/module.elf
+
+.rodata._ZTSSt11logic_error
+                0x0000000000000000       0x10
+ .rodata._ZTSSt11logic_error
+                0x0000000000000000       0x10 build/module.elf
+                0x0000000000000000                typeinfo name for std::logic_error
+
+.rodata._ZTISt11logic_error
+                0x0000000000000000        0xc
+ .rodata._ZTISt11logic_error
+                0x0000000000000000        0xc build/module.elf
+                0x0000000000000000                typeinfo for std::logic_error
+
+.rodata._ZTSSt12length_error
+                0x0000000000000000       0x11
+ .rodata._ZTSSt12length_error
+                0x0000000000000000       0x11 build/module.elf
+                0x0000000000000000                typeinfo name for std::length_error
+
+.rodata._ZTISt12length_error
+                0x0000000000000000        0xc
+ .rodata._ZTISt12length_error
+                0x0000000000000000        0xc build/module.elf
+                0x0000000000000000                typeinfo for std::length_error
+
+.rodata._ZTVSt11logic_error
+                0x0000000000000000       0x14
+ .rodata._ZTVSt11logic_error
+                0x0000000000000000       0x14 build/module.elf
+                0x0000000000000000                vtable for std::logic_error
+
+.rodata._ZTVSt12length_error
+                0x0000000000000000       0x14
+ .rodata._ZTVSt12length_error
+                0x0000000000000000       0x14 build/module.elf
+                0x0000000000000000                vtable for std::length_error
+
+.gcc_except_table._ZN9__gnu_cxx27__verbose_terminate_handlerEv
+                0x0000000000000000       0x38
+ .gcc_except_table._ZN9__gnu_cxx27__verbose_terminate_handlerEv
+                0x0000000000000000       0x38 build/module.elf
+
+.rodata._ZTSN10__cxxabiv120__si_class_type_infoE
+                0x0000000000000000       0x25
+ .rodata._ZTSN10__cxxabiv120__si_class_type_infoE
+                0x0000000000000000       0x25 build/module.elf
+                0x0000000000000000                typeinfo name for __cxxabiv1::__si_class_type_info
+
+.rodata._ZTIN10__cxxabiv120__si_class_type_infoE
+                0x0000000000000000        0xc
+ .rodata._ZTIN10__cxxabiv120__si_class_type_infoE
+                0x0000000000000000        0xc build/module.elf
+                0x0000000000000000                typeinfo for __cxxabiv1::__si_class_type_info
+
+.rodata._ZTVN10__cxxabiv120__si_class_type_infoE
+                0x0000000000000000       0x2c
+ .rodata._ZTVN10__cxxabiv120__si_class_type_infoE
+                0x0000000000000000       0x2c build/module.elf
+                0x0000000000000000                vtable for __cxxabiv1::__si_class_type_info
+
+.rodata._ZTSSt9type_info
+                0x0000000000000000        0xd
+ .rodata._ZTSSt9type_info
+                0x0000000000000000        0xd build/module.elf
+                0x0000000000000000                typeinfo name for std::type_info
+
+.rodata._ZTVSt9type_info
+                0x0000000000000000       0x20
+ .rodata._ZTVSt9type_info
+                0x0000000000000000       0x20 build/module.elf
+                0x0000000000000000                vtable for std::type_info
+
+.data
+ *(.data)
+
+.sdata._ZN10__cxxabiv120__unexpected_handlerE
+                0x0000000000000000        0x4
+ .sdata._ZN10__cxxabiv120__unexpected_handlerE
+                0x0000000000000000        0x4 build/module.elf
+                0x0000000000000000                __cxxabiv1::__unexpected_handler
+
+.sdata._ZN10__cxxabiv119__terminate_handlerE
+                0x0000000000000000        0x4
+ .sdata._ZN10__cxxabiv119__terminate_handlerE
+                0x0000000000000000        0x4 build/module.elf
+                0x0000000000000000                __cxxabiv1::__terminate_handler
+
+.sdata._ZTISt9exception
+                0x0000000000000000        0x8
+ .sdata._ZTISt9exception
+                0x0000000000000000        0x8 build/module.elf
+                0x0000000000000000                typeinfo for std::exception
+
+.sdata._ZTIN10__cxxabiv115__forced_unwindE
+                0x0000000000000000        0x8
+ .sdata._ZTIN10__cxxabiv115__forced_unwindE
+                0x0000000000000000        0x8 build/module.elf
+                0x0000000000000000                typeinfo for __cxxabiv1::__forced_unwind
+
+.sdata._ZTIN10__cxxabiv119__foreign_exceptionE
+                0x0000000000000000        0x8
+ .sdata._ZTIN10__cxxabiv119__foreign_exceptionE
+                0x0000000000000000        0x8 build/module.elf
+                0x0000000000000000                typeinfo for __cxxabiv1::__foreign_exception
+
+.sdata._ZTISt9type_info
+                0x0000000000000000        0x8
+ .sdata._ZTISt9type_info
+                0x0000000000000000        0x8 build/module.elf
+                0x0000000000000000                typeinfo for std::type_info
+
+.bss
+ *(.bss)
+
+.bss._ZNSs4_Rep20_S_empty_rep_storageE
+                0x0000000000000000       0x10
+ .bss._ZNSs4_Rep20_S_empty_rep_storageE
+                0x0000000000000000       0x10 build/module.elf
+                0x0000000000000000                std::string::_Rep::_S_empty_rep_storage
+
+.bss._ZL10eh_globals
+                0x0000000000000000        0x8
+ .bss._ZL10eh_globals
+                0x0000000000000000        0x8 build/module.elf
+
+.bss._ZL14emergency_used
+                0x0000000000000000        0x4
+ .bss._ZL14emergency_used
+                0x0000000000000000        0x4 build/module.elf
+
+.bss._ZL16emergency_buffer
+                0x0000000000000000      0x800
+ .bss._ZL16emergency_buffer
+                0x0000000000000000      0x800 build/module.elf
+
+.sbss.__new_handler
+                0x0000000000000000        0x4
+ .sbss.__new_handler
+                0x0000000000000000        0x4 build/module.elf
+                0x0000000000000000                __new_handler
+
+.bss._ZZN9__gnu_cxx27__verbose_terminate_handlerEvE11terminating
+                0x0000000000000000        0x1
+ .bss._ZZN9__gnu_cxx27__verbose_terminate_handlerEvE11terminating
+                0x0000000000000000        0x1 build/module.elf
+
+.rel.plt
+ *(.rel.plt)
+                0x0000000000000001                __end__ = .
+OUTPUT(bin/hello.mod elf32-powerpc)
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.comment        0x0000000000000000      0x38e
+ .comment       0x0000000000000000      0x38e build/module.elf
+
+.gnu.attributes
+                0x0000000000000000       0x10
+ .gnu.attributes
+                0x0000000000000000       0x10 build/module.elf
