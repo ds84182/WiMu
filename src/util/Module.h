@@ -1,14 +1,13 @@
 #pragma once
 
-#include "ELF.h"
-
-#include <ogc/cache.h>
-
 #include <string>
 #include <map>
 
+#include <ogc/cache.h>
 #include <malloc.h>
 
+#include <util/ELF.h>
+#include <util/SyncQueue.h>
 #include <util/Thread.h>
 
 class AllocSection {
@@ -62,6 +61,9 @@ public:
 	Thread *thread = nullptr;
 	std::map<std::string, void*> data;
 
+	bool isReady = false;
+	SyncQueue readyQueue;
+
 	Module(ELF *e) : elf(e) {
 		u32 i;
 
@@ -87,6 +89,7 @@ public:
 					//global with the same name
 					sym->address = globalSymbolMap[name]->address;
 				} else {
+					//TODO: Cancel link when undefined symbols
 					Logger::logf("Undefined symbol %s", name);
 				}
 			} else {
@@ -113,8 +116,23 @@ public:
 		return nullptr;
 	}
 
+	void ready() {
+		isReady = true;
+		readyQueue.broadcast();
+	}
+
+	void waitReady() {
+		if (!isReady) {
+			readyQueue.sleep();
+		}
+	}
+
 	static void init();
 	static Module *start(std::string name);
+
+	static Module *get(std::string name) {
+		return loadedModules.count(name) == 1 ? loadedModules[name] : nullptr;
+	}
 
 	//TODO: Module queues, a system where modules
 	//can send and receive messages to other modules
