@@ -1442,9 +1442,6 @@ extern void *t1_cmap_unicode_class_rec;
 extern void *t1_decoder_funcs;
 extern void *t1_driver_class;
 extern void *t42_driver_class;
-extern void *test_module_mod;
-extern void *test_module_mod_end;
-extern void *test_module_mod_size;
 extern void *_thr_allocated_fp;
 extern void *__thread_dispatch;
 extern void *_thread_dispatch_disable_level;
@@ -1715,7 +1712,14 @@ extern void *_ZN16HomebrewAppState6unloadEv;
 extern void *_ZN16HomebrewAppStateD0Ev;
 extern void *_ZN16HomebrewAppStateD1Ev;
 extern void *_ZN16HomebrewAppStateD2Ev;
+extern void *_ZN16RenderableCircle6renderEv;
+extern void *_ZN16RenderableCircleD0Ev;
+extern void *_ZN16RenderableCircleD1Ev;
+extern void *_ZN16RenderableCircleD2Ev;
 extern void *_ZN17EventSubscription13handleMessageEPv;
+extern void *_ZN17EventSubscriptionD0Ev;
+extern void *_ZN17EventSubscriptionD1Ev;
+extern void *_ZN17EventSubscriptionD2Ev;
 extern void *_ZN17RenderableTexture6renderEv;
 extern void *_ZN17RenderableTextureD0Ev;
 extern void *_ZN17RenderableTextureD1Ev;
@@ -1735,6 +1739,9 @@ extern void *_ZN19RenderableRectangleD0Ev;
 extern void *_ZN19RenderableRectangleD1Ev;
 extern void *_ZN19RenderableRectangleD2Ev;
 extern void *_ZN2UI10AddCommand7executeEv;
+extern void *_ZN2UI10AddCommandD0Ev;
+extern void *_ZN2UI10AddCommandD1Ev;
+extern void *_ZN2UI10AddCommandD2Ev;
 extern void *_ZN2UI10getElementEP5State;
 extern void *_ZN2UI10stopThreadE;
 extern void *_ZN2UI12addForRenderEP5State;
@@ -1778,22 +1785,22 @@ extern void *_ZN6Logger4initEv;
 extern void *_ZN6Logger4lockE;
 extern void *_ZN6Logger4logfEPKcz;
 extern void *_ZN6Logger6socketE;
+extern void *_ZN6Module13loadedModulesE;
 extern void *_ZN6Module15globalSymbolMapE;
 extern void *_ZN6Module4initEv;
 extern void *_ZN6Module4linkEv;
-extern void *_ZN6Module9getSymbolESs;
+extern void *_ZN6Module5startESs;
 extern void *_ZN6ModuleC1EP3ELF;
 extern void *_ZN6ModuleC2EP3ELF;
-extern void *_ZN6ModuleD1Ev;
-extern void *_ZN6ModuleD2Ev;
 extern void *_ZN6Roboto4BodyE;
 extern void *_ZN6Roboto5TitleE;
+extern void *_ZN6Roboto8BodySizeE;
+extern void *_ZN6Roboto9TitleSizeE;
 extern void *_ZN7Globals4initEv;
 extern void *_ZN7Globals6deinitEv;
 extern void *_ZN7Globals6noIconE;
 extern void *_ZN8Renderer10stopThreadE;
 extern void *_ZN8Renderer11renderQueueE;
-extern void *_ZN8Renderer13addRenderableEP10Renderable;
 extern void *_ZN8Renderer4mainEPv;
 extern void *_ZN8Renderer4stopEv;
 extern void *_ZN8Renderer5startEv;
@@ -2098,6 +2105,7 @@ extern void *_ZNSs4_Rep8_M_cloneERKSaIcEj;
 extern void *_ZNSs4_Rep9_S_createEjjRKSaIcE;
 extern void *_ZNSs4swapERSs;
 extern void *_ZNSs6appendEPKcj;
+extern void *_ZNSs6appendERKSs;
 extern void *_ZNSs6assignEPKcj;
 extern void *_ZNSs6assignERKSs;
 extern void *_ZNSs7reserveEj;
@@ -2155,6 +2163,11 @@ extern void *_ZNSt8_Rb_treeIP5StateSt4pairIKS1_P10RenderableESt10_Select1stIS6_E
 extern void *_ZNSt8_Rb_treeIPK9Elf32_SymSt4pairIKS2_P6SymbolESt10_Select1stIS7_ESt4lessIS2_ESaIS7_EE24_M_get_insert_unique_posERS4_;
 extern void *_ZNSt8_Rb_treeIPK9Elf32_SymSt4pairIKS2_P6SymbolESt10_Select1stIS7_ESt4lessIS2_ESaIS7_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS7_ERS4_;
 extern void *_ZNSt8_Rb_treeIPK9Elf32_SymSt4pairIKS2_P6SymbolESt10_Select1stIS7_ESt4lessIS2_ESaIS7_EE8_M_eraseEPSt13_Rb_tree_nodeIS7_E;
+extern void *_ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESF_IIEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_;
+extern void *_ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESF_IJEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_;
+extern void *_ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE24_M_get_insert_unique_posERS1_;
+extern void *_ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS4_ERS1_;
+extern void *_ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE8_M_eraseEPSt13_Rb_tree_nodeIS4_E;
 extern void *_ZNSt8_Rb_treeISsSt4pairIKSsP6SymbolESt10_Select1stIS4_ESt4lessISsESaIS4_EE14_M_insert_nodeEPSt18_Rb_tree_node_baseSC_PSt13_Rb_tree_nodeIS4_E;
 extern void *_ZNSt8_Rb_treeISsSt4pairIKSsP6SymbolESt10_Select1stIS4_ESt4lessISsESaIS4_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESF_IIEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_;
 extern void *_ZNSt8_Rb_treeISsSt4pairIKSsP6SymbolESt10_Select1stIS4_ESt4lessISsESaIS4_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESF_IJEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_;
@@ -2199,6 +2212,8 @@ extern void *_ZTI15AnimatableColor;
 extern void *_ZTI15AnimatableFloat;
 extern void *_ZTI15RenderableGroup;
 extern void *_ZTI16HomebrewAppState;
+extern void *_ZTI16RenderableCircle;
+extern void *_ZTI17EventSubscription;
 extern void *_ZTI17RenderableTexture;
 extern void *_ZTI18HomebrewAppElement;
 extern void *_ZTI18RenderableTriangle;
@@ -2213,6 +2228,7 @@ extern void *_ZTIN10__cxxabiv115__forced_unwindE;
 extern void *_ZTIN10__cxxabiv117__class_type_infoE;
 extern void *_ZTIN10__cxxabiv119__foreign_exceptionE;
 extern void *_ZTIN10__cxxabiv120__si_class_type_infoE;
+extern void *_ZTIN2UI10AddCommandE;
 extern void *_ZTIN2UI13RemoveCommandE;
 extern void *_ZTIN2UI13UpdateCommandE;
 extern void *_ZTIN2UI14UIElementMakerE;
@@ -2250,6 +2266,8 @@ extern void *_ZTS15AnimatableColor;
 extern void *_ZTS15AnimatableFloat;
 extern void *_ZTS15RenderableGroup;
 extern void *_ZTS16HomebrewAppState;
+extern void *_ZTS16RenderableCircle;
+extern void *_ZTS17EventSubscription;
 extern void *_ZTS17RenderableTexture;
 extern void *_ZTS18HomebrewAppElement;
 extern void *_ZTS18RenderableTriangle;
@@ -2265,6 +2283,7 @@ extern void *_ZTSN10__cxxabiv115__forced_unwindE;
 extern void *_ZTSN10__cxxabiv117__class_type_infoE;
 extern void *_ZTSN10__cxxabiv119__foreign_exceptionE;
 extern void *_ZTSN10__cxxabiv120__si_class_type_infoE;
+extern void *_ZTSN2UI10AddCommandE;
 extern void *_ZTSN2UI13RemoveCommandE;
 extern void *_ZTSN2UI13UpdateCommandE;
 extern void *_ZTSN2UI14UIElementMakerE;
@@ -2302,19 +2321,24 @@ extern void *_ZTV15AnimatableColor;
 extern void *_ZTV15AnimatableFloat;
 extern void *_ZTV15RenderableGroup;
 extern void *_ZTV16HomebrewAppState;
+extern void *_ZTV16RenderableCircle;
+extern void *_ZTV17EventSubscription;
 extern void *_ZTV17RenderableTexture;
 extern void *_ZTV18HomebrewAppElement;
 extern void *_ZTV18RenderableTriangle;
 extern void *_ZTV19RenderableRectangle;
 extern void *_ZTV5State;
 extern void *_ZTV6Future;
+extern void *_ZTV6Socket;
 extern void *_ZTV9Completer;
 extern void *_ZTV9TCPSocket;
 extern void *_ZTV9UIElement;
 extern void *_ZTVN10__cxxabiv117__class_type_infoE;
 extern void *_ZTVN10__cxxabiv120__si_class_type_infoE;
+extern void *_ZTVN2UI10AddCommandE;
 extern void *_ZTVN2UI13RemoveCommandE;
 extern void *_ZTVN2UI13UpdateCommandE;
+extern void *_ZTVN2UI14UIElementMakerE;
 extern void *_ZTVN2UI23HomebrewAppElementMakerE;
 extern void *_ZTVN2UI9UICommandE;
 extern void *_ZTVN8tinyxml210XMLCommentE;
@@ -3787,9 +3811,6 @@ linkdef linkdefs[] = {
 {"t1_decoder_funcs", (void*)&t1_decoder_funcs},
 {"t1_driver_class", (void*)&t1_driver_class},
 {"t42_driver_class", (void*)&t42_driver_class},
-{"test_module_mod", (void*)&test_module_mod},
-{"test_module_mod_end", (void*)&test_module_mod_end},
-{"test_module_mod_size", (void*)&test_module_mod_size},
 {"_thr_allocated_fp", (void*)&_thr_allocated_fp},
 {"__thread_dispatch", (void*)&__thread_dispatch},
 {"_thread_dispatch_disable_level", (void*)&_thread_dispatch_disable_level},
@@ -4060,7 +4081,14 @@ linkdef linkdefs[] = {
 {"_ZN16HomebrewAppStateD0Ev", (void*)&_ZN16HomebrewAppStateD0Ev},
 {"_ZN16HomebrewAppStateD1Ev", (void*)&_ZN16HomebrewAppStateD1Ev},
 {"_ZN16HomebrewAppStateD2Ev", (void*)&_ZN16HomebrewAppStateD2Ev},
+{"_ZN16RenderableCircle6renderEv", (void*)&_ZN16RenderableCircle6renderEv},
+{"_ZN16RenderableCircleD0Ev", (void*)&_ZN16RenderableCircleD0Ev},
+{"_ZN16RenderableCircleD1Ev", (void*)&_ZN16RenderableCircleD1Ev},
+{"_ZN16RenderableCircleD2Ev", (void*)&_ZN16RenderableCircleD2Ev},
 {"_ZN17EventSubscription13handleMessageEPv", (void*)&_ZN17EventSubscription13handleMessageEPv},
+{"_ZN17EventSubscriptionD0Ev", (void*)&_ZN17EventSubscriptionD0Ev},
+{"_ZN17EventSubscriptionD1Ev", (void*)&_ZN17EventSubscriptionD1Ev},
+{"_ZN17EventSubscriptionD2Ev", (void*)&_ZN17EventSubscriptionD2Ev},
 {"_ZN17RenderableTexture6renderEv", (void*)&_ZN17RenderableTexture6renderEv},
 {"_ZN17RenderableTextureD0Ev", (void*)&_ZN17RenderableTextureD0Ev},
 {"_ZN17RenderableTextureD1Ev", (void*)&_ZN17RenderableTextureD1Ev},
@@ -4080,6 +4108,9 @@ linkdef linkdefs[] = {
 {"_ZN19RenderableRectangleD1Ev", (void*)&_ZN19RenderableRectangleD1Ev},
 {"_ZN19RenderableRectangleD2Ev", (void*)&_ZN19RenderableRectangleD2Ev},
 {"_ZN2UI10AddCommand7executeEv", (void*)&_ZN2UI10AddCommand7executeEv},
+{"_ZN2UI10AddCommandD0Ev", (void*)&_ZN2UI10AddCommandD0Ev},
+{"_ZN2UI10AddCommandD1Ev", (void*)&_ZN2UI10AddCommandD1Ev},
+{"_ZN2UI10AddCommandD2Ev", (void*)&_ZN2UI10AddCommandD2Ev},
 {"_ZN2UI10getElementEP5State", (void*)&_ZN2UI10getElementEP5State},
 {"_ZN2UI10stopThreadE", (void*)&_ZN2UI10stopThreadE},
 {"_ZN2UI12addForRenderEP5State", (void*)&_ZN2UI12addForRenderEP5State},
@@ -4123,22 +4154,22 @@ linkdef linkdefs[] = {
 {"_ZN6Logger4lockE", (void*)&_ZN6Logger4lockE},
 {"_ZN6Logger4logfEPKcz", (void*)&_ZN6Logger4logfEPKcz},
 {"_ZN6Logger6socketE", (void*)&_ZN6Logger6socketE},
+{"_ZN6Module13loadedModulesE", (void*)&_ZN6Module13loadedModulesE},
 {"_ZN6Module15globalSymbolMapE", (void*)&_ZN6Module15globalSymbolMapE},
 {"_ZN6Module4initEv", (void*)&_ZN6Module4initEv},
 {"_ZN6Module4linkEv", (void*)&_ZN6Module4linkEv},
-{"_ZN6Module9getSymbolESs", (void*)&_ZN6Module9getSymbolESs},
+{"_ZN6Module5startESs", (void*)&_ZN6Module5startESs},
 {"_ZN6ModuleC1EP3ELF", (void*)&_ZN6ModuleC1EP3ELF},
 {"_ZN6ModuleC2EP3ELF", (void*)&_ZN6ModuleC2EP3ELF},
-{"_ZN6ModuleD1Ev", (void*)&_ZN6ModuleD1Ev},
-{"_ZN6ModuleD2Ev", (void*)&_ZN6ModuleD2Ev},
 {"_ZN6Roboto4BodyE", (void*)&_ZN6Roboto4BodyE},
 {"_ZN6Roboto5TitleE", (void*)&_ZN6Roboto5TitleE},
+{"_ZN6Roboto8BodySizeE", (void*)&_ZN6Roboto8BodySizeE},
+{"_ZN6Roboto9TitleSizeE", (void*)&_ZN6Roboto9TitleSizeE},
 {"_ZN7Globals4initEv", (void*)&_ZN7Globals4initEv},
 {"_ZN7Globals6deinitEv", (void*)&_ZN7Globals6deinitEv},
 {"_ZN7Globals6noIconE", (void*)&_ZN7Globals6noIconE},
 {"_ZN8Renderer10stopThreadE", (void*)&_ZN8Renderer10stopThreadE},
 {"_ZN8Renderer11renderQueueE", (void*)&_ZN8Renderer11renderQueueE},
-{"_ZN8Renderer13addRenderableEP10Renderable", (void*)&_ZN8Renderer13addRenderableEP10Renderable},
 {"_ZN8Renderer4mainEPv", (void*)&_ZN8Renderer4mainEPv},
 {"_ZN8Renderer4stopEv", (void*)&_ZN8Renderer4stopEv},
 {"_ZN8Renderer5startEv", (void*)&_ZN8Renderer5startEv},
@@ -4443,6 +4474,7 @@ linkdef linkdefs[] = {
 {"_ZNSs4_Rep9_S_createEjjRKSaIcE", (void*)&_ZNSs4_Rep9_S_createEjjRKSaIcE},
 {"_ZNSs4swapERSs", (void*)&_ZNSs4swapERSs},
 {"_ZNSs6appendEPKcj", (void*)&_ZNSs6appendEPKcj},
+{"_ZNSs6appendERKSs", (void*)&_ZNSs6appendERKSs},
 {"_ZNSs6assignEPKcj", (void*)&_ZNSs6assignEPKcj},
 {"_ZNSs6assignERKSs", (void*)&_ZNSs6assignERKSs},
 {"_ZNSs7reserveEj", (void*)&_ZNSs7reserveEj},
@@ -4500,6 +4532,11 @@ linkdef linkdefs[] = {
 {"_ZNSt8_Rb_treeIPK9Elf32_SymSt4pairIKS2_P6SymbolESt10_Select1stIS7_ESt4lessIS2_ESaIS7_EE24_M_get_insert_unique_posERS4_", (void*)&_ZNSt8_Rb_treeIPK9Elf32_SymSt4pairIKS2_P6SymbolESt10_Select1stIS7_ESt4lessIS2_ESaIS7_EE24_M_get_insert_unique_posERS4_},
 {"_ZNSt8_Rb_treeIPK9Elf32_SymSt4pairIKS2_P6SymbolESt10_Select1stIS7_ESt4lessIS2_ESaIS7_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS7_ERS4_", (void*)&_ZNSt8_Rb_treeIPK9Elf32_SymSt4pairIKS2_P6SymbolESt10_Select1stIS7_ESt4lessIS2_ESaIS7_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS7_ERS4_},
 {"_ZNSt8_Rb_treeIPK9Elf32_SymSt4pairIKS2_P6SymbolESt10_Select1stIS7_ESt4lessIS2_ESaIS7_EE8_M_eraseEPSt13_Rb_tree_nodeIS7_E", (void*)&_ZNSt8_Rb_treeIPK9Elf32_SymSt4pairIKS2_P6SymbolESt10_Select1stIS7_ESt4lessIS2_ESaIS7_EE8_M_eraseEPSt13_Rb_tree_nodeIS7_E},
+{"_ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESF_IIEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_", (void*)&_ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESF_IIEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_},
+{"_ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESF_IJEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_", (void*)&_ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESF_IJEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_},
+{"_ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE24_M_get_insert_unique_posERS1_", (void*)&_ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE24_M_get_insert_unique_posERS1_},
+{"_ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS4_ERS1_", (void*)&_ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS4_ERS1_},
+{"_ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE8_M_eraseEPSt13_Rb_tree_nodeIS4_E", (void*)&_ZNSt8_Rb_treeISsSt4pairIKSsP6ModuleESt10_Select1stIS4_ESt4lessISsESaIS4_EE8_M_eraseEPSt13_Rb_tree_nodeIS4_E},
 {"_ZNSt8_Rb_treeISsSt4pairIKSsP6SymbolESt10_Select1stIS4_ESt4lessISsESaIS4_EE14_M_insert_nodeEPSt18_Rb_tree_node_baseSC_PSt13_Rb_tree_nodeIS4_E", (void*)&_ZNSt8_Rb_treeISsSt4pairIKSsP6SymbolESt10_Select1stIS4_ESt4lessISsESaIS4_EE14_M_insert_nodeEPSt18_Rb_tree_node_baseSC_PSt13_Rb_tree_nodeIS4_E},
 {"_ZNSt8_Rb_treeISsSt4pairIKSsP6SymbolESt10_Select1stIS4_ESt4lessISsESaIS4_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESF_IIEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_", (void*)&_ZNSt8_Rb_treeISsSt4pairIKSsP6SymbolESt10_Select1stIS4_ESt4lessISsESaIS4_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESF_IIEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_},
 {"_ZNSt8_Rb_treeISsSt4pairIKSsP6SymbolESt10_Select1stIS4_ESt4lessISsESaIS4_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESF_IJEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_", (void*)&_ZNSt8_Rb_treeISsSt4pairIKSsP6SymbolESt10_Select1stIS4_ESt4lessISsESaIS4_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESF_IJEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_},
@@ -4544,6 +4581,8 @@ linkdef linkdefs[] = {
 {"_ZTI15AnimatableFloat", (void*)&_ZTI15AnimatableFloat},
 {"_ZTI15RenderableGroup", (void*)&_ZTI15RenderableGroup},
 {"_ZTI16HomebrewAppState", (void*)&_ZTI16HomebrewAppState},
+{"_ZTI16RenderableCircle", (void*)&_ZTI16RenderableCircle},
+{"_ZTI17EventSubscription", (void*)&_ZTI17EventSubscription},
 {"_ZTI17RenderableTexture", (void*)&_ZTI17RenderableTexture},
 {"_ZTI18HomebrewAppElement", (void*)&_ZTI18HomebrewAppElement},
 {"_ZTI18RenderableTriangle", (void*)&_ZTI18RenderableTriangle},
@@ -4558,6 +4597,7 @@ linkdef linkdefs[] = {
 {"_ZTIN10__cxxabiv117__class_type_infoE", (void*)&_ZTIN10__cxxabiv117__class_type_infoE},
 {"_ZTIN10__cxxabiv119__foreign_exceptionE", (void*)&_ZTIN10__cxxabiv119__foreign_exceptionE},
 {"_ZTIN10__cxxabiv120__si_class_type_infoE", (void*)&_ZTIN10__cxxabiv120__si_class_type_infoE},
+{"_ZTIN2UI10AddCommandE", (void*)&_ZTIN2UI10AddCommandE},
 {"_ZTIN2UI13RemoveCommandE", (void*)&_ZTIN2UI13RemoveCommandE},
 {"_ZTIN2UI13UpdateCommandE", (void*)&_ZTIN2UI13UpdateCommandE},
 {"_ZTIN2UI14UIElementMakerE", (void*)&_ZTIN2UI14UIElementMakerE},
@@ -4595,6 +4635,8 @@ linkdef linkdefs[] = {
 {"_ZTS15AnimatableFloat", (void*)&_ZTS15AnimatableFloat},
 {"_ZTS15RenderableGroup", (void*)&_ZTS15RenderableGroup},
 {"_ZTS16HomebrewAppState", (void*)&_ZTS16HomebrewAppState},
+{"_ZTS16RenderableCircle", (void*)&_ZTS16RenderableCircle},
+{"_ZTS17EventSubscription", (void*)&_ZTS17EventSubscription},
 {"_ZTS17RenderableTexture", (void*)&_ZTS17RenderableTexture},
 {"_ZTS18HomebrewAppElement", (void*)&_ZTS18HomebrewAppElement},
 {"_ZTS18RenderableTriangle", (void*)&_ZTS18RenderableTriangle},
@@ -4610,6 +4652,7 @@ linkdef linkdefs[] = {
 {"_ZTSN10__cxxabiv117__class_type_infoE", (void*)&_ZTSN10__cxxabiv117__class_type_infoE},
 {"_ZTSN10__cxxabiv119__foreign_exceptionE", (void*)&_ZTSN10__cxxabiv119__foreign_exceptionE},
 {"_ZTSN10__cxxabiv120__si_class_type_infoE", (void*)&_ZTSN10__cxxabiv120__si_class_type_infoE},
+{"_ZTSN2UI10AddCommandE", (void*)&_ZTSN2UI10AddCommandE},
 {"_ZTSN2UI13RemoveCommandE", (void*)&_ZTSN2UI13RemoveCommandE},
 {"_ZTSN2UI13UpdateCommandE", (void*)&_ZTSN2UI13UpdateCommandE},
 {"_ZTSN2UI14UIElementMakerE", (void*)&_ZTSN2UI14UIElementMakerE},
@@ -4647,19 +4690,24 @@ linkdef linkdefs[] = {
 {"_ZTV15AnimatableFloat", (void*)&_ZTV15AnimatableFloat},
 {"_ZTV15RenderableGroup", (void*)&_ZTV15RenderableGroup},
 {"_ZTV16HomebrewAppState", (void*)&_ZTV16HomebrewAppState},
+{"_ZTV16RenderableCircle", (void*)&_ZTV16RenderableCircle},
+{"_ZTV17EventSubscription", (void*)&_ZTV17EventSubscription},
 {"_ZTV17RenderableTexture", (void*)&_ZTV17RenderableTexture},
 {"_ZTV18HomebrewAppElement", (void*)&_ZTV18HomebrewAppElement},
 {"_ZTV18RenderableTriangle", (void*)&_ZTV18RenderableTriangle},
 {"_ZTV19RenderableRectangle", (void*)&_ZTV19RenderableRectangle},
 {"_ZTV5State", (void*)&_ZTV5State},
 {"_ZTV6Future", (void*)&_ZTV6Future},
+{"_ZTV6Socket", (void*)&_ZTV6Socket},
 {"_ZTV9Completer", (void*)&_ZTV9Completer},
 {"_ZTV9TCPSocket", (void*)&_ZTV9TCPSocket},
 {"_ZTV9UIElement", (void*)&_ZTV9UIElement},
 {"_ZTVN10__cxxabiv117__class_type_infoE", (void*)&_ZTVN10__cxxabiv117__class_type_infoE},
 {"_ZTVN10__cxxabiv120__si_class_type_infoE", (void*)&_ZTVN10__cxxabiv120__si_class_type_infoE},
+{"_ZTVN2UI10AddCommandE", (void*)&_ZTVN2UI10AddCommandE},
 {"_ZTVN2UI13RemoveCommandE", (void*)&_ZTVN2UI13RemoveCommandE},
 {"_ZTVN2UI13UpdateCommandE", (void*)&_ZTVN2UI13UpdateCommandE},
+{"_ZTVN2UI14UIElementMakerE", (void*)&_ZTVN2UI14UIElementMakerE},
 {"_ZTVN2UI23HomebrewAppElementMakerE", (void*)&_ZTVN2UI23HomebrewAppElementMakerE},
 {"_ZTVN2UI9UICommandE", (void*)&_ZTVN2UI9UICommandE},
 {"_ZTVN8tinyxml210XMLCommentE", (void*)&_ZTVN8tinyxml210XMLCommentE},
