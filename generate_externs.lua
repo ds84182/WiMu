@@ -8,7 +8,7 @@ for file in lfs.dir(".") do
 		for line in io.popen("nm "..file, "r"):lines() do
 			local addr, type, name = line:match("(%x-)%s+(.-)%s+(.+)")
 			
-			if type == "G" or type == "T" then
+			if type == "G" or type == "T" or type == "V" then
 				defs[#defs+1] = "EXTERN("..name..");"
 			end
 		end
