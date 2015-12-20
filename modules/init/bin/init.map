@@ -29,9 +29,73 @@ LOAD build/module.elf
                 0x0000000000000000       0x10 build/module.elf
                 0x0000000000000000                Renderable::~Renderable()
 
-.text.module    0x0000000000000000      0x4d0
- .text.module   0x0000000000000000      0x4d0 build/module.elf
+.text._ZN6Logger3logEPKc
+                0x0000000000000000      0x140
+ .text._ZN6Logger3logEPKc
+                0x0000000000000000      0x140 build/module.elf
+                0x0000000000000000                Logger::log(char const*)
+
+.text._ZN8Renderer13addRenderableEP10Renderable
+                0x0000000000000000       0x4c
+ .text._ZN8Renderer13addRenderableEP10Renderable
+                0x0000000000000000       0x4c build/module.elf
+                0x0000000000000000                Renderer::addRenderable(Renderable*)
+
+.text._ZN8Renderer12runAnimationEP10AnimatablefPFfffEf
+                0x0000000000000000       0xa0
+ .text._ZN8Renderer12runAnimationEP10AnimatablefPFfffEf
+                0x0000000000000000       0xa0 build/module.elf
+                0x0000000000000000                Renderer::runAnimation(Animatable*, float, float (*)(float, float), float)
+
+.text._ZNSt8_Rb_treeISsSt4pairIKSsPvESt10_Select1stIS3_ESt4lessISsESaIS3_EE24_M_get_insert_unique_posERS1_
+                0x0000000000000000      0x190
+ .text._ZNSt8_Rb_treeISsSt4pairIKSsPvESt10_Select1stIS3_ESt4lessISsESaIS3_EE24_M_get_insert_unique_posERS1_
+                0x0000000000000000      0x190 build/module.elf
+                0x0000000000000000                std::_Rb_tree<std::string, std::pair<std::string const, void*>, std::_Select1st<std::pair<std::string const, void*> >, std::less<std::string>, std::allocator<std::pair<std::string const, void*> > >::_M_get_insert_unique_pos(std::string const&)
+
+.text._ZNSt8_Rb_treeISsSt4pairIKSsPvESt10_Select1stIS3_ESt4lessISsESaIS3_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS3_ERS1_
+                0x0000000000000000      0x254
+ .text._ZNSt8_Rb_treeISsSt4pairIKSsPvESt10_Select1stIS3_ESt4lessISsESaIS3_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS3_ERS1_
+                0x0000000000000000      0x254 build/module.elf
+                0x0000000000000000                std::_Rb_tree<std::string, std::pair<std::string const, void*>, std::_Select1st<std::pair<std::string const, void*> >, std::less<std::string>, std::allocator<std::pair<std::string const, void*> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::string const, void*> >, std::string const&)
+
+.text._ZNSt3mapISsPvSt4lessISsESaISt4pairIKSsS0_EEEixEOSs
+                0x0000000000000000      0x254
+ .text._ZNSt3mapISsPvSt4lessISsESaISt4pairIKSsS0_EEEixEOSs
+                0x0000000000000000      0x254 build/module.elf
+                0x0000000000000000                std::map<std::string, void*, std::less<std::string>, std::allocator<std::pair<std::string const, void*> > >::operator[](std::string&&)
+
+.text.module    0x0000000000000000      0x5b4
+ .text.module   0x0000000000000000      0x5b4 build/module.elf
                 0x0000000000000000                module
+
+.text._ZStL25local_Rb_tree_rotate_leftPSt18_Rb_tree_node_baseRS0_
+                0x0000000000000000       0x64
+ .text._ZStL25local_Rb_tree_rotate_leftPSt18_Rb_tree_node_baseRS0_
+                0x0000000000000000       0x64 build/module.elf
+
+.text._ZStL26local_Rb_tree_rotate_rightPSt18_Rb_tree_node_baseRS0_
+                0x0000000000000000       0x64
+ .text._ZStL26local_Rb_tree_rotate_rightPSt18_Rb_tree_node_baseRS0_
+                0x0000000000000000       0x64 build/module.elf
+
+.text._ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base
+                0x0000000000000000       0x70
+ .text._ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base
+                0x0000000000000000       0x70 build/module.elf
+                0x0000000000000000                std::_Rb_tree_increment(std::_Rb_tree_node_base*)
+
+.text._ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base
+                0x0000000000000000       0x80
+ .text._ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base
+                0x0000000000000000       0x80 build/module.elf
+                0x0000000000000000                std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
+
+.text._ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_
+                0x0000000000000000      0x1bc
+ .text._ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_
+                0x0000000000000000      0x1bc build/module.elf
+                0x0000000000000000                std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
 
 .text._ZNSs4_Rep9_S_createEjjRKSaIcE
                 0x0000000000000000       0xb0
@@ -470,10 +534,15 @@ LOAD build/module.elf
  *(.rodata)
  .rodata        0x000000000000004c      0xe30 build/module.elf
 
+.gcc_except_table._ZN6Logger3logEPKc
+                0x0000000000000000       0x13
+ .gcc_except_table._ZN6Logger3logEPKc
+                0x0000000000000000       0x13 build/module.elf
+
 .gcc_except_table.module
-                0x0000000000000000       0x36
+                0x0000000000000000       0x41
  .gcc_except_table.module
-                0x0000000000000000       0x36 build/module.elf
+                0x0000000000000000       0x41 build/module.elf
 
 .rodata._ZTI10Renderable
                 0x0000000000000000        0x8
@@ -493,12 +562,12 @@ LOAD build/module.elf
                 0x0000000000000000       0x14 build/module.elf
                 0x0000000000000000                vtable for Renderable
 
-.rodata.cst4    0x0000000000000000       0x24
- .rodata.cst4   0x0000000000000000       0x24 build/module.elf
+.rodata.cst4    0x0000000000000000       0x28
+ .rodata.cst4   0x0000000000000000       0x28 build/module.elf
 
-.rodata.str1.4  0x0000000000000000      0x9b3
+.rodata.str1.4  0x0000000000000000      0x9c3
  .rodata.str1.4
-                0x0000000000000000      0x9b3 build/module.elf
+                0x0000000000000000      0x9c3 build/module.elf
 
 .gcc_except_table._Znwj
                 0x0000000000000000       0x1a
@@ -774,8 +843,8 @@ OUTPUT(bin/init.mod elf32-powerpc)
 .group          0x0000000000000000        0x8
  .group         0x0000000000000000        0x8 build/module.elf
 
-.group          0x0000000000000000        0x8
- .group         0x0000000000000000        0x8 build/module.elf
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc build/module.elf
 
 .group          0x0000000000000000        0x8
  .group         0x0000000000000000        0x8 build/module.elf
@@ -894,10 +963,28 @@ OUTPUT(bin/init.mod elf32-powerpc)
 .group          0x0000000000000000        0x8
  .group         0x0000000000000000        0x8 build/module.elf
 
-.comment        0x0000000000000000      0x36b
- .comment       0x0000000000000000      0x36b build/module.elf
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.group          0x0000000000000000        0x8
+ .group         0x0000000000000000        0x8 build/module.elf
+
+.comment        0x0000000000000000      0x38e
+ .comment       0x0000000000000000      0x38e build/module.elf
 
 .gnu.attributes
-                0x0000000000000000       0x10
+                0x0000000000000000       0x12
  .gnu.attributes
-                0x0000000000000000       0x10 build/module.elf
+                0x0000000000000000       0x12 build/module.elf

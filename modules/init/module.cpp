@@ -7,9 +7,11 @@
 #include <util/Module.h>
 #include <util/MessageQueue.h>
 
+#include <unistd.h>
+
 #include <Init.h>
 
-using namespace Module::Init;
+using namespace ModuleInit;
 
 extern "C" void *module(Module* module) {
 	Logger::log("Init Module is running");
@@ -33,6 +35,15 @@ extern "C" void *module(Module* module) {
 	Renderer::runAnimation(new AnimatableColor(&text->color, 0xFFFFFF00, 0xFFFFFFFF), 0.3f, EasingFunction::OUT_QUAD, 0.375f);
 	
 	MessageQueue rpcQueue;
+	module->data["rpc"] = &rpcQueue;
+	
+	usleep(700*1000); //700 ms. The animation system lacks callbacks
+	
+	//Mark the module as ready. Any threads waiting on this module will continue running again.
+	module->ready();
+	
+	//Start an example module named "hello"
+	Module::start("hello");
 	
 	while (true) {
 		RPCMessage *message = reinterpret_cast<RPCMessage*>(rpcQueue.receive());
@@ -42,12 +53,15 @@ extern "C" void *module(Module* module) {
 			Renderer::runAnimation(new AnimatableColor(&title->color, 0xFFFFFFFF, 0xFFFFFF00), 0.3f, EasingFunction::OUT_QUAD);
 			Renderer::runAnimation(new AnimatableColor(&text->color, 0xFFFFFFFF, 0xFFFFFF00), 0.3f, EasingFunction::OUT_QUAD);
 			
-			Renderer::waitAnimation(ani);
+			//Renderer::waitAnimation(ani);
+			usleep(300*1000); //300 ms. The animation system lacks callbacks
+			//TODO: Make runAnimation take an EasingState (Rename to Animation), add callbacks
 			
 			Renderer::removeRenderable(circle);
 			Renderer::removeRenderable(title);
 			Renderer::removeRenderable(text);
 			
+			//Sync with the Renderer to make sure that the renderables don't get rendered after we destroy them
 			Renderer::sync();
 			
 			delete circle;
